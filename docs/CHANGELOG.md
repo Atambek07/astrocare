@@ -36,6 +36,7 @@ All notable changes are documented here. Dates use UTC.
 - What-If `sleep_duration_delta_h` is applied.
 - What-If `missed_ared_days` activates the missed-ARED path.
 - Unknown countermeasures return HTTP 400 instead of silently doing nothing.
+- Simulation controls no longer double-wrap backend URLs, fixing `backend route must start with /`.
 - Mission day cannot drop below one.
 - Shared JSON Schema generator uses unified AstroCare contracts and schema identity.
 - Case-insensitive NASA missing tokens are classified as missing rather than suspect.
