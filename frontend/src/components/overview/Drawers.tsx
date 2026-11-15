@@ -3,7 +3,6 @@ import { useEffect, useMemo, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { X, MapPin, MessageCircle } from 'lucide-react';
 import { useHealthStore } from '@/store/useHealthStore';
-import { vitalByKey } from '@/lib/vitals';
 import { metricSeries, type TimeRange } from '@/lib/series';
 import { STATUS_META } from '@/lib/status';
 import { ZonePanel } from '@/components/panel/ZonePanel';
@@ -37,16 +36,37 @@ function Shell({ children, onClose, label }: { children: React.ReactNode; onClos
 
 /** Details for one vital sign: value, status reason, baseline, and history with time filters. */
 function MetricDrawer({ d }: { d: ReturnType<typeof useDashboard> }) {
-  const key = useHealthStore((s) => s.metricDetail)!;
+  const storedKey = useHealthStore((s) => s.metricDetail);
   const set = useHealthStore((s) => s.set);
   const selectZone = useHealthStore((s) => s.selectZone);
   const [range, setRange] = useState<TimeRange>('24h');
   const mission = useMission(d);
-  const def = vitalByKey(key);
-  const r = useVitals(d).find((x) => x.def.key === key)!;
-  const series = useMemo(() => metricSeries(d.astronaut, mission, d.log.missionDay, def.metric, range), [d.astronaut, mission, d.log.missionDay, def.metric, range]);
-  const dia = useMemo(() => (key === 'bp' ? metricSeries(d.astronaut, mission, d.log.missionDay, 'dbp', range) : undefined), [key, d.astronaut, mission, d.log.missionDay, range]);
-  const m = STATUS_META[r.status];
+  const readings = useVitals(d);
+  const reading = storedKey ? readings.find((item) => item.def.key === storedKey) : undefined;
+  const def = reading?.def ?? null;
+
+  // A stale persisted/HMR state can contain a key that no longer matches a vital card.
+  // Clear it instead of dereferencing an undefined definition.
+  useEffect(() => {
+    if (storedKey && !reading) set({ metricDetail: null });
+  }, [reading, set, storedKey]);
+
+  const series = useMemo(
+    () => (reading && def
+      ? metricSeries(d.astronaut, mission, d.log.missionDay, def.metric, range)
+      : null),
+    [d.astronaut, d.log.missionDay, def, mission, range, reading],
+  );
+  const dia = useMemo(
+    () => (storedKey === 'bp' && reading && def
+      ? metricSeries(d.astronaut, mission, d.log.missionDay, 'dbp', range)
+      : undefined),
+    [d.astronaut, d.log.missionDay, def, mission, range, reading, storedKey],
+  );
+
+  if (!reading || !def || !series) return null;
+  const key = reading.def.key;
+  const m = STATUS_META[reading.status];
   const close = () => set({ metricDetail: null });
   const abnormal = series.points.filter((p) => p.status !== 'green').length;
 
@@ -56,18 +76,18 @@ function MetricDrawer({ d }: { d: ReturnType<typeof useDashboard> }) {
         <div>
           <div className="text-sm text-muted">{def.label}</div>
           <div className="mt-1 flex items-baseline gap-2">
-            <span className="num text-5xl font-bold" style={{ color: r.status === 'green' ? '#F5F7FA' : m.color }}>{r.display}</span>
-            <span className="text-muted">{r.unit}</span>
+            <span className="num text-5xl font-bold" style={{ color: reading.status === 'green' ? '#F5F7FA' : m.color }}>{reading.display}</span>
+            <span className="text-muted">{reading.unit}</span>
           </div>
           <span className="mt-2 inline-flex items-center gap-1 rounded-full px-2.5 py-0.5 text-xs font-semibold" style={{ color: m.color, background: m.bg }}><m.icon size={13} />{m.label}</span>
         </div>
         <button onClick={close} className="rounded-lg p-1.5 text-muted hover:bg-raised hover:text-ink" aria-label="Close"><X size={18} /></button>
       </header>
       <div className="flex-1 space-y-5 overflow-y-auto p-5 scroll-thin">
-        {r.reason && <p className="rounded-xl p-3 text-sm text-ink" style={{ background: m.bg }}>{r.reason}</p>}
+        {reading.reason && <p className="rounded-xl p-3 text-sm text-ink" style={{ background: m.bg }}>{reading.reason}</p>}
         <dl className="grid grid-cols-3 gap-3 text-sm">
-          <div><dt className="text-xs text-muted">Your baseline</dt><dd className="num font-semibold text-ink">{r.baseline ? `${r.baseline.mean.toFixed(def.decimals)} ${def.unit}` : '—'}</dd></div>
-          <div><dt className="text-xs text-muted">Difference</dt><dd className="num font-semibold text-ink">{r.deltaPct != null ? `${r.deltaPct > 0 ? '+' : ''}${r.deltaPct.toFixed(0)}%` : '—'}</dd></div>
+          <div><dt className="text-xs text-muted">Your baseline</dt><dd className="num font-semibold text-ink">{reading.baseline ? `${reading.baseline.mean.toFixed(def.decimals)} ${def.unit}` : '—'}</dd></div>
+          <div><dt className="text-xs text-muted">Difference</dt><dd className="num font-semibold text-ink">{reading.deltaPct != null ? `${reading.deltaPct > 0 ? '+' : ''}${reading.deltaPct.toFixed(0)}%` : '—'}</dd></div>
           <div><dt className="text-xs text-muted">Source</dt><dd className="font-semibold text-ink">{def.source}</dd></div>
         </dl>
         <div>
@@ -75,7 +95,7 @@ function MetricDrawer({ d }: { d: ReturnType<typeof useDashboard> }) {
             <h3 className="text-sm font-semibold text-ink">History</h3>
             <RangeTabs value={range} options={RANGES} onChange={setRange} />
           </div>
-          <TrendChart series={series} second={dia} color={r.status === 'green' || r.status === 'stale' ? '#38BDF8' : m.color} height={220} />
+          <TrendChart series={series} second={dia} color={reading.status === 'green' || reading.status === 'stale' ? '#38BDF8' : m.color} height={220} />
           <p className="mt-2 text-xs text-muted">
             {series.baseline ? 'Shaded band = your personal normal range (baseline ± 1.5σ). ' : ''}
             {series.synthetic

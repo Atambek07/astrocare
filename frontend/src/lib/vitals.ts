@@ -22,7 +22,7 @@ export const VITALS: VitalDef[] = [
   { key: 'temp', label: 'Body Temperature', unit: '°C', metric: 'coreTemp', liveKey: 'temp_c', rangeKey: 'temp_c', zone: 'skin_immune', source: 'Core sensor', decimals: 1 },
   { key: 'glucose', label: 'Blood Glucose', unit: 'mg/dL', metric: 'glucose', liveKey: 'glucose_mgdl', rangeKey: 'glucose_mgdl', zone: 'pancreas', source: 'Glucometer', decimals: 0 },
 ];
-export const vitalByKey = (k: VitalKey) => VITALS.find((v) => v.key === k)!;
+export const vitalByKey = (k: VitalKey): VitalDef | null => VITALS.find((v) => v.key === k) ?? null;
 
 /** Brain flag metric names that belong to each vital. */
 const FLAG_METRICS: Record<VitalKey, string[]> = {
