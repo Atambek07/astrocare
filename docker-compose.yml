@@ -25,5 +25,6 @@ services:
       - "3000:3000"
     environment:
       NEXT_PUBLIC_BRAIN_WS_URL: ws://localhost:8787
+      NEXT_PUBLIC_BACKEND_HTTP_URL: http://localhost:8765
     depends_on:
       - backend

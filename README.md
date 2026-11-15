@@ -63,7 +63,7 @@ Three provenance classes are always kept separate:
 | `simulation_engine/` | Advanced Hybrid Simulation Engine. |
 | `shared/` | Shared Pydantic contracts and JSON Schema. |
 | `data/` | Verified NASA files, manifests, processed evidence and reference catalogs. |
-| `docs/` | Architecture, data, simulation, API, demo and final reports. |
+| `docs/` | Architecture, data, simulation, API, QA and demo documentation. |
 | `scripts/` | Setup, run, test and demo scripts. |
 
 ---
@@ -166,10 +166,11 @@ scripts/test.sh
 
 Current result:
 
-- Backend Brain: **651 passed**
-- Frontend: **37 passed**
-- NASA pipeline: **3 passed**
-- Simulation: **17 passed**
+- Backend Brain: **656 passed**
+- Frontend: **39 passed**
+- NASA pipeline: **10 passed**
+- Simulation: **30 passed**
+- Unified service E2E: **15 checks passed**
 
 ---
 

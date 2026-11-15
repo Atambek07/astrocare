@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react';
 import { Activity, FlaskConical, Pause, Play, RotateCcw, ShieldCheck, Zap } from 'lucide-react';
 import { useHealthStore } from '@/store/useHealthStore';
+import { backendUrl, fetchBackendJson } from '@/lib/backend';
 
 interface SimulationStatus {
   mission_status: string;
@@ -38,16 +39,7 @@ const COUNTERMEASURES = [
 ];
 
 async function postJson<T>(url: string, body: unknown): Promise<T> {
-  const response = await fetch(url, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(body),
-  });
-  if (!response.ok) {
-    const payload = await response.json().catch(() => ({}));
-    throw new Error(String(payload.error ?? `HTTP ${response.status}`));
-  }
-  return (await response.json()) as T;
+  return fetchBackendJson<T>(url, { method: 'POST', body });
 }
 
 /** Simulation controls backed by the unified AstroCare service. */
@@ -63,9 +55,7 @@ export function SimulationView() {
     let cancelled = false;
     const load = async () => {
       try {
-        const response = await fetch('/simulation/status', { cache: 'no-store' });
-        if (!response.ok) throw new Error(`HTTP ${response.status}`);
-        const payload = (await response.json()) as SimulationStatusResponse;
+        const payload = await fetchBackendJson<SimulationStatusResponse>('/simulation/status');
         if (cancelled) return;
         setStatus(payload.status);
         setEnvironment(payload.environment);
@@ -86,7 +76,7 @@ export function SimulationView() {
   const sendControl = async (body: Record<string, unknown>) => {
     setBusy(true);
     try {
-      await postJson('/simulation/control', body);
+      await postJson(backendUrl('/simulation/control'), body);
       setError(null);
     } catch (exc) {
       setError(exc instanceof Error ? exc.message : 'control failed');
@@ -98,7 +88,7 @@ export function SimulationView() {
   const sendScenario = async (scenario_id: string, action: 'start' | 'terminate') => {
     setBusy(true);
     try {
-      await postJson('/simulation/scenario', { scenario_id, action });
+      await postJson(backendUrl('/simulation/scenario'), { scenario_id, action });
       setError(null);
     } catch (exc) {
       setError(exc instanceof Error ? exc.message : 'scenario control failed');
@@ -110,7 +100,7 @@ export function SimulationView() {
   const sendCountermeasure = async (type: string) => {
     setBusy(true);
     try {
-      await postJson('/simulation/countermeasure', { type });
+      await postJson(backendUrl('/simulation/countermeasure'), { type });
       setError(null);
     } catch (exc) {
       setError(exc instanceof Error ? exc.message : 'countermeasure failed');
@@ -122,7 +112,7 @@ export function SimulationView() {
   const sendWhatIf = async (body: Record<string, unknown>) => {
     setBusy(true);
     try {
-      const result = await postJson<Record<string, unknown>>('/simulation/what-if', body);
+      const result = await postJson<Record<string, unknown>>(backendUrl('/simulation/what-if'), body);
       console.info('What-If result', result);
       setError(null);
     } catch (exc) {

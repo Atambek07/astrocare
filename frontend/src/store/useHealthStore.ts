@@ -140,7 +140,7 @@ export const useHealthStore = create<HealthState>()(
       xp: 0,
 
       set: (p) => set(p),
-      setDay: (d) => set({ day: Math.max(0, Math.min(180, Math.round(d))) }),
+      setDay: (d) => set({ day: Math.max(1, Math.min(180, Math.round(d))) }),
       setAstronaut: (id) => {
         if (id === get().astronautId) return;
         set({ astronautId: id, ticks: [], level: null, prevLevel: null, selectedZone: null, levelSince: Date.now() });

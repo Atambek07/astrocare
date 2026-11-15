@@ -1,0 +1,43 @@
+{
+  "timestamp": "2026-11-15T04:29:12Z",
+  "commit": "0e2c6cfe367166074ba432331bc65aa72b5782ea",
+  "environment": {
+    "python": "3.12.3",
+    "node": "v24.15.0",
+    "doctor_mode": "offline_deterministic"
+  },
+  "commands": [
+    "scripts/test_backend.sh",
+    "scripts/test_frontend.sh",
+    "scripts/test_data_pipeline.sh",
+    "scripts/test_simulation.sh",
+    "scripts/test_integration.sh",
+    "scripts/test_e2e.sh",
+    "scripts/test_frontend_build.sh",
+    "shared/generate_contracts_schema.py --check",
+    "scripts/check_docs.sh"
+  ],
+  "test_counts": {
+    "backend_passed": 656,
+    "frontend_passed": 39,
+    "data_pipeline_passed": 10,
+    "simulation_passed": 30,
+    "integration_passed": 7
+  },
+  "checks": {
+    "backend": true,
+    "frontend": true,
+    "data_pipeline": true,
+    "simulation": true,
+    "integration": true,
+    "end_to_end_service": true,
+    "frontend_build": true,
+    "shared_schema": true,
+    "documentation_links": true
+  },
+  "failure_count": 0,
+  "skipped_count": 0,
+  "blocked_checks": [],
+  "build_status": "PASSED",
+  "readiness_status": "READY_WITH_LIMITATIONS"
+}

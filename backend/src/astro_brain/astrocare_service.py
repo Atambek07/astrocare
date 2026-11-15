@@ -39,8 +39,8 @@ from simulation_engine import SimulationController  # noqa: E402
 
 # Маппинг внутренних симуляционных ID на публичные ID AstroCare.
 ASTRONAUT_ID_MAP: dict[str, str] = {
-    "A1": "ASTRO-01",
-    "A2": "ASTRO-02",
+    "A1": "astro-01",
+    "A2": "astro-02",
 }
 
 
@@ -203,7 +203,7 @@ def build_astrocare_handler(
                 200,
                 {
                     "status": controller.get_state().model_dump(mode="json"),
-                    "astronauts": list(controller.astronaut_states),
+                    "astronauts": [public_astronaut_id(item) for item in controller.astronaut_states],
                     "environment": controller.get_environment_state(),
                     "mode": store.mode,
                 },

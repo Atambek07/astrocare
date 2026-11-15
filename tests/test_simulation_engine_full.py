@@ -101,6 +101,7 @@ def test_what_if_experiment_is_isolated() -> None:
     controller.config.numerical.output_step_seconds = 300
     controller._build_engines()
     controller.start()
+    controller.advance(600)
     baseline_snapshot = controller.snapshot_state()
     result = controller.run_what_if(
         WhatIfModification(
@@ -116,6 +117,42 @@ def test_what_if_experiment_is_isolated() -> None:
     assert result.experiment_results
     assert result.difference_metrics
     assert controller.snapshot_state() == baseline_snapshot
+
+
+def test_what_if_sleep_delta_actually_changes_sleep_debt() -> None:
+    """A negative sleep-opportunity experiment must increase modeled sleep debt."""
+    controller = SimulationController()
+    controller.config.numerical.internal_step_seconds = 86400
+    controller.config.numerical.output_step_seconds = 86400
+    controller._build_engines()
+    controller.start()
+    baseline = controller.run_what_if(WhatIfModification(), 5 * 86400, experiment_id="SLEEP_BASELINE")
+    experiment = controller.run_what_if(
+        WhatIfModification(sleep_duration_delta_h=-2.0),
+        5 * 86400,
+        experiment_id="SLEEP_REDUCED",
+    )
+    baseline_debt = sum(value for key, value in baseline.difference_metrics.items() if key.endswith(".sleep_debt_h"))
+    reduced_debt = sum(value for key, value in experiment.difference_metrics.items() if key.endswith(".sleep_debt_h"))
+    assert reduced_debt > baseline_debt
+
+
+def test_what_if_missed_ared_actually_reduces_vo2max() -> None:
+    """A missed-ARED experiment must degrade modeled VO2max relative to baseline."""
+    controller = SimulationController()
+    controller.config.numerical.internal_step_seconds = 86400
+    controller.config.numerical.output_step_seconds = 86400
+    controller._build_engines()
+    controller.start()
+    baseline = controller.run_what_if(WhatIfModification(), 7 * 86400, experiment_id="ARED_BASELINE")
+    experiment = controller.run_what_if(
+        WhatIfModification(missed_ared_days=7),
+        7 * 86400,
+        experiment_id="ARED_MISSED",
+    )
+    baseline_vo2 = baseline.experiment_results["A1.vo2max"]
+    missed_vo2 = experiment.experiment_results["A1.vo2max"]
+    assert missed_vo2 < baseline_vo2
 
 
 def test_checkpoint_round_trip_restores_mission_time_and_state() -> None:
@@ -180,6 +217,16 @@ def test_mission_time_cannot_move_backward() -> None:
     with pytest.raises(ValueError):
         controller.clock.advance(-100)
     assert controller.clock.elapsed_seconds == before
+
+
+def test_unknown_countermeasure_is_rejected() -> None:
+    """Unknown countermeasures must fail instead of silently doing nothing."""
+    controller = SimulationController()
+    state = controller.astronaut_states["A1"]
+    before = state.physiology.vo2max
+    with pytest.raises(ValueError):
+        controller.apply_countermeasure("UNKNOWN_COUNTERMEASURE", astronaut_id="A1")
+    assert state.physiology.vo2max == before
 
 
 def test_scenario_termination_and_recovery() -> None:

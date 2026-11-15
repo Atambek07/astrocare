@@ -78,6 +78,11 @@ class CountermeasureEngine:
         elif countermeasure_type == "ENVIRONMENTAL_CORRECTION":
             state.stress = max(0.0, state.stress - 0.15 * effectiveness)
             state.fatigue = max(0.0, state.fatigue - 0.05 * effectiveness)
+        else:
+            raise ValueError(
+                "countermeasure_type must be ARED, AEROBIC_EXERCISE, "
+                "SLEEP_INTERVENTION, or ENVIRONMENTAL_CORRECTION"
+            )
 
     def update_daily(
         self,

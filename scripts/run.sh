@@ -19,7 +19,8 @@ BACKEND_PID=$!
 
 cd frontend
 if [ -d node_modules ]; then
-  NEXT_PUBLIC_BRAIN_WS_URL="ws://localhost:${ASTROCARE_WS_PORT:-8787}" npm run dev -- --port "$FRONTEND_PORT" &
+  NEXT_PUBLIC_BRAIN_WS_URL="ws://localhost:${ASTROCARE_WS_PORT:-8787}" \
+  NEXT_PUBLIC_BACKEND_HTTP_URL="http://localhost:${BACKEND_PORT}" npm run dev -- --port "$FRONTEND_PORT" &
 FRONTEND_PID=$!
 else
   echo "frontend/node_modules is missing; run scripts/setup.sh first." >&2

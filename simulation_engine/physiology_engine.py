@@ -188,7 +188,10 @@ class PhysiologyEngine:
             sleep_penalty *= 1.0 - self._profile.countermeasure.sleep_intervention_effectiveness.value
 
         sleep_duration = clamp(
-            sleep_need - sleep_penalty + self._rng.gauss(0.0, 0.35),
+            sleep_need
+            - sleep_penalty
+            + sleep.sleep_duration_delta_h.value
+            + self._rng.gauss(0.0, 0.35),
             (0.0, 24.0),
         )
         sleep_efficiency = clamp(

@@ -19,7 +19,9 @@ export function ActiveFlags({ tick, ticks, stale, max = 4 }: { tick: BrainTick |
 
   const flags = useMemo(() => {
     if (!tick) return [];
-    const recent = ticks.slice(-30);
+    const recent = ticks
+      .filter((item) => !tick?.astronautId || item.astronautId === tick.astronautId)
+      .slice(-30);
     return [...tick.activeFlags]
       .sort((a, b) => (a.severity === b.severity ? 0 : a.severity === 'critical' ? -1 : 1))
       .map((f) => {

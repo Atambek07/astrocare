@@ -188,7 +188,7 @@ def normalize_subject_identifier(
 def _parse_number(value: str) -> float | None:
     """Разобрать число, включая записи вида `<0.1`; не угадывать диапазоны."""
     cleaned = value.strip().replace(",", "")
-    if cleaned.upper() in MISSING_TOKENS:
+    if cleaned.casefold() in MISSING_TOKENS:
         return None
     if cleaned.startswith(("<", ">")):
         cleaned = cleaned[1:].strip()
@@ -209,7 +209,7 @@ def normalize_measurement(
     original_unit: str | None,
 ) -> NormalizedMeasurement:
     """Нормализовать одно измерение, сохранив original_value без изменений."""
-    if original_value is None or original_value.strip().upper() in MISSING_TOKENS:
+    if original_value is None or original_value.strip().casefold() in MISSING_TOKENS:
         return NormalizedMeasurement(
             metric_key=metric_key,
             original_value=original_value,

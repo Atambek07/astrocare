@@ -25,15 +25,15 @@ if str(_PROJECT_ROOT) not in sys.path:
 
 from pydantic.json_schema import models_json_schema  # noqa: E402
 
-from backend.app.schemas import CANONICAL_CONTRACTS  # noqa: E402
+from shared.contracts import CANONICAL_CONTRACTS  # noqa: E402
 
 SCHEMA_PATH = Path(__file__).resolve().parent / "contracts.schema.json"
 CYRILLIC = re.compile(r"[\u0400-\u04FF]")
 
 TOP_LEVEL = {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "$id": "https://astralis.space/contracts.schema.json",
-    "title": "ASTRALIS + IMPACT Canonical Data Contracts",
+    "$id": "https://astrocare.space/contracts.schema.json",
+    "title": "AstroCare Canonical Data Contracts",
     "description": (
         "Single cross-language contract for Python (Pydantic v2), TypeScript, and offline "
         "data bundles. Every measurement and derived feature references provenance records. "

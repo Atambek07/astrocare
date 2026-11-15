@@ -1,0 +1,1 @@
+{"version": 1, "required": {"anatomy": "/models/astronaut_anatomy.glb", "bodyMesh": "/models/astronaut_body.fbx"}, "optional": {"twin": null}}

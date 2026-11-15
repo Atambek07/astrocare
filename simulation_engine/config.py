@@ -116,6 +116,7 @@ class SleepParameters(BaseModel):
     sleep_debt_decay_rate: Coefficient
     stress_sleep_penalty: Coefficient
     environment_sleep_penalty: Coefficient
+    sleep_duration_delta_h: Coefficient
 
 
 class AdaptationParameters(BaseModel):

@@ -145,10 +145,18 @@ export function Twin3D({ zoneStatus, zones, sky }: { zoneStatus: Record<ZoneId, 
     set({ layerMode: LAYER_FOR[ZONES[selectedZone].layer] });
   }, [selectedZone, layerMode, set]);
   useEffect(() => {
-    // Swap in the Blender GLB automatically when it exists.
-    fetch('/models/astronaut_twin.glb', { method: 'HEAD' }).then((r) => {
-      if (r.ok && (r.headers.get('content-type') ?? '').includes('model')) setGlbUrl('/models/astronaut_twin.glb');
-    }).catch(() => undefined);
+    // Only request an optional custom twin model when the static asset manifest advertises it.
+    // This avoids a guaranteed 404 for an optional, user-supplied asset.
+    fetch('/models/astronaut_models.json')
+      .then((r) => (r.ok ? r.json() : null))
+      .then((manifest: { optional?: { twin?: string | null } } | null) => {
+        const twin = manifest?.optional?.twin;
+        if (!twin) return;
+        return fetch(twin, { method: 'HEAD' }).then((r) => {
+          if (r.ok && (r.headers.get('content-type') ?? '').includes('model')) setGlbUrl(twin);
+        });
+      })
+      .catch(() => undefined);
   }, []);
 
   const visuals = useMemo(() => {

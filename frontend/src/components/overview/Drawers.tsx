@@ -16,9 +16,16 @@ const RANGES: { id: TimeRange; label: string }[] = [{ id: '24h', label: '24 hour
 
 function Shell({ children, onClose, label }: { children: React.ReactNode; onClose: () => void; label: string }) {
   useEffect(() => {
-    const k = (e: KeyboardEvent) => { if (e.key === 'Escape') onClose(); };
-    window.addEventListener('keydown', k);
-    return () => window.removeEventListener('keydown', k);
+    // Capture-phase handler gives the topmost drawer dismissal priority over
+    // zone selection, dropdowns and other global Escape listeners.
+    const handleEscape = (event: KeyboardEvent) => {
+      if (event.key !== 'Escape') return;
+      event.stopPropagation();
+      event.preventDefault();
+      onClose();
+    };
+    window.addEventListener('keydown', handleEscape, { capture: true });
+    return () => window.removeEventListener('keydown', handleEscape, { capture: true });
   }, [onClose]);
   return (
     <motion.aside role="dialog" aria-label={label} initial={{ x: 40, opacity: 0 }} animate={{ x: 0, opacity: 1 }} exit={{ x: 40, opacity: 0 }} transition={{ duration: 0.2 }}

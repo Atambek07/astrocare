@@ -127,6 +127,7 @@ def _sleep(
         sleep_debt_decay_rate=_c("sleep_debt_decay_rate", sleep_debt_decay_rate, "1/day", "Sleep-debt repayment rate.", "Model assumption.", EvidenceLevel.MODEL_ASSUMPTION),
         stress_sleep_penalty=_c("stress_sleep_penalty", stress_sleep_penalty, "h per stress unit", "Sleep-duration reduction per stress unit.", "Model assumption.", EvidenceLevel.MODEL_ASSUMPTION),
         environment_sleep_penalty=_c("environment_sleep_penalty", environment_sleep_penalty, "h per environment-stress unit", "Sleep-duration reduction per environmental stress.", "Model assumption.", EvidenceLevel.MODEL_ASSUMPTION),
+        sleep_duration_delta_h=_c("sleep_duration_delta_h", 0.0, "h/day", "Configured sleep-opportunity delta used by What-If experiments.", "Synthetic experimental control.", EvidenceLevel.SYNTHETIC_DEMONSTRATION, adjustable=True),
     )
 
 

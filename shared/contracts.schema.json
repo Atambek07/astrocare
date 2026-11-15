@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://astralis.space/contracts.schema.json",
-  "title": "ASTRALIS + IMPACT Canonical Data Contracts",
+  "$id": "https://astrocare.space/contracts.schema.json",
+  "title": "AstroCare Canonical Data Contracts",
   "description": "Single cross-language contract for Python (Pydantic v2), TypeScript, and offline data bundles. Every measurement and derived feature references provenance records. Field names and descriptions are English; Russian is allowed only in source comments.",
   "oneOf": [
     {

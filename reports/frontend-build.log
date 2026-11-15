@@ -1,0 +1,30 @@
+
+> astrocare-core@0.1.0 build
+> next build
+
+  ▲ Next.js 14.2.35
+
+   Creating an optimized production build ...
+ ✓ Compiled successfully
+   Linting and checking validity of types ...
+   Collecting page data ...
+   Generating static pages (0/5) ...
+   Generating static pages (1/5) 
+   Generating static pages (2/5) 
+   Generating static pages (3/5) 
+ ✓ Generating static pages (5/5)
+   Finalizing page optimization ...
+   Collecting build traces ...
+
+Route (app)                              Size     First Load JS
+┌ ○ /                                    1.4 kB         89.1 kB
+├ ○ /_not-found                          876 B          88.6 kB
+└ ○ /crew                                1.4 kB         89.1 kB
++ First Load JS shared by all            87.7 kB
+  ├ chunks/117-6676095a5e51c512.js       31.9 kB
+  ├ chunks/fd9d1056-aa9b9ca480dc9276.js  53.6 kB
+  └ other shared chunks (total)          2.2 kB
+
+
+○  (Static)  prerendered as static content
+

@@ -139,9 +139,13 @@ class WhatIfEngine:
                     0.0,
                     modification.sleep_intervention_effectiveness,
                 )
+        if modification.missed_ared_days > 0 and modification.scenario_id is None:
+            controller.inject_scenario("MISSED_ARED")
+        if modification.sleep_duration_delta_h:
+            for profile in config.profiles:
+                profile.sleep.sleep_duration_delta_h.value = modification.sleep_duration_delta_h
         if modification.scenario_id:
             controller.inject_scenario(modification.scenario_id)
-        controller.reload_config(config)
         return controller
 
     def _extract_metrics(self, state: dict[str, Any]) -> dict[str, float]:

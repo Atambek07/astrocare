@@ -43,7 +43,11 @@ export function useDashboard() {
   const result = useMemo(() => triage(astronaut, log, history), [astronaut, log, history]);
   const scores = useMemo(() => allScores(astronaut, log, result), [astronaut, log, result]);
 
-  const tick = ticks[ticks.length - 1] ?? null;
+  const selectedTicks = useMemo(
+    () => ticks.filter((item) => item.astronautId?.toLowerCase() === astronautId.toLowerCase()),
+    [ticks, astronautId],
+  );
+  const tick = selectedTicks[selectedTicks.length - 1] ?? null;
   const fresh = freshnessOf(lastTickAt, now);
 
   const zoneStatus = useMemo(() => {

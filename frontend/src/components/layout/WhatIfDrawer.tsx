@@ -1,4 +1,5 @@
 'use client';
+import { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { FlaskConical, X } from 'lucide-react';
 import { useHealthStore } from '@/store/useHealthStore';
@@ -8,6 +9,18 @@ export function WhatIfDrawer() {
   const whatIfs = useHealthStore((s) => s.whatIfs);
   const toggle = useHealthStore((s) => s.toggleWhatIf);
   const set = useHealthStore((s) => s.set);
+
+  useEffect(() => {
+    const handleEscape = (event: KeyboardEvent) => {
+      if (event.key !== 'Escape') return;
+      event.stopPropagation();
+      event.preventDefault();
+      set({ whatIfOpen: false });
+    };
+    window.addEventListener('keydown', handleEscape, { capture: true });
+    return () => window.removeEventListener('keydown', handleEscape, { capture: true });
+  }, [set]);
+
   return (
     <motion.div initial={{ y: -10, opacity: 0 }} animate={{ y: 0, opacity: 1 }} exit={{ y: -10, opacity: 0 }}
       className="glass rounded-xl p-3" aria-label="What-if simulator">
