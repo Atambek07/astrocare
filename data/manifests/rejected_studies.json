@@ -1,0 +1,58 @@
+[
+  {
+    "study_id": "OSD-1",
+    "title": "Expression data from drosophila melanogaster",
+    "rejection_reason": "Rejected: low human-relevance score or non-human study without a radiation/environmental role.",
+    "relevance_score": 20.0,
+    "source_url": "https://osdr.nasa.gov/bio/repo/data/studies/OSD-1"
+  },
+  {
+    "study_id": "OSD-272",
+    "title": "Transcriptional analysis of spleens from mice preserved with the Rapid Freeze hardware",
+    "rejection_reason": "Rejected: low human-relevance score or non-human study without a radiation/environmental role.",
+    "relevance_score": 20.0,
+    "source_url": "https://osdr.nasa.gov/bio/repo/data/studies/OSD-272"
+  },
+  {
+    "study_id": "OSD-274",
+    "title": "Transcriptional analysis of soleus from mice preserved with the Rapid Freeze hardware",
+    "rejection_reason": "Rejected: low human-relevance score or non-human study without a radiation/environmental role.",
+    "relevance_score": 20.0,
+    "source_url": "https://osdr.nasa.gov/bio/repo/data/studies/OSD-274"
+  },
+  {
+    "study_id": "OSD-279",
+    "title": "International Space Station flight project EXTREMOPHILES",
+    "rejection_reason": "Rejected: low human-relevance score or non-human study without a radiation/environmental role.",
+    "relevance_score": 20.0,
+    "source_url": "https://osdr.nasa.gov/bio/repo/data/studies/OSD-279"
+  },
+  {
+    "study_id": "OSD-61",
+    "title": "Effect of a 91 day long stay in weightlessness on the International Space Station on mouse skin physiology",
+    "rejection_reason": "Rejected: low human-relevance score or non-human study without a radiation/environmental role.",
+    "relevance_score": 20.0,
+    "source_url": "https://osdr.nasa.gov/bio/repo/data/studies/OSD-61"
+  },
+  {
+    "study_id": "OSD-618",
+    "title": "Combined space stressors induce independent behavioral deficits predicted by early peripheral blood monocytes (Behavioral Assays)",
+    "rejection_reason": "Rejected: low human-relevance score or non-human study without a radiation/environmental role.",
+    "relevance_score": 20.0,
+    "source_url": "https://osdr.nasa.gov/bio/repo/data/studies/OSD-618"
+  },
+  {
+    "study_id": "OSD-640",
+    "title": "Combined space stressors induce independent behavioral deficits predicted by early peripheral blood monocytes (flow cytometry)",
+    "rejection_reason": "Rejected: low human-relevance score or non-human study without a radiation/environmental role.",
+    "relevance_score": 20.0,
+    "source_url": "https://osdr.nasa.gov/bio/repo/data/studies/OSD-640"
+  },
+  {
+    "study_id": "OSD-980",
+    "title": "Cold stress during room temperature housing alters skeletal response to simulated microgravity (hindlimb unloading) in growing female C57BL6 mice.",
+    "rejection_reason": "Rejected: low human-relevance score or non-human study without a radiation/environmental role.",
+    "relevance_score": 20.0,
+    "source_url": "https://osdr.nasa.gov/bio/repo/data/studies/OSD-980"
+  }
+]

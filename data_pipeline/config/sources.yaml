@@ -1,0 +1,45 @@
+# NASA OSDR source configuration for SPEC 1.
+# Identifiers and endpoints were verified on 2026-11-14.
+
+osdr:
+  base_url: https://osdr.nasa.gov
+  metadata_path: /osdr/data/osd/meta/{study_number}
+  file_index_path: /osdr/data/osd/files/{study_number}
+  search_path: /osdr/data/search
+  search_parameter: term
+  pagination:
+    parameter_size: size
+    parameter_offset: from
+  identifier_format: OSD-<number>
+  numeric_metadata_id_required: true
+
+verified_core_studies:
+  - OSD-569
+  - OSD-570
+  - OSD-571
+  - OSD-572
+  - OSD-573
+  - OSD-575
+  - OSD-656
+
+supporting_radiation_studies:
+  - OSD-73
+  - OSD-410
+  - OSD-896
+  - OSD-897
+
+rejected_non_radiation_studies:
+  OSD-977: "Rat bone study, not radiation evidence."
+  OSD-968: "Hippocampal neuron study, not radiation evidence."
+  OSD-898: "Mouse blood-brain barrier study, not radiation evidence."
+  OSD-989: "Spacecraft bioburden study, not radiation evidence."
+
+offline_mode:
+  environment_variable: ASTRALIS_OFFLINE_DATA
+  accepted_values: ["1", "true", "yes"]
+  behavior: "Return cached JSON when available; never fabricate missing NASA data."
+
+redistribution_policy:
+  preserve_originals_under: data_bundle/raw/nasa
+  allowed_when: "File is visible, not restricted, and small enough for the selected-file policy."
+  restricted_files_downloaded: 0

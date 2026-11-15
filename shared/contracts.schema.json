@@ -1,0 +1,3800 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://astralis.space/contracts.schema.json",
+  "title": "ASTRALIS + IMPACT Canonical Data Contracts",
+  "description": "Single cross-language contract for Python (Pydantic v2), TypeScript, and offline data bundles. Every measurement and derived feature references provenance records. Field names and descriptions are English; Russian is allowed only in source comments.",
+  "oneOf": [
+    {
+      "$ref": "#/$defs/ProvenanceRecord"
+    },
+    {
+      "$ref": "#/$defs/ProvenanceManifest"
+    },
+    {
+      "$ref": "#/$defs/StreamTick"
+    },
+    {
+      "$ref": "#/$defs/DailyTelemetryLog"
+    },
+    {
+      "$ref": "#/$defs/NasaStudyRecord"
+    },
+    {
+      "$ref": "#/$defs/NasaDatasetRecord"
+    },
+    {
+      "$ref": "#/$defs/PhaseBaseline"
+    },
+    {
+      "$ref": "#/$defs/TriageAssessment"
+    },
+    {
+      "$ref": "#/$defs/DetectorResult"
+    },
+    {
+      "$ref": "#/$defs/ImpactForecast"
+    },
+    {
+      "$ref": "#/$defs/SbarMedicalReport"
+    },
+    {
+      "$ref": "#/$defs/AstronautProfile"
+    },
+    {
+      "$ref": "#/$defs/AnomalyManifestEntry"
+    },
+    {
+      "$ref": "#/$defs/NasaEvidenceCard"
+    },
+    {
+      "$ref": "#/$defs/TriageProtocol"
+    },
+    {
+      "$ref": "#/$defs/MedicalGuideline"
+    },
+    {
+      "$ref": "#/$defs/LaboratoryPanel"
+    }
+  ],
+  "$defs": {
+    "AnomalyManifestEntry": {
+      "additionalProperties": false,
+      "properties": {
+        "anomaly_id": {
+          "minLength": 1,
+          "title": "Anomaly Id",
+          "type": "string"
+        },
+        "astronaut_id": {
+          "minLength": 1,
+          "title": "Astronaut Id",
+          "type": "string"
+        },
+        "detector_id": {
+          "$ref": "#/$defs/DetectorId"
+        },
+        "label": {
+          "description": "English anomaly label",
+          "minLength": 1,
+          "title": "Label",
+          "type": "string"
+        },
+        "onset_utc": {
+          "title": "Onset Utc",
+          "type": "string"
+        },
+        "yellow_utc": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Yellow Utc"
+        },
+        "red_utc": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Red Utc"
+        },
+        "peak_utc": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Peak Utc"
+        },
+        "recovery_utc": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Recovery Utc"
+        },
+        "affected_systems": {
+          "items": {
+            "$ref": "#/$defs/BodySystemId"
+          },
+          "title": "Affected Systems",
+          "type": "array"
+        },
+        "description": {
+          "description": "English description of the seeded anomaly",
+          "minLength": 1,
+          "title": "Description",
+          "type": "string"
+        },
+        "source_type": {
+          "$ref": "#/$defs/SourceType"
+        },
+        "provenance_ids": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Provenance Ids",
+          "type": "array"
+        },
+        "scenario_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Scenario Id"
+        },
+        "anomaly_type": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Anomaly Type"
+        },
+        "start_timestamp": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Start Timestamp"
+        },
+        "yellow_timestamp": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Yellow Timestamp"
+        },
+        "red_timestamp": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Red Timestamp"
+        },
+        "peak_timestamp": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Peak Timestamp"
+        },
+        "recovery_timestamp": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Recovery Timestamp"
+        },
+        "affected_metrics": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Affected Metrics",
+          "type": "array"
+        },
+        "expected_triage_status": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/TriageStatus"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "expected_trigger_conditions": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Expected Trigger Conditions",
+          "type": "array"
+        },
+        "scenario_configuration": {
+          "anyOf": [
+            {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Scenario Configuration"
+        },
+        "scientific_rationale": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Scientific Rationale"
+        },
+        "evidence_references": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Evidence References",
+          "type": "array"
+        }
+      },
+      "required": [
+        "anomaly_id",
+        "astronaut_id",
+        "detector_id",
+        "label",
+        "onset_utc",
+        "yellow_utc",
+        "red_utc",
+        "peak_utc",
+        "recovery_utc",
+        "affected_systems",
+        "description",
+        "source_type",
+        "provenance_ids"
+      ],
+      "title": "AnomalyManifestEntry",
+      "type": "object"
+    },
+    "AstronautProfile": {
+      "additionalProperties": false,
+      "properties": {
+        "astronaut_id": {
+          "minLength": 1,
+          "title": "Astronaut Id",
+          "type": "string"
+        },
+        "display_name": {
+          "minLength": 1,
+          "title": "Display Name",
+          "type": "string"
+        },
+        "mission_role": {
+          "description": "e.g. Commander, Medical Officer",
+          "minLength": 1,
+          "title": "Mission Role",
+          "type": "string"
+        },
+        "age": {
+          "maximum": 80,
+          "minimum": 18,
+          "title": "Age",
+          "type": "integer"
+        },
+        "sex": {
+          "$ref": "#/$defs/BiologicalSex"
+        },
+        "height_cm": {
+          "maximum": 230.0,
+          "minimum": 120.0,
+          "title": "Height Cm",
+          "type": "number"
+        },
+        "mass_kg": {
+          "maximum": 200.0,
+          "minimum": 35.0,
+          "title": "Mass Kg",
+          "type": "number"
+        },
+        "mission_name": {
+          "minLength": 1,
+          "title": "Mission Name",
+          "type": "string"
+        },
+        "mission_duration_days": {
+          "maximum": 3650,
+          "minimum": 1,
+          "title": "Mission Duration Days",
+          "type": "integer"
+        },
+        "is_control": {
+          "description": "A2 healthy control flag",
+          "title": "Is Control",
+          "type": "boolean"
+        },
+        "source_type": {
+          "$ref": "#/$defs/SourceType",
+          "description": "SYNTHETIC demo crew must never be presented as real NASA astronauts"
+        },
+        "provenance_ids": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Provenance Ids",
+          "type": "array"
+        }
+      },
+      "required": [
+        "astronaut_id",
+        "display_name",
+        "mission_role",
+        "age",
+        "sex",
+        "height_cm",
+        "mass_kg",
+        "mission_name",
+        "mission_duration_days",
+        "is_control",
+        "source_type",
+        "provenance_ids"
+      ],
+      "title": "AstronautProfile",
+      "type": "object"
+    },
+    "BiologicalSex": {
+      "enum": [
+        "FEMALE",
+        "MALE",
+        "OTHER"
+      ],
+      "title": "BiologicalSex",
+      "type": "string"
+    },
+    "BodySystemId": {
+      "enum": [
+        "CARDIOVASCULAR",
+        "NEURO_OCULAR_SANS",
+        "NEURO_BEHAVIORAL",
+        "RESPIRATORY_ENV",
+        "ENDOCRINE_METABOLIC",
+        "IMMUNE_MUSCULOSKELETAL"
+      ],
+      "title": "BodySystemId",
+      "type": "string"
+    },
+    "CommDelayProfile": {
+      "enum": [
+        "LEO",
+        "LUNAR",
+        "MARS"
+      ],
+      "title": "CommDelayProfile",
+      "type": "string"
+    },
+    "DailyTelemetryLog": {
+      "additionalProperties": false,
+      "properties": {
+        "timestamp": {
+          "description": "ISO-8601 UTC timestamp for the daily record",
+          "title": "Timestamp",
+          "type": "string"
+        },
+        "mission_day": {
+          "maximum": 3650,
+          "minimum": 1,
+          "title": "Mission Day",
+          "type": "integer"
+        },
+        "mission_phase": {
+          "$ref": "#/$defs/MissionPhase"
+        },
+        "astronaut_id": {
+          "minLength": 1,
+          "title": "Astronaut Id",
+          "type": "string"
+        },
+        "source_type": {
+          "$ref": "#/$defs/SourceType"
+        },
+        "hr": {
+          "maximum": 250.0,
+          "minimum": 20.0,
+          "title": "Hr",
+          "type": "number"
+        },
+        "hrv_rmssd": {
+          "maximum": 300.0,
+          "minimum": 0.0,
+          "title": "Hrv Rmssd",
+          "type": "number"
+        },
+        "spo2": {
+          "maximum": 100.0,
+          "minimum": 50.0,
+          "title": "Spo2",
+          "type": "number"
+        },
+        "systolic_bp": {
+          "maximum": 260,
+          "minimum": 50,
+          "title": "Systolic Bp",
+          "type": "integer"
+        },
+        "diastolic_bp": {
+          "maximum": 160,
+          "minimum": 20,
+          "title": "Diastolic Bp",
+          "type": "integer"
+        },
+        "temp_c": {
+          "maximum": 45.0,
+          "minimum": 30.0,
+          "title": "Temp C",
+          "type": "number"
+        },
+        "resp_rate": {
+          "maximum": 60.0,
+          "minimum": 4.0,
+          "title": "Resp Rate",
+          "type": "number"
+        },
+        "cabin_ppco2": {
+          "maximum": 20.0,
+          "minimum": 0.0,
+          "title": "Cabin Ppco2",
+          "type": "number"
+        },
+        "radiation_dose_rate": {
+          "maximum": 1000.0,
+          "minimum": 0.0,
+          "title": "Radiation Dose Rate",
+          "type": "number"
+        },
+        "iop_mmhg": {
+          "maximum": 60.0,
+          "minimum": 0.0,
+          "title": "Iop Mmhg",
+          "type": "number"
+        },
+        "pvt_slowest10_rt": {
+          "maximum": 1000.0,
+          "minimum": 100.0,
+          "title": "Pvt Slowest10 Rt",
+          "type": "number"
+        },
+        "sleep_duration_h": {
+          "description": "Total sleep time, hours",
+          "maximum": 24.0,
+          "minimum": 0.0,
+          "title": "Sleep Duration H",
+          "type": "number"
+        },
+        "sleep_efficiency_pct": {
+          "description": "Sleep efficiency, %",
+          "maximum": 100.0,
+          "minimum": 0.0,
+          "title": "Sleep Efficiency Pct",
+          "type": "number"
+        },
+        "sleep_shift_active": {
+          "description": "Slam-shift / circadian misalignment flag",
+          "title": "Sleep Shift Active",
+          "type": "boolean"
+        },
+        "mood_stress_vas": {
+          "description": "Stress visual analogue scale, 0-100",
+          "maximum": 100.0,
+          "minimum": 0.0,
+          "title": "Mood Stress Vas",
+          "type": "number"
+        },
+        "pvt_mean_rt_ms": {
+          "description": "PVT-B mean reaction time, ms",
+          "maximum": 2000.0,
+          "minimum": 100.0,
+          "title": "Pvt Mean Rt Ms",
+          "type": "number"
+        },
+        "pvt_lapses_count": {
+          "description": "Number of PVT-B lapses (>500 ms)",
+          "maximum": 100,
+          "minimum": 0,
+          "title": "Pvt Lapses Count",
+          "type": "integer"
+        },
+        "fluid_shift_index": {
+          "description": "Cephalad fluid shift index, 0-3",
+          "maximum": 3.0,
+          "minimum": 0.0,
+          "title": "Fluid Shift Index",
+          "type": "number"
+        },
+        "sans_visual_symptoms": {
+          "description": "Visual symptoms consistent with SANS",
+          "title": "Sans Visual Symptoms",
+          "type": "boolean"
+        },
+        "daily_radiation_msv": {
+          "description": "Daily dose, mSv",
+          "maximum": 1000.0,
+          "minimum": 0.0,
+          "title": "Daily Radiation Msv",
+          "type": "number"
+        },
+        "cumulative_radiation_msv": {
+          "description": "Cumulative mission dose, mSv",
+          "maximum": 5000.0,
+          "minimum": 0.0,
+          "title": "Cumulative Radiation Msv",
+          "type": "number"
+        },
+        "ared_exercise_completed": {
+          "description": "ARED resistance exercise completed",
+          "title": "Ared Exercise Completed",
+          "type": "boolean"
+        },
+        "vo2max_ml_kg_min": {
+          "description": "VO2max, mL/kg/min",
+          "maximum": 100.0,
+          "minimum": 0.0,
+          "title": "Vo2Max Ml Kg Min",
+          "type": "number"
+        },
+        "respiratory_exchange_ratio": {
+          "description": "Metabolic RQ (DET-07 input)",
+          "maximum": 1.4,
+          "minimum": 0.6,
+          "title": "Respiratory Exchange Ratio",
+          "type": "number"
+        },
+        "provenance_ids": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Provenance Ids",
+          "type": "array"
+        }
+      },
+      "required": [
+        "timestamp",
+        "mission_day",
+        "mission_phase",
+        "astronaut_id",
+        "source_type",
+        "hr",
+        "hrv_rmssd",
+        "spo2",
+        "systolic_bp",
+        "diastolic_bp",
+        "temp_c",
+        "resp_rate",
+        "cabin_ppco2",
+        "radiation_dose_rate",
+        "iop_mmhg",
+        "pvt_slowest10_rt",
+        "sleep_duration_h",
+        "sleep_efficiency_pct",
+        "sleep_shift_active",
+        "mood_stress_vas",
+        "pvt_mean_rt_ms",
+        "pvt_lapses_count",
+        "fluid_shift_index",
+        "sans_visual_symptoms",
+        "daily_radiation_msv",
+        "cumulative_radiation_msv",
+        "ared_exercise_completed",
+        "vo2max_ml_kg_min",
+        "respiratory_exchange_ratio",
+        "provenance_ids"
+      ],
+      "title": "DailyTelemetryLog",
+      "type": "object"
+    },
+    "DataModality": {
+      "enum": [
+        "CONTINUOUS_TELEMETRY",
+        "DAILY_AGGREGATE",
+        "LAB_PANEL",
+        "OMICS",
+        "MICROBIOME",
+        "ENVIRONMENTAL",
+        "RADIATION",
+        "QUESTIONNAIRE",
+        "IMAGING",
+        "OTHER"
+      ],
+      "title": "DataModality",
+      "type": "string"
+    },
+    "DatasetCategory": {
+      "enum": [
+        "DIRECT_HUMAN_SPACEFLIGHT",
+        "HUMAN_SPACEFLIGHT_ANALOG",
+        "SUPPORTING_BIOLOGICAL_EVIDENCE",
+        "ENVIRONMENTAL_TELEMETRY",
+        "RADIATION_EVIDENCE",
+        "OTHER_RELEVANT_RESEARCH"
+      ],
+      "title": "DatasetCategory",
+      "type": "string"
+    },
+    "DetectorId": {
+      "enum": [
+        "DET-01",
+        "DET-02",
+        "DET-03",
+        "DET-04",
+        "DET-05",
+        "DET-06",
+        "DET-07"
+      ],
+      "title": "DetectorId",
+      "type": "string"
+    },
+    "DetectorResult": {
+      "additionalProperties": false,
+      "properties": {
+        "detector_id": {
+          "$ref": "#/$defs/DetectorId"
+        },
+        "name": {
+          "description": "Short English detector name",
+          "minLength": 1,
+          "title": "Name",
+          "type": "string"
+        },
+        "triggered": {
+          "title": "Triggered",
+          "type": "boolean"
+        },
+        "severity": {
+          "$ref": "#/$defs/DetectorSeverity"
+        },
+        "confidence": {
+          "maximum": 1.0,
+          "minimum": 0.0,
+          "title": "Confidence",
+          "type": "number"
+        },
+        "clinical_summary": {
+          "description": "English plain-language summary",
+          "minLength": 1,
+          "title": "Clinical Summary",
+          "type": "string"
+        },
+        "nasa_references": {
+          "description": "NASA report IDs and document codes",
+          "items": {
+            "type": "string"
+          },
+          "title": "Nasa References",
+          "type": "array"
+        },
+        "recommended_action": {
+          "description": "English countermeasure recommendation",
+          "minLength": 1,
+          "title": "Recommended Action",
+          "type": "string"
+        },
+        "threshold_source": {
+          "$ref": "#/$defs/ThresholdSource"
+        },
+        "data_completeness_pct": {
+          "maximum": 100.0,
+          "minimum": 0.0,
+          "title": "Data Completeness Pct",
+          "type": "number"
+        },
+        "model_version": {
+          "minLength": 1,
+          "title": "Model Version",
+          "type": "string"
+        },
+        "provenance_ids": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Provenance Ids",
+          "type": "array"
+        }
+      },
+      "required": [
+        "detector_id",
+        "name",
+        "triggered",
+        "severity",
+        "confidence",
+        "clinical_summary",
+        "nasa_references",
+        "recommended_action",
+        "threshold_source",
+        "data_completeness_pct",
+        "model_version",
+        "provenance_ids"
+      ],
+      "title": "DetectorResult",
+      "type": "object"
+    },
+    "DetectorSeverity": {
+      "enum": [
+        "LOW",
+        "MODERATE",
+        "HIGH",
+        "CRITICAL"
+      ],
+      "title": "DetectorSeverity",
+      "type": "string"
+    },
+    "EvidenceLevel": {
+      "enum": [
+        "NASA_OFFICIAL_REQUIREMENT",
+        "NASA_TECHNICAL_GUIDANCE",
+        "PEER_REVIEWED_FINDING",
+        "RESEARCH_REFERENCE",
+        "PROJECT_SIMULATION_ASSUMPTION"
+      ],
+      "title": "EvidenceLevel",
+      "type": "string"
+    },
+    "FallbackStatus": {
+      "enum": [
+        "NONE",
+        "CACHE_FALLBACK",
+        "SYNTHETIC_FALLBACK",
+        "UNAVAILABLE"
+      ],
+      "title": "FallbackStatus",
+      "type": "string"
+    },
+    "ForecastMetric": {
+      "enum": [
+        "cabin_ppco2",
+        "hr",
+        "hrv_rmssd",
+        "spo2",
+        "pvt_slowest10_rt",
+        "mfi_risk_score",
+        "vo2max_ml_kg_min",
+        "cumulative_radiation_msv"
+      ],
+      "title": "ForecastMetric",
+      "type": "string"
+    },
+    "ImpactForecast": {
+      "additionalProperties": false,
+      "properties": {
+        "astronaut_id": {
+          "minLength": 1,
+          "title": "Astronaut Id",
+          "type": "string"
+        },
+        "generated_at_utc": {
+          "description": "ISO-8601 UTC timestamp of forecast generation",
+          "title": "Generated At Utc",
+          "type": "string"
+        },
+        "short_term_horizons": {
+          "items": {
+            "$ref": "#/$defs/ShortTermHorizonPrediction"
+          },
+          "title": "Short Term Horizons",
+          "type": "array"
+        },
+        "time_to_threshold_alerts": {
+          "items": {
+            "$ref": "#/$defs/TimeToThresholdAlert"
+          },
+          "title": "Time To Threshold Alerts",
+          "type": "array"
+        },
+        "long_term_trajectory": {
+          "items": {
+            "$ref": "#/$defs/LongTermTrajectoryPoint"
+          },
+          "title": "Long Term Trajectory",
+          "type": "array"
+        },
+        "model_version": {
+          "minLength": 1,
+          "title": "Model Version",
+          "type": "string"
+        },
+        "confidence_score": {
+          "maximum": 1.0,
+          "minimum": 0.0,
+          "title": "Confidence Score",
+          "type": "number"
+        },
+        "is_low_confidence": {
+          "description": "True when confidence_score is below the documented threshold",
+          "title": "Is Low Confidence",
+          "type": "boolean"
+        },
+        "data_completeness_pct": {
+          "maximum": 100.0,
+          "minimum": 0.0,
+          "title": "Data Completeness Pct",
+          "type": "number"
+        },
+        "missing_metrics": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Missing Metrics",
+          "type": "array"
+        },
+        "provenance_ids": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Provenance Ids",
+          "type": "array"
+        }
+      },
+      "required": [
+        "astronaut_id",
+        "generated_at_utc",
+        "short_term_horizons",
+        "time_to_threshold_alerts",
+        "long_term_trajectory",
+        "model_version",
+        "confidence_score",
+        "is_low_confidence",
+        "data_completeness_pct",
+        "missing_metrics",
+        "provenance_ids"
+      ],
+      "title": "ImpactForecast",
+      "type": "object"
+    },
+    "IngestionStatus": {
+      "enum": [
+        "DISCOVERED",
+        "CATALOGUED",
+        "DOWNLOADED",
+        "PROCESSED",
+        "REJECTED",
+        "UNAVAILABLE"
+      ],
+      "title": "IngestionStatus",
+      "type": "string"
+    },
+    "LaboratoryPanel": {
+      "additionalProperties": false,
+      "properties": {
+        "panel_id": {
+          "minLength": 1,
+          "title": "Panel Id",
+          "type": "string"
+        },
+        "astronaut_id": {
+          "minLength": 1,
+          "title": "Astronaut Id",
+          "type": "string"
+        },
+        "collected_at_utc": {
+          "title": "Collected At Utc",
+          "type": "string"
+        },
+        "mission_day": {
+          "maximum": 3650,
+          "minimum": 1,
+          "title": "Mission Day",
+          "type": "integer"
+        },
+        "panel_type": {
+          "description": "CBC | CMP | CYTOKINES",
+          "minLength": 1,
+          "title": "Panel Type",
+          "type": "string"
+        },
+        "source_type": {
+          "$ref": "#/$defs/SourceType",
+          "description": "NASA_REAL for published panels, SYNTHETIC for demo panels"
+        },
+        "results": {
+          "additionalProperties": {
+            "type": "number"
+          },
+          "description": "Analyte -> normalized value in SI units",
+          "title": "Results",
+          "type": "object"
+        },
+        "interpretation": {
+          "description": "English clinical interpretation",
+          "minLength": 1,
+          "title": "Interpretation",
+          "type": "string"
+        },
+        "data_completeness_pct": {
+          "maximum": 100.0,
+          "minimum": 0.0,
+          "title": "Data Completeness Pct",
+          "type": "number"
+        },
+        "provenance_ids": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Provenance Ids",
+          "type": "array"
+        },
+        "subject_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Subject Id"
+        },
+        "source_study_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Source Study Ids",
+          "type": "array"
+        },
+        "sample_type": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Sample Type"
+        },
+        "quality_status": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/QualityStatus"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "results_detail": {
+          "items": {
+            "$ref": "#/$defs/LaboratoryResult"
+          },
+          "title": "Results Detail",
+          "type": "array"
+        }
+      },
+      "required": [
+        "panel_id",
+        "astronaut_id",
+        "collected_at_utc",
+        "mission_day",
+        "panel_type",
+        "source_type",
+        "results",
+        "interpretation",
+        "data_completeness_pct",
+        "provenance_ids"
+      ],
+      "title": "LaboratoryPanel",
+      "type": "object"
+    },
+    "LaboratoryResult": {
+      "additionalProperties": false,
+      "properties": {
+        "result_id": {
+          "minLength": 1,
+          "title": "Result Id",
+          "type": "string"
+        },
+        "test_name": {
+          "description": "Original analyte/test name",
+          "minLength": 1,
+          "title": "Test Name",
+          "type": "string"
+        },
+        "value": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "Normalized numeric value; null if missing",
+          "title": "Value"
+        },
+        "original_value": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "Unmodified source value",
+          "title": "Original Value"
+        },
+        "unit": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "Original reported unit",
+          "title": "Unit"
+        },
+        "normalized_unit": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "Documented normalized unit; null if ambiguous",
+          "title": "Normalized Unit"
+        },
+        "sample_type": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Sample Type"
+        },
+        "collection_timepoint": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Collection Timepoint"
+        },
+        "subject_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Subject Id"
+        },
+        "source_study_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Source Study Id"
+        },
+        "source_file": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Source File"
+        },
+        "reference_interval_low": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Reference Interval Low"
+        },
+        "reference_interval_high": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Reference Interval High"
+        },
+        "assay_method": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Assay Method"
+        },
+        "quality_status": {
+          "$ref": "#/$defs/QualityStatus"
+        },
+        "provenance_id": {
+          "minLength": 1,
+          "title": "Provenance Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "result_id",
+        "test_name",
+        "value",
+        "original_value",
+        "unit",
+        "normalized_unit",
+        "quality_status",
+        "provenance_id"
+      ],
+      "title": "LaboratoryResult",
+      "type": "object"
+    },
+    "LongTermTrajectoryPoint": {
+      "additionalProperties": false,
+      "properties": {
+        "horizon_days": {
+          "enum": [
+            7,
+            30,
+            90
+          ],
+          "title": "Horizon Days",
+          "type": "integer"
+        },
+        "vo2max_ml_kg_min": {
+          "maximum": 100.0,
+          "minimum": 0.0,
+          "title": "Vo2Max Ml Kg Min",
+          "type": "number"
+        },
+        "cumulative_radiation_msv": {
+          "maximum": 5000.0,
+          "minimum": 0.0,
+          "title": "Cumulative Radiation Msv",
+          "type": "number"
+        },
+        "radiation_budget_remaining_pct": {
+          "maximum": 100.0,
+          "minimum": 0.0,
+          "title": "Radiation Budget Remaining Pct",
+          "type": "number"
+        },
+        "sans_risk_probability": {
+          "maximum": 1.0,
+          "minimum": 0.0,
+          "title": "Sans Risk Probability",
+          "type": "number"
+        },
+        "prediction_lower_bound": {
+          "additionalProperties": {
+            "type": "number"
+          },
+          "title": "Prediction Lower Bound",
+          "type": "object"
+        },
+        "prediction_upper_bound": {
+          "additionalProperties": {
+            "type": "number"
+          },
+          "title": "Prediction Upper Bound",
+          "type": "object"
+        },
+        "confidence_score": {
+          "maximum": 1.0,
+          "minimum": 0.0,
+          "title": "Confidence Score",
+          "type": "number"
+        },
+        "provenance_ids": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Provenance Ids",
+          "type": "array"
+        }
+      },
+      "required": [
+        "horizon_days",
+        "vo2max_ml_kg_min",
+        "cumulative_radiation_msv",
+        "radiation_budget_remaining_pct",
+        "sans_risk_probability",
+        "prediction_lower_bound",
+        "prediction_upper_bound",
+        "confidence_score",
+        "provenance_ids"
+      ],
+      "title": "LongTermTrajectoryPoint",
+      "type": "object"
+    },
+    "MedicalGuideline": {
+      "additionalProperties": false,
+      "properties": {
+        "guideline_id": {
+          "minLength": 1,
+          "title": "Guideline Id",
+          "type": "string"
+        },
+        "title": {
+          "minLength": 1,
+          "title": "Title",
+          "type": "string"
+        },
+        "category": {
+          "description": "e.g. Environmental, Cardiovascular, SANS",
+          "minLength": 1,
+          "title": "Category",
+          "type": "string"
+        },
+        "summary": {
+          "minLength": 1,
+          "title": "Summary",
+          "type": "string"
+        },
+        "key_values": {
+          "additionalProperties": {
+            "type": "number"
+          },
+          "description": "Machine-readable thresholds, e.g. cabin_ppco2_red: 7.6",
+          "title": "Key Values",
+          "type": "object"
+        },
+        "threshold_source": {
+          "$ref": "#/$defs/ThresholdSource"
+        },
+        "citation": {
+          "minLength": 1,
+          "title": "Citation",
+          "type": "string"
+        },
+        "source_url": {
+          "minLength": 1,
+          "title": "Source Url",
+          "type": "string"
+        },
+        "provenance_ids": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Provenance Ids",
+          "type": "array"
+        },
+        "organization": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Organization"
+        },
+        "document_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Document Id"
+        },
+        "document_version": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Document Version"
+        },
+        "publication_date": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Publication Date"
+        },
+        "applicable_body_systems": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Applicable Body Systems",
+          "type": "array"
+        },
+        "relevant_metric": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Relevant Metric"
+        },
+        "threshold_if_explicitly_published": {
+          "anyOf": [
+            {
+              "additionalProperties": {
+                "type": "number"
+              },
+              "type": "object"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Threshold If Explicitly Published"
+        },
+        "recommendation": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Recommendation"
+        },
+        "scientific_rationale": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Scientific Rationale"
+        },
+        "evidence_level": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/EvidenceLevel"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "applicability": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Applicability"
+        },
+        "limitations": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Limitations",
+          "type": "array"
+        }
+      },
+      "required": [
+        "guideline_id",
+        "title",
+        "category",
+        "summary",
+        "key_values",
+        "threshold_source",
+        "citation",
+        "source_url",
+        "provenance_ids"
+      ],
+      "title": "MedicalGuideline",
+      "type": "object"
+    },
+    "MissionPhase": {
+      "enum": [
+        "PHASE_1_ACUTE_ADAPTATION",
+        "PHASE_2_LONG_DURATION"
+      ],
+      "title": "MissionPhase",
+      "type": "string"
+    },
+    "NasaDatasetRecord": {
+      "additionalProperties": false,
+      "properties": {
+        "dataset_id": {
+          "minLength": 1,
+          "title": "Dataset Id",
+          "type": "string"
+        },
+        "study_id": {
+          "minLength": 1,
+          "title": "Study Id",
+          "type": "string"
+        },
+        "title": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Title"
+        },
+        "modality": {
+          "$ref": "#/$defs/DataModality"
+        },
+        "measurement_types": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Measurement Types",
+          "type": "array"
+        },
+        "measurement_units": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Measurement Units",
+          "type": "array"
+        },
+        "subject_count": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Subject Count"
+        },
+        "timepoint_count": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Timepoint Count"
+        },
+        "file_count": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "File Count"
+        },
+        "access_level": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Access Level"
+        },
+        "verification_status": {
+          "$ref": "#/$defs/VerificationStatus"
+        },
+        "source_url": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Source Url"
+        },
+        "last_verified_utc": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Last Verified Utc"
+        },
+        "continuous_telemetry": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Continuous Telemetry"
+        },
+        "notes": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Notes"
+        },
+        "category": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/DatasetCategory"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "assay_types": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Assay Types",
+          "type": "array"
+        },
+        "collection_timepoints": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Collection Timepoints",
+          "type": "array"
+        },
+        "public_files": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Public Files"
+        },
+        "restricted_files": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Restricted Files"
+        },
+        "downloaded_files": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Downloaded Files"
+        },
+        "relevance_score": {
+          "anyOf": [
+            {
+              "maximum": 100.0,
+              "minimum": 0.0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Relevance Score"
+        },
+        "scientific_relevance": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Scientific Relevance"
+        },
+        "limitations": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Limitations",
+          "type": "array"
+        },
+        "publication_references": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Publication References",
+          "type": "array"
+        },
+        "ingestion_status": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/IngestionStatus"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "source_file_names": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Source File Names",
+          "type": "array"
+        }
+      },
+      "required": [
+        "dataset_id",
+        "study_id",
+        "title",
+        "modality",
+        "measurement_types",
+        "measurement_units",
+        "subject_count",
+        "timepoint_count",
+        "file_count",
+        "access_level",
+        "verification_status",
+        "source_url",
+        "last_verified_utc",
+        "continuous_telemetry",
+        "notes"
+      ],
+      "title": "NasaDatasetRecord",
+      "type": "object"
+    },
+    "NasaEvidenceCard": {
+      "additionalProperties": false,
+      "properties": {
+        "card_id": {
+          "minLength": 1,
+          "title": "Card Id",
+          "type": "string"
+        },
+        "title": {
+          "minLength": 1,
+          "title": "Title",
+          "type": "string"
+        },
+        "body_system": {
+          "$ref": "#/$defs/BodySystemId"
+        },
+        "phenomenon": {
+          "description": "What the crew/operator observes",
+          "minLength": 1,
+          "title": "Phenomenon",
+          "type": "string"
+        },
+        "why_it_happens": {
+          "description": "Spaceflight physiology explanation",
+          "minLength": 1,
+          "title": "Why It Happens",
+          "type": "string"
+        },
+        "countermeasure": {
+          "minLength": 1,
+          "title": "Countermeasure",
+          "type": "string"
+        },
+        "nasa_report_id": {
+          "minLength": 1,
+          "title": "Nasa Report Id",
+          "type": "string"
+        },
+        "source_url": {
+          "minLength": 1,
+          "title": "Source Url",
+          "type": "string"
+        },
+        "tags": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Tags",
+          "type": "array"
+        },
+        "provenance_ids": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Provenance Ids",
+          "type": "array"
+        },
+        "detector_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Detector Id"
+        },
+        "clinical_question": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Clinical Question"
+        },
+        "scientific_mechanism": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Scientific Mechanism"
+        },
+        "observed_findings": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Observed Findings"
+        },
+        "relevance_to_astronaut_health": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Relevance To Astronaut Health"
+        },
+        "applicable_metrics": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Applicable Metrics",
+          "type": "array"
+        },
+        "threshold_evidence": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Threshold Evidence"
+        },
+        "nasa_document_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Nasa Document Ids",
+          "type": "array"
+        },
+        "study_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Study Ids",
+          "type": "array"
+        },
+        "publication_title": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Publication Title"
+        },
+        "publication_doi": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Publication Doi"
+        },
+        "publication_url": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Publication Url"
+        },
+        "official_nasa_url": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Official Nasa Url"
+        },
+        "evidence_level": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/EvidenceLevel"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "limitations": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Limitations",
+          "type": "array"
+        },
+        "data_type": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Data Type"
+        },
+        "last_verified_at": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Last Verified At"
+        }
+      },
+      "required": [
+        "card_id",
+        "title",
+        "body_system",
+        "phenomenon",
+        "why_it_happens",
+        "countermeasure",
+        "nasa_report_id",
+        "source_url",
+        "tags",
+        "provenance_ids"
+      ],
+      "title": "NasaEvidenceCard",
+      "type": "object"
+    },
+    "NasaStudyRecord": {
+      "additionalProperties": false,
+      "properties": {
+        "study_id": {
+          "description": "OSDR accession, e.g. OSD-569",
+          "minLength": 1,
+          "title": "Study Id",
+          "type": "string"
+        },
+        "title": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "Study title from OSDR; null if metadata unavailable",
+          "title": "Title"
+        },
+        "description": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "Study description from OSDR; null if unavailable",
+          "title": "Description"
+        },
+        "mission": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "Mission or platform, e.g. SpaceX Inspiration4; null if absent",
+          "title": "Mission"
+        },
+        "verification_status": {
+          "$ref": "#/$defs/VerificationStatus"
+        },
+        "metadata_url": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Metadata Url"
+        },
+        "file_index_url": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "File Index Url"
+        },
+        "s3_prefix": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "S3 Prefix"
+        },
+        "dataset_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Dataset Ids",
+          "type": "array"
+        },
+        "continuous_telemetry_available": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "True/False only after file inspection; null when not yet verified",
+          "title": "Continuous Telemetry Available"
+        },
+        "last_verified_utc": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Last Verified Utc"
+        },
+        "notes": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Notes"
+        },
+        "study_category": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/DatasetCategory"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "organism": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Organism"
+        },
+        "subject_count": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Subject Count"
+        },
+        "sample_count": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Sample Count"
+        },
+        "assay_types": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Assay Types",
+          "type": "array"
+        },
+        "available_measurements": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Available Measurements",
+          "type": "array"
+        },
+        "collection_timepoints": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Collection Timepoints",
+          "type": "array"
+        },
+        "file_count": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "File Count"
+        },
+        "downloaded_file_count": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Downloaded File Count"
+        },
+        "public_access_status": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Public Access Status"
+        },
+        "relevance_score": {
+          "anyOf": [
+            {
+              "maximum": 100.0,
+              "minimum": 0.0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Relevance Score"
+        },
+        "scientific_relevance": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Scientific Relevance"
+        },
+        "limitations": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Limitations",
+          "type": "array"
+        },
+        "source_url": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Source Url"
+        },
+        "publication_references": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Publication References",
+          "type": "array"
+        },
+        "ingestion_status": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/IngestionStatus"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "rejection_reason": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Rejection Reason"
+        }
+      },
+      "required": [
+        "study_id",
+        "title",
+        "description",
+        "mission",
+        "verification_status",
+        "metadata_url",
+        "file_index_url",
+        "s3_prefix",
+        "dataset_ids",
+        "continuous_telemetry_available",
+        "last_verified_utc",
+        "notes"
+      ],
+      "title": "NasaStudyRecord",
+      "type": "object"
+    },
+    "PhaseBaseline": {
+      "additionalProperties": false,
+      "properties": {
+        "baseline_id": {
+          "minLength": 1,
+          "title": "Baseline Id",
+          "type": "string"
+        },
+        "astronaut_id": {
+          "minLength": 1,
+          "title": "Astronaut Id",
+          "type": "string"
+        },
+        "mission_phase": {
+          "$ref": "#/$defs/MissionPhase"
+        },
+        "window_start_day": {
+          "maximum": 3650,
+          "minimum": 1,
+          "title": "Window Start Day",
+          "type": "integer"
+        },
+        "window_end_day": {
+          "maximum": 3650,
+          "minimum": 1,
+          "title": "Window End Day",
+          "type": "integer"
+        },
+        "sample_days": {
+          "maximum": 3650,
+          "minimum": 1,
+          "title": "Sample Days",
+          "type": "integer"
+        },
+        "mean_hr": {
+          "maximum": 250.0,
+          "minimum": 20.0,
+          "title": "Mean Hr",
+          "type": "number"
+        },
+        "sd_hr": {
+          "maximum": 100.0,
+          "minimum": 0.0,
+          "title": "Sd Hr",
+          "type": "number"
+        },
+        "mean_hrv_rmssd": {
+          "maximum": 300.0,
+          "minimum": 0.0,
+          "title": "Mean Hrv Rmssd",
+          "type": "number"
+        },
+        "sd_hrv_rmssd": {
+          "maximum": 100.0,
+          "minimum": 0.0,
+          "title": "Sd Hrv Rmssd",
+          "type": "number"
+        },
+        "mean_pvt_slowest10_rt": {
+          "maximum": 1000.0,
+          "minimum": 100.0,
+          "title": "Mean Pvt Slowest10 Rt",
+          "type": "number"
+        },
+        "sd_pvt_slowest10_rt": {
+          "maximum": 300.0,
+          "minimum": 0.0,
+          "title": "Sd Pvt Slowest10 Rt",
+          "type": "number"
+        },
+        "mean_sleep_efficiency_pct": {
+          "maximum": 100.0,
+          "minimum": 0.0,
+          "title": "Mean Sleep Efficiency Pct",
+          "type": "number"
+        },
+        "mean_cabin_ppco2": {
+          "maximum": 20.0,
+          "minimum": 0.0,
+          "title": "Mean Cabin Ppco2",
+          "type": "number"
+        },
+        "generated_at_utc": {
+          "description": "ISO-8601 UTC timestamp of baseline derivation",
+          "title": "Generated At Utc",
+          "type": "string"
+        },
+        "baseline_source_ids": {
+          "description": "Provenance IDs used to derive this baseline",
+          "items": {
+            "type": "string"
+          },
+          "title": "Baseline Source Ids",
+          "type": "array"
+        },
+        "baseline_population": {
+          "description": "English description of the reference population",
+          "minLength": 1,
+          "title": "Baseline Population",
+          "type": "string"
+        },
+        "baseline_sample_size": {
+          "minimum": 0,
+          "title": "Baseline Sample Size",
+          "type": "integer"
+        },
+        "data_completeness_pct": {
+          "maximum": 100.0,
+          "minimum": 0.0,
+          "title": "Data Completeness Pct",
+          "type": "number"
+        },
+        "missing_metrics": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Missing Metrics",
+          "type": "array"
+        },
+        "confidence_score": {
+          "maximum": 1.0,
+          "minimum": 0.0,
+          "title": "Confidence Score",
+          "type": "number"
+        },
+        "model_version": {
+          "minLength": 1,
+          "title": "Model Version",
+          "type": "string"
+        },
+        "threshold_source": {
+          "$ref": "#/$defs/ThresholdSource"
+        },
+        "provenance_ids": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Provenance Ids",
+          "type": "array"
+        },
+        "metric_statistics": {
+          "items": {
+            "additionalProperties": true,
+            "type": "object"
+          },
+          "title": "Metric Statistics",
+          "type": "array"
+        },
+        "evidence_references": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Evidence References",
+          "type": "array"
+        },
+        "limitations": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Limitations",
+          "type": "array"
+        }
+      },
+      "required": [
+        "baseline_id",
+        "astronaut_id",
+        "mission_phase",
+        "window_start_day",
+        "window_end_day",
+        "sample_days",
+        "mean_hr",
+        "sd_hr",
+        "mean_hrv_rmssd",
+        "sd_hrv_rmssd",
+        "mean_pvt_slowest10_rt",
+        "sd_pvt_slowest10_rt",
+        "mean_sleep_efficiency_pct",
+        "mean_cabin_ppco2",
+        "generated_at_utc",
+        "baseline_source_ids",
+        "baseline_population",
+        "baseline_sample_size",
+        "data_completeness_pct",
+        "missing_metrics",
+        "confidence_score",
+        "model_version",
+        "threshold_source",
+        "provenance_ids"
+      ],
+      "title": "PhaseBaseline",
+      "type": "object"
+    },
+    "ProvenanceManifest": {
+      "additionalProperties": false,
+      "properties": {
+        "manifest_id": {
+          "minLength": 1,
+          "title": "Manifest Id",
+          "type": "string"
+        },
+        "bundle_id": {
+          "minLength": 1,
+          "title": "Bundle Id",
+          "type": "string"
+        },
+        "manifest_version": {
+          "minLength": 1,
+          "title": "Manifest Version",
+          "type": "string"
+        },
+        "generated_at_utc": {
+          "title": "Generated At Utc",
+          "type": "string"
+        },
+        "fallback_status": {
+          "$ref": "#/$defs/FallbackStatus"
+        },
+        "records": {
+          "items": {
+            "$ref": "#/$defs/ProvenanceRecord"
+          },
+          "title": "Records",
+          "type": "array"
+        }
+      },
+      "required": [
+        "manifest_id",
+        "bundle_id",
+        "manifest_version",
+        "generated_at_utc",
+        "fallback_status",
+        "records"
+      ],
+      "title": "ProvenanceManifest",
+      "type": "object"
+    },
+    "ProvenanceRecord": {
+      "additionalProperties": false,
+      "properties": {
+        "provenance_id": {
+          "minLength": 1,
+          "title": "Provenance Id",
+          "type": "string"
+        },
+        "source_type": {
+          "$ref": "#/$defs/SourceType"
+        },
+        "nasa_study_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "OSDR study accession, e.g. OSD-569; null if synthetic",
+          "title": "Nasa Study Id"
+        },
+        "nasa_dataset_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "OSDR dataset or assay identifier; null if absent",
+          "title": "Nasa Dataset Id"
+        },
+        "source_file": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "Original file name or object key; null if none",
+          "title": "Source File"
+        },
+        "source_url": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "Public HTTP(S) source URL; null if none",
+          "title": "Source Url"
+        },
+        "publication_reference": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "Citation or DOI; null if not published",
+          "title": "Publication Reference"
+        },
+        "subject_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "De-identified subject ID from the source; null if absent",
+          "title": "Subject Id"
+        },
+        "collection_timepoint": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "Source collection label, e.g. L-92 or R+1; null if absent",
+          "title": "Collection Timepoint"
+        },
+        "measurement_timestamp": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "ISO-8601 UTC timestamp; null if the source has none",
+          "title": "Measurement Timestamp"
+        },
+        "measurement_unit": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "Original or UCUM unit; null if not reported",
+          "title": "Measurement Unit"
+        },
+        "original_value": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "Unmodified source value serialized as text; null if missing",
+          "title": "Original Value"
+        },
+        "normalized_value": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "Processed numeric value; null if not normalized",
+          "title": "Normalized Value"
+        },
+        "processing_method": {
+          "description": "Method used, e.g. identity, unit_conversion, synthetic_gaussian",
+          "minLength": 1,
+          "title": "Processing Method",
+          "type": "string"
+        },
+        "quality_status": {
+          "$ref": "#/$defs/QualityStatus"
+        },
+        "metric_key": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "Target field name, e.g. hr or hrv_rmssd; null if not mapped",
+          "title": "Metric Key"
+        },
+        "fallback_status": {
+          "$ref": "#/$defs/FallbackStatus"
+        },
+        "derived_from": {
+          "description": "Parent provenance IDs for derived features",
+          "items": {
+            "type": "string"
+          },
+          "title": "Derived From",
+          "type": "array"
+        },
+        "source_verified_utc": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "When the source record was last verified; null if unknown",
+          "title": "Source Verified Utc"
+        },
+        "notes": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "English free-text note; null if none",
+          "title": "Notes"
+        },
+        "source_publication": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Publication title, DOI, or citation; null if absent",
+          "title": "Source Publication"
+        },
+        "sample_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Source sample identifier; null if absent",
+          "title": "Sample Id"
+        },
+        "measurement_name": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Original measurement/analyte name; null if absent",
+          "title": "Measurement Name"
+        },
+        "original_unit": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Unit exactly as reported by the source",
+          "title": "Original Unit"
+        },
+        "normalized_unit": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "UCUM or documented normalized unit",
+          "title": "Normalized Unit"
+        },
+        "processing_version": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Version of the normalization or feature routine",
+          "title": "Processing Version"
+        },
+        "generated_at_utc": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "When this provenance record was generated",
+          "title": "Generated At Utc"
+        },
+        "source_file_sha256": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "SHA-256 of the source file, if available",
+          "title": "Source File Sha256"
+        },
+        "license_or_access_terms": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "License or public-access terms; null if unknown",
+          "title": "License Or Access Terms"
+        },
+        "download_timestamp": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "ISO-8601 download time; null if not downloaded",
+          "title": "Download Timestamp"
+        },
+        "processing_timestamp": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "ISO-8601 processing time; null if not processed",
+          "title": "Processing Timestamp"
+        },
+        "pipeline_version": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Data pipeline version that produced the record",
+          "title": "Pipeline Version"
+        },
+        "generator_name": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Synthetic generator name; null for real data",
+          "title": "Generator Name"
+        },
+        "generator_version": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Synthetic generator version; null for real data",
+          "title": "Generator Version"
+        },
+        "random_seed": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Deterministic seed; null for real data",
+          "title": "Random Seed"
+        },
+        "scenario_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Synthetic scenario identifier; null for real data",
+          "title": "Scenario Id"
+        },
+        "scenario_configuration": {
+          "anyOf": [
+            {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Synthetic scenario parameters; null for real data",
+          "title": "Scenario Configuration"
+        },
+        "generation_timestamp": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "ISO-8601 synthetic generation time; null for real data",
+          "title": "Generation Timestamp"
+        }
+      },
+      "required": [
+        "provenance_id",
+        "source_type",
+        "nasa_study_id",
+        "nasa_dataset_id",
+        "source_file",
+        "source_url",
+        "publication_reference",
+        "subject_id",
+        "collection_timepoint",
+        "measurement_timestamp",
+        "measurement_unit",
+        "original_value",
+        "normalized_value",
+        "processing_method",
+        "quality_status",
+        "metric_key",
+        "fallback_status",
+        "derived_from",
+        "source_verified_utc",
+        "notes"
+      ],
+      "title": "ProvenanceRecord",
+      "type": "object"
+    },
+    "QualityStatus": {
+      "enum": [
+        "VALIDATED",
+        "ACCEPTED",
+        "VALID",
+        "VALID_WITH_WARNINGS",
+        "SUSPECT",
+        "MISSING",
+        "INVALID",
+        "INVALID_UNIT",
+        "INSUFFICIENT_BASELINE",
+        "UNVERIFIED",
+        "NOT_ASSESSED"
+      ],
+      "title": "QualityStatus",
+      "type": "string"
+    },
+    "SbarMedicalReport": {
+      "additionalProperties": false,
+      "properties": {
+        "report_id": {
+          "minLength": 1,
+          "title": "Report Id",
+          "type": "string"
+        },
+        "generated_at_utc": {
+          "description": "ISO-8601 UTC timestamp",
+          "title": "Generated At Utc",
+          "type": "string"
+        },
+        "comm_delay_profile": {
+          "$ref": "#/$defs/CommDelayProfile"
+        },
+        "round_trip_latency_sec": {
+          "maximum": 7200,
+          "minimum": 0,
+          "title": "Round Trip Latency Sec",
+          "type": "integer"
+        },
+        "situation": {
+          "minLength": 1,
+          "title": "Situation",
+          "type": "string"
+        },
+        "background": {
+          "minLength": 1,
+          "title": "Background",
+          "type": "string"
+        },
+        "assessment": {
+          "minLength": 1,
+          "title": "Assessment",
+          "type": "string"
+        },
+        "recommendation": {
+          "minLength": 1,
+          "title": "Recommendation",
+          "type": "string"
+        },
+        "attached_telemetry_snapshot": {
+          "$ref": "#/$defs/StreamTick"
+        },
+        "nasa_protocol_citations": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Nasa Protocol Citations",
+          "type": "array"
+        },
+        "model_version": {
+          "minLength": 1,
+          "title": "Model Version",
+          "type": "string"
+        },
+        "provenance_ids": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Provenance Ids",
+          "type": "array"
+        }
+      },
+      "required": [
+        "report_id",
+        "generated_at_utc",
+        "comm_delay_profile",
+        "round_trip_latency_sec",
+        "situation",
+        "background",
+        "assessment",
+        "recommendation",
+        "attached_telemetry_snapshot",
+        "nasa_protocol_citations",
+        "model_version",
+        "provenance_ids"
+      ],
+      "title": "SbarMedicalReport",
+      "type": "object"
+    },
+    "ShortTermHorizonPrediction": {
+      "additionalProperties": false,
+      "properties": {
+        "horizon_minutes": {
+          "enum": [
+            5,
+            15,
+            30
+          ],
+          "title": "Horizon Minutes",
+          "type": "integer"
+        },
+        "cabin_ppco2": {
+          "maximum": 20.0,
+          "minimum": 0.0,
+          "title": "Cabin Ppco2",
+          "type": "number"
+        },
+        "hr": {
+          "maximum": 250.0,
+          "minimum": 20.0,
+          "title": "Hr",
+          "type": "number"
+        },
+        "hrv_rmssd": {
+          "maximum": 300.0,
+          "minimum": 0.0,
+          "title": "Hrv Rmssd",
+          "type": "number"
+        },
+        "spo2": {
+          "maximum": 100.0,
+          "minimum": 50.0,
+          "title": "Spo2",
+          "type": "number"
+        },
+        "pvt_slowest10_rt": {
+          "maximum": 1000.0,
+          "minimum": 100.0,
+          "title": "Pvt Slowest10 Rt",
+          "type": "number"
+        },
+        "mfi_risk_score": {
+          "maximum": 100.0,
+          "minimum": 0.0,
+          "title": "Mfi Risk Score",
+          "type": "number"
+        },
+        "prediction_lower_bound": {
+          "additionalProperties": {
+            "type": "number"
+          },
+          "title": "Prediction Lower Bound",
+          "type": "object"
+        },
+        "prediction_upper_bound": {
+          "additionalProperties": {
+            "type": "number"
+          },
+          "title": "Prediction Upper Bound",
+          "type": "object"
+        },
+        "confidence_score": {
+          "maximum": 1.0,
+          "minimum": 0.0,
+          "title": "Confidence Score",
+          "type": "number"
+        },
+        "provenance_ids": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Provenance Ids",
+          "type": "array"
+        }
+      },
+      "required": [
+        "horizon_minutes",
+        "cabin_ppco2",
+        "hr",
+        "hrv_rmssd",
+        "spo2",
+        "pvt_slowest10_rt",
+        "mfi_risk_score",
+        "prediction_lower_bound",
+        "prediction_upper_bound",
+        "confidence_score",
+        "provenance_ids"
+      ],
+      "title": "ShortTermHorizonPrediction",
+      "type": "object"
+    },
+    "SourceType": {
+      "enum": [
+        "NASA_REAL",
+        "NASA_DERIVED",
+        "SYNTHETIC"
+      ],
+      "title": "SourceType",
+      "type": "string"
+    },
+    "StreamTick": {
+      "additionalProperties": false,
+      "properties": {
+        "timestamp": {
+          "description": "ISO-8601 UTC timestamp, e.g. 2026-05-01T12:00:00Z",
+          "title": "Timestamp",
+          "type": "string"
+        },
+        "mission_day": {
+          "description": "1-based mission day",
+          "maximum": 3650,
+          "minimum": 1,
+          "title": "Mission Day",
+          "type": "integer"
+        },
+        "mission_phase": {
+          "$ref": "#/$defs/MissionPhase"
+        },
+        "astronaut_id": {
+          "description": "Crew member identifier, e.g. A1",
+          "minLength": 1,
+          "title": "Astronaut Id",
+          "type": "string"
+        },
+        "source_type": {
+          "$ref": "#/$defs/SourceType",
+          "description": "Direct label for the measurement source; SYNTHETIC demo ticks are never NASA_REAL"
+        },
+        "hr": {
+          "description": "Heart rate, bpm",
+          "maximum": 250.0,
+          "minimum": 20.0,
+          "title": "Hr",
+          "type": "number"
+        },
+        "hrv_rmssd": {
+          "description": "HRV RMSSD, ms",
+          "maximum": 300.0,
+          "minimum": 0.0,
+          "title": "Hrv Rmssd",
+          "type": "number"
+        },
+        "spo2": {
+          "description": "Peripheral oxygen saturation, %",
+          "maximum": 100.0,
+          "minimum": 50.0,
+          "title": "Spo2",
+          "type": "number"
+        },
+        "systolic_bp": {
+          "description": "Systolic blood pressure, mmHg",
+          "maximum": 260,
+          "minimum": 50,
+          "title": "Systolic Bp",
+          "type": "integer"
+        },
+        "diastolic_bp": {
+          "description": "Diastolic blood pressure, mmHg",
+          "maximum": 160,
+          "minimum": 20,
+          "title": "Diastolic Bp",
+          "type": "integer"
+        },
+        "temp_c": {
+          "description": "Core/skin temperature, Celsius",
+          "maximum": 45.0,
+          "minimum": 30.0,
+          "title": "Temp C",
+          "type": "number"
+        },
+        "resp_rate": {
+          "description": "Respiratory rate, breaths/min",
+          "maximum": 60.0,
+          "minimum": 4.0,
+          "title": "Resp Rate",
+          "type": "number"
+        },
+        "iop_mmhg": {
+          "description": "Intraocular pressure, mmHg",
+          "maximum": 60.0,
+          "minimum": 0.0,
+          "title": "Iop Mmhg",
+          "type": "number"
+        },
+        "cabin_ppco2": {
+          "description": "Cabin partial pressure of CO2, mmHg",
+          "maximum": 20.0,
+          "minimum": 0.0,
+          "title": "Cabin Ppco2",
+          "type": "number"
+        },
+        "radiation_dose_rate": {
+          "description": "Instantaneous dose rate, mSv/h",
+          "maximum": 1000.0,
+          "minimum": 0.0,
+          "title": "Radiation Dose Rate",
+          "type": "number"
+        },
+        "pvt_slowest10_rt": {
+          "description": "PVT-B slowest 10% reaction time, ms",
+          "maximum": 1000.0,
+          "minimum": 100.0,
+          "title": "Pvt Slowest10 Rt",
+          "type": "number"
+        },
+        "provenance_ids": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Provenance Ids",
+          "type": "array"
+        }
+      },
+      "required": [
+        "timestamp",
+        "mission_day",
+        "mission_phase",
+        "astronaut_id",
+        "source_type",
+        "hr",
+        "hrv_rmssd",
+        "spo2",
+        "systolic_bp",
+        "diastolic_bp",
+        "temp_c",
+        "resp_rate",
+        "iop_mmhg",
+        "cabin_ppco2",
+        "radiation_dose_rate",
+        "pvt_slowest10_rt",
+        "provenance_ids"
+      ],
+      "title": "StreamTick",
+      "type": "object"
+    },
+    "ThresholdSource": {
+      "enum": [
+        "NASA_PUBLISHED",
+        "RESEARCH_REFERENCE",
+        "EXPERIMENTAL",
+        "PROJECT_SIMULATION"
+      ],
+      "title": "ThresholdSource",
+      "type": "string"
+    },
+    "TimeToThresholdAlert": {
+      "additionalProperties": false,
+      "properties": {
+        "metric": {
+          "$ref": "#/$defs/ForecastMetric"
+        },
+        "current_value": {
+          "title": "Current Value",
+          "type": "number"
+        },
+        "target_threshold": {
+          "title": "Target Threshold",
+          "type": "number"
+        },
+        "target_status": {
+          "$ref": "#/$defs/TriageStatus",
+          "description": "GREEN, YELLOW, or RED; INSUFFICIENT_DATA is not a valid target status"
+        },
+        "seconds_remaining": {
+          "description": "Seconds until threshold; 0 if already crossed; -1 if not projected",
+          "minimum": -1,
+          "title": "Seconds Remaining",
+          "type": "integer"
+        },
+        "explanation": {
+          "description": "English explanation of the alert",
+          "minLength": 1,
+          "title": "Explanation",
+          "type": "string"
+        },
+        "threshold_source": {
+          "$ref": "#/$defs/ThresholdSource"
+        },
+        "threshold_already_crossed": {
+          "title": "Threshold Already Crossed",
+          "type": "boolean"
+        },
+        "velocity_per_second": {
+          "title": "Velocity Per Second",
+          "type": "number"
+        },
+        "confidence_score": {
+          "maximum": 1.0,
+          "minimum": 0.0,
+          "title": "Confidence Score",
+          "type": "number"
+        },
+        "prediction_lower_bound": {
+          "description": "Lower bound for seconds_remaining",
+          "title": "Prediction Lower Bound",
+          "type": "number"
+        },
+        "prediction_upper_bound": {
+          "description": "Upper bound for seconds_remaining",
+          "title": "Prediction Upper Bound",
+          "type": "number"
+        },
+        "provenance_ids": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Provenance Ids",
+          "type": "array"
+        }
+      },
+      "required": [
+        "metric",
+        "current_value",
+        "target_threshold",
+        "target_status",
+        "seconds_remaining",
+        "explanation",
+        "threshold_source",
+        "threshold_already_crossed",
+        "velocity_per_second",
+        "confidence_score",
+        "prediction_lower_bound",
+        "prediction_upper_bound",
+        "provenance_ids"
+      ],
+      "title": "TimeToThresholdAlert",
+      "type": "object"
+    },
+    "TriageAssessment": {
+      "additionalProperties": false,
+      "properties": {
+        "timestamp": {
+          "description": "ISO-8601 UTC timestamp of assessment",
+          "title": "Timestamp",
+          "type": "string"
+        },
+        "astronaut_id": {
+          "minLength": 1,
+          "title": "Astronaut Id",
+          "type": "string"
+        },
+        "mission_phase": {
+          "$ref": "#/$defs/MissionPhase"
+        },
+        "mfi_risk_score": {
+          "description": "Multi-Signal Fusion Index, 0-100",
+          "maximum": 100.0,
+          "minimum": 0.0,
+          "title": "Mfi Risk Score",
+          "type": "number"
+        },
+        "triage_status": {
+          "$ref": "#/$defs/TriageStatus"
+        },
+        "active_fusion_patterns": {
+          "description": "Human-readable fusion patterns, e.g. HYPERCAPNIC_NEUROCOGNITIVE_TRIAD",
+          "items": {
+            "type": "string"
+          },
+          "title": "Active Fusion Patterns",
+          "type": "array"
+        },
+        "affected_systems": {
+          "items": {
+            "$ref": "#/$defs/BodySystemId"
+          },
+          "title": "Affected Systems",
+          "type": "array"
+        },
+        "recommended_protocol_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Recommended Protocol Ids",
+          "type": "array"
+        },
+        "requires_eva_hold": {
+          "description": "EVA operations must be paused",
+          "title": "Requires Eva Hold",
+          "type": "boolean"
+        },
+        "data_completeness_pct": {
+          "maximum": 100.0,
+          "minimum": 0.0,
+          "title": "Data Completeness Pct",
+          "type": "number"
+        },
+        "missing_metrics": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Missing Metrics",
+          "type": "array"
+        },
+        "confidence_score": {
+          "maximum": 1.0,
+          "minimum": 0.0,
+          "title": "Confidence Score",
+          "type": "number"
+        },
+        "model_version": {
+          "minLength": 1,
+          "title": "Model Version",
+          "type": "string"
+        },
+        "data_quality_status": {
+          "$ref": "#/$defs/QualityStatus"
+        },
+        "requires_human_review": {
+          "description": "True for INSUFFICIENT_DATA, low confidence, or any RED override",
+          "title": "Requires Human Review",
+          "type": "boolean"
+        },
+        "provenance_ids": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Provenance Ids",
+          "type": "array"
+        }
+      },
+      "required": [
+        "timestamp",
+        "astronaut_id",
+        "mission_phase",
+        "mfi_risk_score",
+        "triage_status",
+        "active_fusion_patterns",
+        "affected_systems",
+        "recommended_protocol_ids",
+        "requires_eva_hold",
+        "data_completeness_pct",
+        "missing_metrics",
+        "confidence_score",
+        "model_version",
+        "data_quality_status",
+        "requires_human_review",
+        "provenance_ids"
+      ],
+      "title": "TriageAssessment",
+      "type": "object"
+    },
+    "TriageProtocol": {
+      "additionalProperties": false,
+      "properties": {
+        "protocol_id": {
+          "minLength": 1,
+          "title": "Protocol Id",
+          "type": "string"
+        },
+        "title": {
+          "minLength": 1,
+          "title": "Title",
+          "type": "string"
+        },
+        "severity": {
+          "$ref": "#/$defs/DetectorSeverity"
+        },
+        "trigger_condition": {
+          "description": "English trigger description",
+          "minLength": 1,
+          "title": "Trigger Condition",
+          "type": "string"
+        },
+        "steps": {
+          "description": "Ordered plain-language steps",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Steps",
+          "type": "array"
+        },
+        "escalate_if": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Escalate If",
+          "type": "array"
+        },
+        "citation": {
+          "description": "NASA source identifier",
+          "minLength": 1,
+          "title": "Citation",
+          "type": "string"
+        },
+        "provenance_ids": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Provenance Ids",
+          "type": "array"
+        },
+        "applicable_detector_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Applicable Detector Ids",
+          "type": "array"
+        },
+        "applicable_body_systems": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Applicable Body Systems",
+          "type": "array"
+        },
+        "trigger_conditions": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Trigger Conditions",
+          "type": "array"
+        },
+        "triage_status": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/TriageStatus"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "immediate_actions": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Immediate Actions",
+          "type": "array"
+        },
+        "monitoring_instructions": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Monitoring Instructions",
+          "type": "array"
+        },
+        "escalation_conditions": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Escalation Conditions",
+          "type": "array"
+        },
+        "communication_requirements": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Communication Requirements",
+          "type": "array"
+        },
+        "contraindications_if_known": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Contraindications If Known",
+          "type": "array"
+        },
+        "source_references": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Source References",
+          "type": "array"
+        },
+        "evidence_level": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/EvidenceLevel"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "limitations": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Limitations",
+          "type": "array"
+        }
+      },
+      "required": [
+        "protocol_id",
+        "title",
+        "severity",
+        "trigger_condition",
+        "steps",
+        "escalate_if",
+        "citation",
+        "provenance_ids"
+      ],
+      "title": "TriageProtocol",
+      "type": "object"
+    },
+    "TriageStatus": {
+      "enum": [
+        "GREEN",
+        "YELLOW",
+        "RED",
+        "INSUFFICIENT_DATA"
+      ],
+      "title": "TriageStatus",
+      "type": "string"
+    },
+    "VerificationStatus": {
+      "enum": [
+        "VERIFIED_METADATA",
+        "VERIFIED_FILES",
+        "UNVERIFIED",
+        "UNAVAILABLE",
+        "CACHE_FALLBACK"
+      ],
+      "title": "VerificationStatus",
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "generated_at_utc": "2026-11-14T10:41:32Z",
+  "status": "VALID",
+  "artifact_counts": {
+    "stream_ticks": 7200,
+    "daily_records": 360,
+    "study_catalog_records": 79,
+    "laboratory_results": 23174,
+    "provenance_records": 31339
+  },
+  "laboratory_quality": {
+    "VALID": 23062,
+    "SUSPECT": 78,
+    "VALID_WITH_WARNINGS": 34
+  },
+  "provenance_quality": {
+    "VALIDATED": 7836,
+    "VALID": 23389,
+    "MISSING": 2,
+    "SUSPECT": 78,
+    "VALID_WITH_WARNINGS": 34
+  },
+  "missing_laboratory_values": 0,
+  "real_laboratory_missing_timestamp": 0,
+  "continuous_telemetry_available": false,
+  "continuous_telemetry_note": "No selected NASA file contains continuous physiological telemetry.",
+  "schema_validation_errors": [],
+  "warnings": [
+    "Some laboratory values are missing and remain null; no imputation was performed.",
+    "Absolute collection timestamps are unavailable; relative labels are preserved.",
+    "Synthetic A1/A2 data are not NASA measurements."
+  ]
+}

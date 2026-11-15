@@ -1,0 +1,90 @@
+{
+  "generated_at_utc": "2026-11-14T10:40:21Z",
+  "scope": "Radiation evidence for DET-06; GCR and SPE are distinct exposure modes.",
+  "official_references": [
+    {
+      "document_id": "NASA-STD-3001 [V1 4029]",
+      "title": "NASA Space Flight Human-System Standard, Volume 1",
+      "organization": "NASA",
+      "url": "https://www.nasa.gov/reference/nasa-std-3001v1/",
+      "evidence_level": "NASA_OFFICIAL_REQUIREMENT",
+      "use": "Official human-system radiation requirements context."
+    },
+    {
+      "document_id": "NASA HRP Radiation-Induced Cancer Risk",
+      "title": "Risk of Radiation-Induced Cancers",
+      "organization": "NASA Human Research Program",
+      "url": "https://www.nasa.gov/reference/risk-of-radiation-induced-cancers/",
+      "evidence_level": "NASA_TECHNICAL_GUIDANCE",
+      "use": "GCR and space-radiation health-risk context."
+    }
+  ],
+  "supporting_osdr_studies": [
+    {
+      "study_id": "OSD-73",
+      "title": "Transcriptome Profiles in Normal Human Bronchial Epithelial Cells after Exposure to gamma-rays and different HZE particles",
+      "organism": "Homo sapiens",
+      "category": "RADIATION_EVIDENCE",
+      "why_relevant": "Human cell transcriptomic response to gamma-rays and HZE particles.",
+      "limitations": "In vitro cell study; not astronaut telemetry.",
+      "source_url": "https://osdr.nasa.gov/bio/repo/data/studies/OSD-73"
+    },
+    {
+      "study_id": "OSD-410",
+      "title": "Dataset for dose and time-dependent transcriptional response to ionizing radiation exposure.",
+      "organism": "Homo sapiens",
+      "category": "RADIATION_EVIDENCE",
+      "why_relevant": "Human cell transcriptional response across radiation dose and time.",
+      "limitations": "In vitro study; not a clinical dose-response model.",
+      "source_url": "https://osdr.nasa.gov/bio/repo/data/studies/OSD-410"
+    },
+    {
+      "study_id": "OSD-896",
+      "title": "Deficits in Sustained Attention and Changes in Dopaminergic Protein Levels following Exposure to Proton Radiation (Western Blot, Frontal Cortex)",
+      "organism": "Rattus norvegicus",
+      "category": "SUPPORTING_BIOLOGICAL_EVIDENCE",
+      "why_relevant": "Proton-radiation effects on sustained attention and dopaminergic markers.",
+      "limitations": "Animal model; not direct human evidence.",
+      "source_url": "https://osdr.nasa.gov/bio/repo/data/studies/OSD-896"
+    },
+    {
+      "study_id": "OSD-897",
+      "title": "Deficits in Sustained Attention and Changes in Dopaminergic Protein Levels following Exposure to Proton Radiation (Western Blot, Parietal Cortex)",
+      "organism": "Rattus norvegicus",
+      "category": "SUPPORTING_BIOLOGICAL_EVIDENCE",
+      "why_relevant": "Regional brain protein evidence in the same proton-radiation model.",
+      "limitations": "Animal model; not direct human evidence.",
+      "source_url": "https://osdr.nasa.gov/bio/repo/data/studies/OSD-897"
+    }
+  ],
+  "rejected_reference_audit": [
+    {
+      "study_id": "OSD-977",
+      "actual_title": "Effects of spaceflight on cancellous and cortical bone in proximal femur in growing rats.",
+      "reason": "Inspected metadata: bone study in rats, not a radiation study. Do not use as DET-06 evidence."
+    },
+    {
+      "study_id": "OSD-968",
+      "actual_title": "Three-dimensional spatial selectivity of hippocampal neurons during space flight",
+      "reason": "Inspected metadata: hippocampal neuron study, not a radiation study. Do not use as DET-06 evidence."
+    },
+    {
+      "study_id": "OSD-898",
+      "actual_title": "Spaceflight induces oxidative damage to blood-brain barrier integrity in a mouse model",
+      "reason": "Inspected metadata: blood-brain barrier study in mice, not a radiation study. Do not use as DET-06 evidence."
+    },
+    {
+      "study_id": "OSD-989",
+      "actual_title": "Identification of Bioburden Associated with Nonmetallic Spacecraft Materials Using Culture-Based and Metagenomic Analyses",
+      "reason": "Inspected metadata: spacecraft bioburden study, not a radiation study. Do not use as DET-06 evidence."
+    }
+  ],
+  "demo_thresholds": {
+    "acute_dose_rate_red_msv_h": 1.0,
+    "daily_warning_msv": 2.0,
+    "cumulative_budget_msv": 600.0,
+    "gcr_daily_msv": 0.48,
+    "threshold_source": "PROJECT_SIMULATION",
+    "note": "These values are demo heuristics from the ASTRALIS project, not individualized NASA career limits."
+  }
+}

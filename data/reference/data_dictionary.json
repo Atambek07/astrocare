@@ -1,0 +1,126 @@
+{
+  "generated_at_utc": "2026-11-14T10:40:59Z",
+  "bundle_id": "astralis-offline-2026-11-14",
+  "artifacts": [
+    {
+      "path": "telemetry_stream_60m.jsonl",
+      "contract": "StreamTick",
+      "row_count": 7200,
+      "source_type": "SYNTHETIC",
+      "time_range_utc": [
+        "2026-05-01T08:00:00Z",
+        "2026-05-01T08:59:59Z"
+      ],
+      "fields": [
+        "timestamp",
+        "mission_day",
+        "mission_phase",
+        "astronaut_id",
+        "source_type",
+        "hr",
+        "hrv_rmssd",
+        "spo2",
+        "systolic_bp",
+        "diastolic_bp",
+        "temp_c",
+        "resp_rate",
+        "iop_mmhg",
+        "cabin_ppco2",
+        "radiation_dose_rate",
+        "pvt_slowest10_rt",
+        "provenance_ids"
+      ],
+      "units": {
+        "hr": "bpm",
+        "hrv_rmssd": "ms",
+        "spo2": "%",
+        "cabin_ppco2": "mmHg",
+        "radiation_dose_rate": "mSv/h"
+      }
+    },
+    {
+      "path": "telemetry_180d.json",
+      "contract": "DailyTelemetryLog",
+      "row_count": 360,
+      "source_type": "SYNTHETIC",
+      "mission_day_range": [
+        1,
+        180
+      ],
+      "phase_1_days": [
+        1,
+        14
+      ],
+      "phase_2_days": [
+        15,
+        180
+      ]
+    },
+    {
+      "path": "nasa_baselines.json",
+      "contract": "PhaseBaseline",
+      "row_count": 4,
+      "source_type": "SYNTHETIC",
+      "note": "Computed from daily records; not a NASA clinical baseline."
+    },
+    {
+      "path": "processed/nasa_laboratory_results.json",
+      "contract": "LaboratoryResult",
+      "row_count": 23174,
+      "source_type": "NASA_REAL",
+      "study_ids": [
+        "OSD-569",
+        "OSD-575",
+        "OSD-656"
+      ],
+      "collection_timepoints": [
+        "L-3",
+        "L-44",
+        "L-92",
+        "R+1",
+        "R+194",
+        "R+45",
+        "R+82"
+      ],
+      "units_policy": "Original units preserved; unknown units flagged, never guessed."
+    },
+    {
+      "path": "processed/nasa_laboratory_panels.json",
+      "row_count": 133,
+      "source_type": "NASA_REAL",
+      "grouping": "study_id, subject_id, source relative timepoint, panel type, sample type",
+      "timestamp_policy": "Absolute collection time is not published and remains null."
+    },
+    {
+      "path": "processed/microbiome_diversity.json",
+      "row_count": 329,
+      "source_type": "NASA_DERIVED",
+      "metric": "Shannon diversity from Metaphlan species relative abundance."
+    }
+  ],
+  "required_tables": [
+    "astronaut_profiles",
+    "daily_telemetry",
+    "stream_ticks",
+    "events",
+    "protocols",
+    "baselines",
+    "study_catalog",
+    "dataset_catalog",
+    "provenance_records",
+    "synthetic_config"
+  ],
+  "counts": {
+    "stream_ticks": 7200,
+    "daily_records": 360,
+    "baselines": 4,
+    "anomalies": 4,
+    "studies": 79,
+    "datasets": 59,
+    "laboratory_results": 23174,
+    "real_lab_panels": 133,
+    "synthetic_lab_panels": 24,
+    "microbiome_samples": 329,
+    "provenance_records": 31339
+  }
+}

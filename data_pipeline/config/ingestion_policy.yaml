@@ -1,0 +1,54 @@
+# Download and cache policy for selected public OSDR files.
+
+selection:
+  default: "Small public metadata, README, tabular, and processed spreadsheet files only."
+  excluded_by_default:
+    - "*.fastq"
+    - "*.fq"
+    - "*.bam"
+    - "*.cram"
+    - "*.mzML"
+    - "*.raw"
+    - "*.h5"
+    - "*.mp4"
+    - "*.mov"
+  large_raw_omics_downloaded: false
+  selected_file_counts:
+    OSD-569: 3
+    OSD-570: 2
+    OSD-571: 9
+    OSD-572: 4
+    OSD-573: 1
+    OSD-575: 9
+    OSD-656: 4
+
+http:
+  timeout_seconds: 120
+  max_retries: 3
+  retry_backoff_seconds: 2.0
+  max_concurrent_downloads: 4
+  user_agent: ASTRALIS-SPEC1/1.0
+  resume:
+    enabled: true
+    method: HTTP_RANGE
+    partial_file_suffix: .resume.part
+    reset_on_checksum_mismatch: true
+
+integrity:
+  algorithm: sha256
+  verify_expected_size: true
+  reject_on_checksum_mismatch: true
+
+cache:
+  pipeline_cache_dir: data_pipeline/cache
+  download_cache_dir: data_pipeline/cache/downloads
+  reuse_existing_file_when_size_matches: true
+
+fallback:
+  on_network_failure: CACHE_FALLBACK
+  without_cache: UNAVAILABLE
+  synthetic_substitution_for_real_data: false
+
+restricted_access:
+  allowed: false
+  behavior: "Skip restricted or invisible files and record them in the file inventory."

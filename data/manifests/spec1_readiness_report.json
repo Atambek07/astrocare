@@ -1,0 +1,66 @@
+{
+  "report_id": "SPEC1-READINESS-2026-11-14",
+  "generated_at_utc": "2026-11-14T10:41:32Z",
+  "readiness_status": "READY_WITH_LIMITATIONS",
+  "decision_rule": "All required SPEC 1 artifacts and tests are present; explicit limitations remain.",
+  "discovery_statistics": {
+    "osdr_search_queries": 17,
+    "study_catalog_total": 79,
+    "accepted_studies": 71,
+    "rejected_studies": 8,
+    "verified_core_studies": 7,
+    "dataset_registry_records": 59
+  },
+  "ingestion_statistics": {
+    "selected_public_files": 32,
+    "download_fallback_status": "NONE",
+    "restricted_files_downloaded": 0,
+    "large_raw_omics_downloaded": false
+  },
+  "quality_statistics": {
+    "schema_validation_errors": 0,
+    "data_quality_status": "VALID",
+    "laboratory_quality": {
+      "VALID": 23062,
+      "SUSPECT": 78,
+      "VALID_WITH_WARNINGS": 34
+    },
+    "provenance_quality": {
+      "VALIDATED": 7836,
+      "VALID": 23389,
+      "MISSING": 2,
+      "SUSPECT": 78,
+      "VALID_WITH_WARNINGS": 34
+    },
+    "continuous_telemetry_available": false
+  },
+  "artifact_counts": {
+    "stream_ticks": 7200,
+    "daily_records": 360,
+    "baselines": 4,
+    "anomalies": 4,
+    "studies": 79,
+    "datasets": 59,
+    "laboratory_results": 23174,
+    "real_lab_panels": 133,
+    "synthetic_lab_panels": 24,
+    "microbiome_samples": 329,
+    "provenance_records": 31339,
+    "medical_guidelines": 14,
+    "triage_protocols": 8,
+    "evidence_cards": 12
+  },
+  "tests": {
+    "test_file": "tests/test_data_bundle.py",
+    "status": "PASSING"
+  },
+  "limitations": [
+    "Discovery is OSDR-only; GEO, LTSA, TechPort, and other repositories were not searched.",
+    "The seven verified Inspiration4 studies are biospecimen and laboratory studies, not continuous mission telemetry.",
+    "No NASA file in the selected set contains continuous physiological telemetry.",
+    "All physiological A1/A2 stream, daily, and scenario values are SYNTHETIC.",
+    "Large raw omics files were intentionally not downloaded.",
+    "Some OSDR laboratory values have unknown or nonstandard units and are flagged instead of converted.",
+    "OSD-977, OSD-968, OSD-898, and OSD-989 were inspected and rejected as DET-06 radiation evidence."
+  ]
+}

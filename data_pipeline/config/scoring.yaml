@@ -1,0 +1,48 @@
+# Transparent 100-point relevance scoring and category assignment.
+
+scale:
+  minimum: 0
+  maximum: 100
+  round_to_decimals: 3
+
+category_base_scores:
+  DIRECT_HUMAN_SPACEFLIGHT: 40
+  HUMAN_SPACEFLIGHT_ANALOG: 32
+  RADIATION_EVIDENCE: 28
+  ENVIRONMENTAL_TELEMETRY: 26
+  SUPPORTING_BIOLOGICAL_EVIDENCE: 18
+  OTHER_RELEVANT_RESEARCH: 6
+
+bonus_scores:
+  human_organism: 12
+  inspiration4: 10
+  astronaut_or_crew_keyword: 8
+  clinical_system_keyword: 6
+  analog_keyword: 6
+  radiation_keyword: 6
+  environmental_keyword: 5
+  unique_assay_types: "min(6, 2 * unique_count)"
+  human_research_bonus: 4
+  homo_sapiens_explicit: 3
+
+classification_order:
+  1: RADIATION_EVIDENCE
+  2: ENVIRONMENTAL_TELEMETRY
+  3: HUMAN_SPACEFLIGHT_ANALOG
+  4: DIRECT_HUMAN_SPACEFLIGHT
+  5: SUPPORTING_BIOLOGICAL_EVIDENCE
+  6: OTHER_RELEVANT_RESEARCH
+
+acceptance:
+  minimum_score: 24
+  non_human_studies_accepted_only_if:
+    - RADIATION_EVIDENCE
+    - ENVIRONMENTAL_TELEMETRY
+    - HUMAN_SPACEFLIGHT_ANALOG
+  rejected_reason_required: true
+
+search_discovery:
+  endpoint_parameter: term
+  page_size: 8
+  osd_accessions_only: true
+  non_osdr_accessions: "Recorded as limitations; not treated as OSDR studies."

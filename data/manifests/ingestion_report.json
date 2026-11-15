@@ -1,0 +1,77 @@
+{
+  "generated_at_utc": "2026-11-14T10:41:32Z",
+  "discovery_queries": [
+    "Inspiration4",
+    "ISS human physiology",
+    "astronaut cardiovascular deconditioning",
+    "spaceflight associated neuro-ocular syndrome",
+    "orthostatic intolerance spaceflight",
+    "circadian sleep astronaut",
+    "immune function spaceflight",
+    "bone muscle loss spaceflight",
+    "bed rest",
+    "head-down tilt",
+    "dry immersion",
+    "isolation confinement",
+    "cabin carbon dioxide",
+    "space radiation",
+    "galactic cosmic radiation",
+    "solar particle event",
+    "microbiome astronaut"
+  ],
+  "study_catalog_total": 79,
+  "accepted_studies": 71,
+  "rejected_studies": 8,
+  "verified_inspiration4_studies": 7,
+  "osdr_file_inventory": [
+    {
+      "study_id": "OSD-569",
+      "file_count": 11,
+      "downloaded_file_count": 3,
+      "verification_status": "VERIFIED_FILES"
+    },
+    {
+      "study_id": "OSD-570",
+      "file_count": 12,
+      "downloaded_file_count": 2,
+      "verification_status": "VERIFIED_FILES"
+    },
+    {
+      "study_id": "OSD-571",
+      "file_count": 14,
+      "downloaded_file_count": 9,
+      "verification_status": "VERIFIED_FILES"
+    },
+    {
+      "study_id": "OSD-572",
+      "file_count": 5404,
+      "downloaded_file_count": 4,
+      "verification_status": "VERIFIED_FILES"
+    },
+    {
+      "study_id": "OSD-573",
+      "file_count": 659,
+      "downloaded_file_count": 1,
+      "verification_status": "VERIFIED_FILES"
+    },
+    {
+      "study_id": "OSD-575",
+      "file_count": 9,
+      "downloaded_file_count": 9,
+      "verification_status": "VERIFIED_FILES"
+    },
+    {
+      "study_id": "OSD-656",
+      "file_count": 4,
+      "downloaded_file_count": 4,
+      "verification_status": "VERIFIED_FILES"
+    }
+  ],
+  "download_fallback_status": "NONE",
+  "restricted_files_downloaded": 0,
+  "large_raw_omics_policy": "Large FASTQ/BAM/video and raw matrices were not downloaded by default.",
+  "limitations": [
+    "Discovery is OSDR-only; non-OSDR repositories (GEO, LTSA, TechPort) were not searched in this run.",
+    "Some searches can fail when the OSDR endpoint is unavailable; failures are reported rather than silently omitted."
+  ]
+}

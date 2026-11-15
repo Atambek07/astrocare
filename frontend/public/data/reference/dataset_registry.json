@@ -1,0 +1,2614 @@
+[
+  {
+    "dataset_id": "OSD-569-Complete_Blood_Count-Tabular_Results_Files",
+    "study_id": "OSD-569",
+    "title": "Complete Blood Count / Tabular Results Files",
+    "modality": "LAB_PANEL",
+    "measurement_types": [
+      "Complete Blood Count"
+    ],
+    "measurement_units": [],
+    "subject_count": null,
+    "timepoint_count": null,
+    "file_count": 2,
+    "access_level": "PUBLIC",
+    "verification_status": "VERIFIED_FILES",
+    "source_url": "https://osdr.nasa.gov/geode-py/ws/studies/OSD-569/download?source=datamanager&file=LSDS-7_Complete_Blood_Count_CBC.upload_SUBMITTED.csv",
+    "last_verified_utc": "2026-11-14T10:40:17Z",
+    "continuous_telemetry": false,
+    "notes": "Public file index inspected; table content is parsed separately.",
+    "category": "DIRECT_HUMAN_SPACEFLIGHT",
+    "assay_types": [
+      "Complete Blood Count"
+    ],
+    "collection_timepoints": [],
+    "public_files": 2,
+    "restricted_files": 0,
+    "downloaded_files": 2,
+    "relevance_score": 90.0,
+    "scientific_relevance": "OSDR public dataset grouped by category and subcategory.",
+    "limitations": [
+      "File-level measurement counts and units are recorded only for parsed files."
+    ],
+    "publication_references": [],
+    "ingestion_status": "DOWNLOADED",
+    "source_file_names": [
+      "LSDS-7_Complete_Blood_Count_CBC.upload_SUBMITTED.csv",
+      "LSDS-7_Complete_Blood_Count_CBC_TRANSFORMED.csv"
+    ]
+  },
+  {
+    "dataset_id": "OSD-569-GeneLab_Processed_RNA-Seq_Files-Merged_Sequence_Data",
+    "study_id": "OSD-569",
+    "title": "GeneLab Processed RNA-Seq Files / Merged Sequence Data",
+    "modality": "OMICS",
+    "measurement_types": [
+      "GeneLab Processed RNA-Seq Files"
+    ],
+    "measurement_units": [],
+    "subject_count": null,
+    "timepoint_count": null,
+    "file_count": 1,
+    "access_level": "PUBLIC",
+    "verification_status": "VERIFIED_FILES",
+    "source_url": "https://osdr.nasa.gov/geode-py/ws/studies/OSD-569/download?source=datamanager&file=GLDS-561_rna_seq_raw_multiqc_GLbulkRNAseq_report.zip",
+    "last_verified_utc": "2026-11-14T10:40:17Z",
+    "continuous_telemetry": false,
+    "notes": "Public file index inspected; table content is parsed separately.",
+    "category": "DIRECT_HUMAN_SPACEFLIGHT",
+    "assay_types": [
+      "GeneLab Processed RNA-Seq Files"
+    ],
+    "collection_timepoints": [],
+    "public_files": 1,
+    "restricted_files": 0,
+    "downloaded_files": 0,
+    "relevance_score": 55.0,
+    "scientific_relevance": "OSDR public dataset grouped by category and subcategory.",
+    "limitations": [
+      "File-level measurement counts and units are recorded only for parsed files."
+    ],
+    "publication_references": [],
+    "ingestion_status": "CATALOGUED",
+    "source_file_names": [
+      "GLDS-561_rna_seq_raw_multiqc_GLbulkRNAseq_report.zip"
+    ]
+  },
+  {
+    "dataset_id": "OSD-569-GeneLab_Processed_Whole_Genome_Sequencing-Merged_Sequence_Data",
+    "study_id": "OSD-569",
+    "title": "GeneLab Processed Whole Genome Sequencing / Merged Sequence Data",
+    "modality": "OMICS",
+    "measurement_types": [
+      "GeneLab Processed Whole Genome Sequencing"
+    ],
+    "measurement_units": [],
+    "subject_count": null,
+    "timepoint_count": null,
+    "file_count": 1,
+    "access_level": "PUBLIC",
+    "verification_status": "VERIFIED_FILES",
+    "source_url": "https://osdr.nasa.gov/geode-py/ws/studies/OSD-569/download?source=datamanager&file=GLDS-561_Gwgs_raw_multiqc_GLwgs_report.zip",
+    "last_verified_utc": "2026-11-14T10:40:17Z",
+    "continuous_telemetry": false,
+    "notes": "Public file index inspected; table content is parsed separately.",
+    "category": "DIRECT_HUMAN_SPACEFLIGHT",
+    "assay_types": [
+      "GeneLab Processed Whole Genome Sequencing"
+    ],
+    "collection_timepoints": [],
+    "public_files": 1,
+    "restricted_files": 0,
+    "downloaded_files": 0,
+    "relevance_score": 55.0,
+    "scientific_relevance": "OSDR public dataset grouped by category and subcategory.",
+    "limitations": [
+      "File-level measurement counts and units are recorded only for parsed files."
+    ],
+    "publication_references": [],
+    "ingestion_status": "CATALOGUED",
+    "source_file_names": [
+      "GLDS-561_Gwgs_raw_multiqc_GLwgs_report.zip"
+    ]
+  },
+  {
+    "dataset_id": "OSD-569-GeneLab_Processed_long_read_RNA-Seq_Files-Merged_Sequence_Data",
+    "study_id": "OSD-569",
+    "title": "GeneLab Processed long read RNA-Seq Files / Merged Sequence Data",
+    "modality": "OMICS",
+    "measurement_types": [
+      "GeneLab Processed long read RNA-Seq Files"
+    ],
+    "measurement_units": [],
+    "subject_count": null,
+    "timepoint_count": null,
+    "file_count": 1,
+    "access_level": "PUBLIC",
+    "verification_status": "VERIFIED_FILES",
+    "source_url": "https://osdr.nasa.gov/geode-py/ws/studies/OSD-569/download?source=datamanager&file=GLDS-561_Glong-readRNAseq_raw_multiqc_GLlong-readRNAseq_report.zip",
+    "last_verified_utc": "2026-11-14T10:40:17Z",
+    "continuous_telemetry": false,
+    "notes": "Public file index inspected; table content is parsed separately.",
+    "category": "DIRECT_HUMAN_SPACEFLIGHT",
+    "assay_types": [
+      "GeneLab Processed long read RNA-Seq Files"
+    ],
+    "collection_timepoints": [],
+    "public_files": 1,
+    "restricted_files": 0,
+    "downloaded_files": 0,
+    "relevance_score": 55.0,
+    "scientific_relevance": "OSDR public dataset grouped by category and subcategory.",
+    "limitations": [
+      "File-level measurement counts and units are recorded only for parsed files."
+    ],
+    "publication_references": [],
+    "ingestion_status": "CATALOGUED",
+    "source_file_names": [
+      "GLDS-561_Glong-readRNAseq_raw_multiqc_GLlong-readRNAseq_report.zip"
+    ]
+  },
+  {
+    "dataset_id": "OSD-569-Study_Metadata_Files",
+    "study_id": "OSD-569",
+    "title": "Study Metadata Files / files",
+    "modality": "OTHER",
+    "measurement_types": [
+      "Study Metadata Files"
+    ],
+    "measurement_units": [],
+    "subject_count": null,
+    "timepoint_count": null,
+    "file_count": 1,
+    "access_level": "PUBLIC",
+    "verification_status": "VERIFIED_FILES",
+    "source_url": "https://osdr.nasa.gov/geode-py/ws/studies/OSD-569/download?source=datamanager&file=OSD-569_metadata_OSD-569-ISA.zip",
+    "last_verified_utc": "2026-11-14T10:40:17Z",
+    "continuous_telemetry": false,
+    "notes": "Public file index inspected; table content is parsed separately.",
+    "category": "DIRECT_HUMAN_SPACEFLIGHT",
+    "assay_types": [
+      "Study Metadata Files"
+    ],
+    "collection_timepoints": [],
+    "public_files": 1,
+    "restricted_files": 0,
+    "downloaded_files": 1,
+    "relevance_score": 90.0,
+    "scientific_relevance": "OSDR public dataset grouped by category and subcategory.",
+    "limitations": [
+      "File-level measurement counts and units are recorded only for parsed files."
+    ],
+    "publication_references": [],
+    "ingestion_status": "DOWNLOADED",
+    "source_file_names": [
+      "OSD-569_metadata_OSD-569-ISA.zip"
+    ]
+  },
+  {
+    "dataset_id": "OSD-569-long_read_RNA-Seq-MD5_Checksums",
+    "study_id": "OSD-569",
+    "title": "long read RNA-Seq / MD5 Checksums",
+    "modality": "OMICS",
+    "measurement_types": [
+      "long read RNA-Seq"
+    ],
+    "measurement_units": [],
+    "subject_count": null,
+    "timepoint_count": null,
+    "file_count": 1,
+    "access_level": "PUBLIC",
+    "verification_status": "VERIFIED_FILES",
+    "source_url": "https://osdr.nasa.gov/geode-py/ws/studies/OSD-569/download?source=datamanager&file=GLDS-561_long-readRNAseq_raw_md5sum_GLlong-readRNAseq.txt",
+    "last_verified_utc": "2026-11-14T10:40:17Z",
+    "continuous_telemetry": false,
+    "notes": "Public file index inspected; table content is parsed separately.",
+    "category": "DIRECT_HUMAN_SPACEFLIGHT",
+    "assay_types": [
+      "long read RNA-Seq"
+    ],
+    "collection_timepoints": [],
+    "public_files": 1,
+    "restricted_files": 0,
+    "downloaded_files": 0,
+    "relevance_score": 55.0,
+    "scientific_relevance": "OSDR public dataset grouped by category and subcategory.",
+    "limitations": [
+      "File-level measurement counts and units are recorded only for parsed files."
+    ],
+    "publication_references": [],
+    "ingestion_status": "CATALOGUED",
+    "source_file_names": [
+      "GLDS-561_long-readRNAseq_raw_md5sum_GLlong-readRNAseq.txt"
+    ]
+  },
+  {
+    "dataset_id": "OSD-569-long_read_RNA-Seq-Processed_Data_Files",
+    "study_id": "OSD-569",
+    "title": "long read RNA-Seq / Processed Data Files",
+    "modality": "OMICS",
+    "measurement_types": [
+      "long read RNA-Seq"
+    ],
+    "measurement_units": [],
+    "subject_count": null,
+    "timepoint_count": null,
+    "file_count": 1,
+    "access_level": "PUBLIC",
+    "verification_status": "VERIFIED_FILES",
+    "source_url": "https://osdr.nasa.gov/geode-py/ws/studies/OSD-569/download?source=datamanager&file=GLDS-561_long-readRNAseq_Direct_RNA_seq_Gene_Expression_Processed.xlsx",
+    "last_verified_utc": "2026-11-14T10:40:17Z",
+    "continuous_telemetry": false,
+    "notes": "Public file index inspected; table content is parsed separately.",
+    "category": "DIRECT_HUMAN_SPACEFLIGHT",
+    "assay_types": [
+      "long read RNA-Seq"
+    ],
+    "collection_timepoints": [],
+    "public_files": 1,
+    "restricted_files": 0,
+    "downloaded_files": 0,
+    "relevance_score": 55.0,
+    "scientific_relevance": "OSDR public dataset grouped by category and subcategory.",
+    "limitations": [
+      "File-level measurement counts and units are recorded only for parsed files."
+    ],
+    "publication_references": [],
+    "ingestion_status": "CATALOGUED",
+    "source_file_names": [
+      "GLDS-561_long-readRNAseq_Direct_RNA_seq_Gene_Expression_Processed.xlsx"
+    ]
+  },
+  {
+    "dataset_id": "OSD-569-m6A_Direct_RNAseq_Data_Files-Processed_Data_Files",
+    "study_id": "OSD-569",
+    "title": "m6A Direct RNAseq Data Files / Processed Data Files",
+    "modality": "OMICS",
+    "measurement_types": [
+      "m6A Direct RNAseq Data Files"
+    ],
+    "measurement_units": [],
+    "subject_count": null,
+    "timepoint_count": null,
+    "file_count": 1,
+    "access_level": "PUBLIC",
+    "verification_status": "VERIFIED_FILES",
+    "source_url": "https://osdr.nasa.gov/geode-py/ws/studies/OSD-569/download?source=datamanager&file=GLDS-561_directm6Aseq_Direct_RNA_seq_m6A_Processed_Data.xlsx",
+    "last_verified_utc": "2026-11-14T10:40:17Z",
+    "continuous_telemetry": false,
+    "notes": "Public file index inspected; table content is parsed separately.",
+    "category": "DIRECT_HUMAN_SPACEFLIGHT",
+    "assay_types": [
+      "m6A Direct RNAseq Data Files"
+    ],
+    "collection_timepoints": [],
+    "public_files": 1,
+    "restricted_files": 0,
+    "downloaded_files": 0,
+    "relevance_score": 55.0,
+    "scientific_relevance": "OSDR public dataset grouped by category and subcategory.",
+    "limitations": [
+      "File-level measurement counts and units are recorded only for parsed files."
+    ],
+    "publication_references": [],
+    "ingestion_status": "CATALOGUED",
+    "source_file_names": [
+      "GLDS-561_directm6Aseq_Direct_RNA_seq_m6A_Processed_Data.xlsx"
+    ]
+  },
+  {
+    "dataset_id": "OSD-569-targeted_sequencing-MD5_Checksums",
+    "study_id": "OSD-569",
+    "title": "targeted sequencing / MD5 Checksums",
+    "modality": "OMICS",
+    "measurement_types": [
+      "targeted sequencing"
+    ],
+    "measurement_units": [],
+    "subject_count": null,
+    "timepoint_count": null,
+    "file_count": 1,
+    "access_level": "PUBLIC",
+    "verification_status": "VERIFIED_FILES",
+    "source_url": "https://osdr.nasa.gov/geode-py/ws/studies/OSD-569/download?source=datamanager&file=GLDS-561_targetSeq_raw_md5sum_GLtargetSeq.txt",
+    "last_verified_utc": "2026-11-14T10:40:17Z",
+    "continuous_telemetry": false,
+    "notes": "Public file index inspected; table content is parsed separately.",
+    "category": "DIRECT_HUMAN_SPACEFLIGHT",
+    "assay_types": [
+      "targeted sequencing"
+    ],
+    "collection_timepoints": [],
+    "public_files": 1,
+    "restricted_files": 0,
+    "downloaded_files": 0,
+    "relevance_score": 55.0,
+    "scientific_relevance": "OSDR public dataset grouped by category and subcategory.",
+    "limitations": [
+      "File-level measurement counts and units are recorded only for parsed files."
+    ],
+    "publication_references": [],
+    "ingestion_status": "CATALOGUED",
+    "source_file_names": [
+      "GLDS-561_targetSeq_raw_md5sum_GLtargetSeq.txt"
+    ]
+  },
+  {
+    "dataset_id": "OSD-569-targeted_sequencing-Merged_Sequence_Data",
+    "study_id": "OSD-569",
+    "title": "targeted sequencing / Merged Sequence Data",
+    "modality": "OMICS",
+    "measurement_types": [
+      "targeted sequencing"
+    ],
+    "measurement_units": [],
+    "subject_count": null,
+    "timepoint_count": null,
+    "file_count": 1,
+    "access_level": "PUBLIC",
+    "verification_status": "VERIFIED_FILES",
+    "source_url": "https://osdr.nasa.gov/geode-py/ws/studies/OSD-569/download?source=datamanager&file=GLDS-561_GtargetSeq_raw_multiqc_GLtargetSeq_report.zip",
+    "last_verified_utc": "2026-11-14T10:40:17Z",
+    "continuous_telemetry": false,
+    "notes": "Public file index inspected; table content is parsed separately.",
+    "category": "DIRECT_HUMAN_SPACEFLIGHT",
+    "assay_types": [
+      "targeted sequencing"
+    ],
+    "collection_timepoints": [],
+    "public_files": 1,
+    "restricted_files": 0,
+    "downloaded_files": 0,
+    "relevance_score": 55.0,
+    "scientific_relevance": "OSDR public dataset grouped by category and subcategory.",
+    "limitations": [
+      "File-level measurement counts and units are recorded only for parsed files."
+    ],
+    "publication_references": [],
+    "ingestion_status": "CATALOGUED",
+    "source_file_names": [
+      "GLDS-561_GtargetSeq_raw_multiqc_GLtargetSeq_report.zip"
+    ]
+  },
+  {
+    "dataset_id": "OSD-570-GeneLab_Processed_scRNAseq_Files-Merged_Sequence_Data",
+    "study_id": "OSD-570",
+    "title": "GeneLab Processed scRNAseq Files / Merged Sequence Data",
+    "modality": "OMICS",
+    "measurement_types": [
+      "GeneLab Processed scRNAseq Files"
+    ],
+    "measurement_units": [],
+    "subject_count": null,
+    "timepoint_count": null,
+    "file_count": 2,
+    "access_level": "PUBLIC",
+    "verification_status": "VERIFIED_FILES",
+    "source_url": "https://osdr.nasa.gov/geode-py/ws/studies/OSD-570/download?source=datamanager&file=GLDS-562_scRNA_Seq_raw_multiqc_GLscRNAseq_BCR_report.zip",
+    "last_verified_utc": "2026-11-14T10:40:17Z",
+    "continuous_telemetry": false,
+    "notes": "Public file index inspected; table content is parsed separately.",
+    "category": "DIRECT_HUMAN_SPACEFLIGHT",
+    "assay_types": [
+      "GeneLab Processed scRNAseq Files"
+    ],
+    "collection_timepoints": [],
+    "public_files": 2,
+    "restricted_files": 0,
+    "downloaded_files": 0,
+    "relevance_score": 55.0,
+    "scientific_relevance": "OSDR public dataset grouped by category and subcategory.",
+    "limitations": [
+      "File-level measurement counts and units are recorded only for parsed files."
+    ],
+    "publication_references": [],
+    "ingestion_status": "CATALOGUED",
+    "source_file_names": [
+      "GLDS-562_scRNA_Seq_raw_multiqc_GLscRNAseq_BCR_report.zip",
+      "GLDS-562_scRNA_Seq_raw_multiqc_GLscRNAseq_TCR_report.zip"
+    ]
+  },
+  {
+    "dataset_id": "OSD-570-GeneLab_Processed_snATACseq_Data_Files-Merged_Sequence_Data",
+    "study_id": "OSD-570",
+    "title": "GeneLab Processed snATACseq Data Files / Merged Sequence Data",
+    "modality": "OTHER",
+    "measurement_types": [
+      "GeneLab Processed snATACseq Data Files"
+    ],
+    "measurement_units": [],
+    "subject_count": null,
+    "timepoint_count": null,
+    "file_count": 1,
+    "access_level": "PUBLIC",
+    "verification_status": "VERIFIED_FILES",
+    "source_url": "https://osdr.nasa.gov/geode-py/ws/studies/OSD-570/download?source=datamanager&file=GLDS-562_GsnATAC-Seq_raw_multiqc_GLsnATACseq_report.zip",
+    "last_verified_utc": "2026-11-14T10:40:17Z",
+    "continuous_telemetry": false,
+    "notes": "Public file index inspected; table content is parsed separately.",
+    "category": "DIRECT_HUMAN_SPACEFLIGHT",
+    "assay_types": [
+      "GeneLab Processed snATACseq Data Files"
+    ],
+    "collection_timepoints": [],
+    "public_files": 1,
+    "restricted_files": 0,
+    "downloaded_files": 0,
+    "relevance_score": 55.0,
+    "scientific_relevance": "OSDR public dataset grouped by category and subcategory.",
+    "limitations": [
+      "File-level measurement counts and units are recorded only for parsed files."
+    ],
+    "publication_references": [],
+    "ingestion_status": "CATALOGUED",
+    "source_file_names": [
+      "GLDS-562_GsnATAC-Seq_raw_multiqc_GLsnATACseq_report.zip"
+    ]
+  },
+  {
+    "dataset_id": "OSD-570-GeneLab_Processed_snRNAseq_Files-Merged_Sequence_Data",
+    "study_id": "OSD-570",
+    "title": "GeneLab Processed snRNAseq Files / Merged Sequence Data",
+    "modality": "OMICS",
+    "measurement_types": [
+      "GeneLab Processed snRNAseq Files"
+    ],
+    "measurement_units": [],
+    "subject_count": null,
+    "timepoint_count": null,
+    "file_count": 1,
+    "access_level": "PUBLIC",
+    "verification_status": "VERIFIED_FILES",
+    "source_url": "https://osdr.nasa.gov/geode-py/ws/studies/OSD-570/download?source=datamanager&file=GLDS-562_GsnRNA-Seq_raw_multiqc_GLsnRNAseq_report.zip",
+    "last_verified_utc": "2026-11-14T10:40:17Z",
+    "continuous_telemetry": false,
+    "notes": "Public file index inspected; table content is parsed separately.",
+    "category": "DIRECT_HUMAN_SPACEFLIGHT",
+    "assay_types": [
+      "GeneLab Processed snRNAseq Files"
+    ],
+    "collection_timepoints": [],
+    "public_files": 1,
+    "restricted_files": 0,
+    "downloaded_files": 0,
+    "relevance_score": 55.0,
+    "scientific_relevance": "OSDR public dataset grouped by category and subcategory.",
+    "limitations": [
+      "File-level measurement counts and units are recorded only for parsed files."
+    ],
+    "publication_references": [],
+    "ingestion_status": "CATALOGUED",
+    "source_file_names": [
+      "GLDS-562_GsnRNA-Seq_raw_multiqc_GLsnRNAseq_report.zip"
+    ]
+  },
+  {
+    "dataset_id": "OSD-570-Study_Metadata_Files",
+    "study_id": "OSD-570",
+    "title": "Study Metadata Files / files",
+    "modality": "OTHER",
+    "measurement_types": [
+      "Study Metadata Files"
+    ],
+    "measurement_units": [],
+    "subject_count": null,
+    "timepoint_count": null,
+    "file_count": 1,
+    "access_level": "PUBLIC",
+    "verification_status": "VERIFIED_FILES",
+    "source_url": "https://osdr.nasa.gov/geode-py/ws/studies/OSD-570/download?source=datamanager&file=OSD-570_metadata_OSD-570-ISA.zip",
+    "last_verified_utc": "2026-11-14T10:40:17Z",
+    "continuous_telemetry": false,
+    "notes": "Public file index inspected; table content is parsed separately.",
+    "category": "DIRECT_HUMAN_SPACEFLIGHT",
+    "assay_types": [
+      "Study Metadata Files"
+    ],
+    "collection_timepoints": [],
+    "public_files": 1,
+    "restricted_files": 0,
+    "downloaded_files": 1,
+    "relevance_score": 90.0,
+    "scientific_relevance": "OSDR public dataset grouped by category and subcategory.",
+    "limitations": [
+      "File-level measurement counts and units are recorded only for parsed files."
+    ],
+    "publication_references": [],
+    "ingestion_status": "DOWNLOADED",
+    "source_file_names": [
+      "OSD-570_metadata_OSD-570-ISA.zip"
+    ]
+  },
+  {
+    "dataset_id": "OSD-570-scRNA-Seq_Data_Files-MD5_Checksums",
+    "study_id": "OSD-570",
+    "title": "scRNA-Seq Data Files / MD5 Checksums",
+    "modality": "OMICS",
+    "measurement_types": [
+      "scRNA-Seq Data Files"
+    ],
+    "measurement_units": [],
+    "subject_count": null,
+    "timepoint_count": null,
+    "file_count": 2,
+    "access_level": "PUBLIC",
+    "verification_status": "VERIFIED_FILES",
+    "source_url": "https://osdr.nasa.gov/geode-py/ws/studies/OSD-570/download?source=datamanager&file=GLDS-562_scRNA-Seq_raw_md5sum_GLscRNAseq_BCR.txt",
+    "last_verified_utc": "2026-11-14T10:40:17Z",
+    "continuous_telemetry": false,
+    "notes": "Public file index inspected; table content is parsed separately.",
+    "category": "DIRECT_HUMAN_SPACEFLIGHT",
+    "assay_types": [
+      "scRNA-Seq Data Files"
+    ],
+    "collection_timepoints": [],
+    "public_files": 2,
+    "restricted_files": 0,
+    "downloaded_files": 0,
+    "relevance_score": 55.0,
+    "scientific_relevance": "OSDR public dataset grouped by category and subcategory.",
+    "limitations": [
+      "File-level measurement counts and units are recorded only for parsed files."
+    ],
+    "publication_references": [],
+    "ingestion_status": "CATALOGUED",
+    "source_file_names": [
+      "GLDS-562_scRNA-Seq_raw_md5sum_GLscRNAseq_BCR.txt",
+      "GLDS-562_scRNA-Seq_raw_md5sum_GLscRNAseq_TCR.txt"
+    ]
+  },
+  {
+    "dataset_id": "OSD-570-scRNA-Seq_Data_Files-Processed_Data_Files",
+    "study_id": "OSD-570",
+    "title": "scRNA-Seq Data Files / Processed Data Files",
+    "modality": "OMICS",
+    "measurement_types": [
+      "scRNA-Seq Data Files"
+    ],
+    "measurement_units": [],
+    "subject_count": null,
+    "timepoint_count": null,
+    "file_count": 1,
+    "access_level": "PUBLIC",
+    "verification_status": "VERIFIED_FILES",
+    "source_url": "https://osdr.nasa.gov/geode-py/ws/studies/OSD-570/download?source=datamanager&file=GLDS-562_scRNA-Seq_VDJ_Results.xlsx",
+    "last_verified_utc": "2026-11-14T10:40:17Z",
+    "continuous_telemetry": false,
+    "notes": "Public file index inspected; table content is parsed separately.",
+    "category": "DIRECT_HUMAN_SPACEFLIGHT",
+    "assay_types": [
+      "scRNA-Seq Data Files"
+    ],
+    "collection_timepoints": [],
+    "public_files": 1,
+    "restricted_files": 0,
+    "downloaded_files": 0,
+    "relevance_score": 55.0,
+    "scientific_relevance": "OSDR public dataset grouped by category and subcategory.",
+    "limitations": [
+      "File-level measurement counts and units are recorded only for parsed files."
+    ],
+    "publication_references": [],
+    "ingestion_status": "CATALOGUED",
+    "source_file_names": [
+      "GLDS-562_scRNA-Seq_VDJ_Results.xlsx"
+    ]
+  },
+  {
+    "dataset_id": "OSD-570-snATAC-Seq-MD5_Checksums",
+    "study_id": "OSD-570",
+    "title": "snATAC-Seq / MD5 Checksums",
+    "modality": "OTHER",
+    "measurement_types": [
+      "snATAC-Seq"
+    ],
+    "measurement_units": [],
+    "subject_count": null,
+    "timepoint_count": null,
+    "file_count": 1,
+    "access_level": "PUBLIC",
+    "verification_status": "VERIFIED_FILES",
+    "source_url": "https://osdr.nasa.gov/geode-py/ws/studies/OSD-570/download?source=datamanager&file=GLDS-562_snATAC-Seq_raw_md5sum_GLsnATACseq.txt",
+    "last_verified_utc": "2026-11-14T10:40:17Z",
+    "continuous_telemetry": false,
+    "notes": "Public file index inspected; table content is parsed separately.",
+    "category": "DIRECT_HUMAN_SPACEFLIGHT",
+    "assay_types": [
+      "snATAC-Seq"
+    ],
+    "collection_timepoints": [],
+    "public_files": 1,
+    "restricted_files": 0,
+    "downloaded_files": 0,
+    "relevance_score": 55.0,
+    "scientific_relevance": "OSDR public dataset grouped by category and subcategory.",
+    "limitations": [
+      "File-level measurement counts and units are recorded only for parsed files."
+    ],
+    "publication_references": [],
+    "ingestion_status": "CATALOGUED",
+    "source_file_names": [
+      "GLDS-562_snATAC-Seq_raw_md5sum_GLsnATACseq.txt"
+    ]
+  },
+  {
+    "dataset_id": "OSD-570-snATAC-Seq-Processed_Data_Files",
+    "study_id": "OSD-570",
+    "title": "snATAC-Seq / Processed Data Files",
+    "modality": "OTHER",
+    "measurement_types": [
+      "snATAC-Seq"
+    ],
+    "measurement_units": [],
+    "subject_count": null,
+    "timepoint_count": null,
+    "file_count": 1,
+    "access_level": "PUBLIC",
+    "verification_status": "VERIFIED_FILES",
+    "source_url": "https://osdr.nasa.gov/geode-py/ws/studies/OSD-570/download?source=datamanager&file=GLDS-562_snATAC-Seq_PBMC_Chromatin_Accessibility_snATAC-seq_Processed_Data.xlsx",
+    "last_verified_utc": "2026-11-14T10:40:17Z",
+    "continuous_telemetry": false,
+    "notes": "Public file index inspected; table content is parsed separately.",
+    "category": "DIRECT_HUMAN_SPACEFLIGHT",
+    "assay_types": [
+      "snATAC-Seq"
+    ],
+    "collection_timepoints": [],
+    "public_files": 1,
+    "restricted_files": 0,
+    "downloaded_files": 0,
+    "relevance_score": 55.0,
+    "scientific_relevance": "OSDR public dataset grouped by category and subcategory.",
+    "limitations": [
+      "File-level measurement counts and units are recorded only for parsed files."
+    ],
+    "publication_references": [],
+    "ingestion_status": "CATALOGUED",
+    "source_file_names": [
+      "GLDS-562_snATAC-Seq_PBMC_Chromatin_Accessibility_snATAC-seq_Processed_Data.xlsx"
+    ]
+  },
+  {
+    "dataset_id": "OSD-570-snRNA-Seq_Data_Files-MD5_Checksums",
+    "study_id": "OSD-570",
+    "title": "snRNA-Seq Data Files / MD5 Checksums",
+    "modality": "OMICS",
+    "measurement_types": [
+      "snRNA-Seq Data Files"
+    ],
+    "measurement_units": [],
+    "subject_count": null,
+    "timepoint_count": null,
+    "file_count": 1,
+    "access_level": "PUBLIC",
+    "verification_status": "VERIFIED_FILES",
+    "source_url": "https://osdr.nasa.gov/geode-py/ws/studies/OSD-570/download?source=datamanager&file=GLDS-562_snRNA-Seq_raw_md5sum_GLsnRNAseq.txt",
+    "last_verified_utc": "2026-11-14T10:40:17Z",
+    "continuous_telemetry": false,
+    "notes": "Public file index inspected; table content is parsed separately.",
+    "category": "DIRECT_HUMAN_SPACEFLIGHT",
+    "assay_types": [
+      "snRNA-Seq Data Files"
+    ],
+    "collection_timepoints": [],
+    "public_files": 1,
+    "restricted_files": 0,
+    "downloaded_files": 0,
+    "relevance_score": 55.0,
+    "scientific_relevance": "OSDR public dataset grouped by category and subcategory.",
+    "limitations": [
+      "File-level measurement counts and units are recorded only for parsed files."
+    ],
+    "publication_references": [],
+    "ingestion_status": "CATALOGUED",
+    "source_file_names": [
+      "GLDS-562_snRNA-Seq_raw_md5sum_GLsnRNAseq.txt"
+    ]
+  },
+  {
+    "dataset_id": "OSD-570-snRNA-Seq_Data_Files-Processed_Data_Files",
+    "study_id": "OSD-570",
+    "title": "snRNA-Seq Data Files / Processed Data Files",
+    "modality": "OMICS",
+    "measurement_types": [
+      "snRNA-Seq Data Files"
+    ],
+    "measurement_units": [],
+    "subject_count": null,
+    "timepoint_count": null,
+    "file_count": 1,
+    "access_level": "PUBLIC",
+    "verification_status": "VERIFIED_FILES",
+    "source_url": "https://osdr.nasa.gov/geode-py/ws/studies/OSD-570/download?source=datamanager&file=GLDS-562_snRNA-Seq_PBMC_Gene_Expression_snRNA-seq_Processed_Data.xlsx",
+    "last_verified_utc": "2026-11-14T10:40:17Z",
+    "continuous_telemetry": false,
+    "notes": "Public file index inspected; table content is parsed separately.",
+    "category": "DIRECT_HUMAN_SPACEFLIGHT",
+    "assay_types": [
+      "snRNA-Seq Data Files"
+    ],
+    "collection_timepoints": [],
+    "public_files": 1,
+    "restricted_files": 0,
+    "downloaded_files": 1,
+    "relevance_score": 90.0,
+    "scientific_relevance": "OSDR public dataset grouped by category and subcategory.",
+    "limitations": [
+      "File-level measurement counts and units are recorded only for parsed files."
+    ],
+    "publication_references": [],
+    "ingestion_status": "DOWNLOADED",
+    "source_file_names": [
+      "GLDS-562_snRNA-Seq_PBMC_Gene_Expression_snRNA-seq_Processed_Data.xlsx"
+    ]
+  },
+  {
+    "dataset_id": "OSD-571-GeneLab_Processed_RNA-Seq_Files-Merged_Sequence_Data",
+    "study_id": "OSD-571",
+    "title": "GeneLab Processed RNA-Seq Files / Merged Sequence Data",
+    "modality": "OMICS",
+    "measurement_types": [
+      "GeneLab Processed RNA-Seq Files"
+    ],
+    "measurement_units": [],
+    "subject_count": null,
+    "timepoint_count": null,
+    "file_count": 1,
+    "access_level": "PUBLIC",
+    "verification_status": "VERIFIED_FILES",
+    "source_url": "https://osdr.nasa.gov/geode-py/ws/studies/OSD-571/download?source=datamanager&file=GLDS-563_rna_seq_raw_multiqc_GLbulkRNAseq_report.zip",
+    "last_verified_utc": "2026-11-14T10:40:17Z",
+    "continuous_telemetry": false,
+    "notes": "Public file index inspected; table content is parsed separately.",
+    "category": "DIRECT_HUMAN_SPACEFLIGHT",
+    "assay_types": [
+      "GeneLab Processed RNA-Seq Files"
+    ],
+    "collection_timepoints": [],
+    "public_files": 1,
+    "restricted_files": 0,
+    "downloaded_files": 0,
+    "relevance_score": 55.0,
+    "scientific_relevance": "OSDR public dataset grouped by category and subcategory.",
+    "limitations": [
+      "File-level measurement counts and units are recorded only for parsed files."
+    ],
+    "publication_references": [],
+    "ingestion_status": "CATALOGUED",
+    "source_file_names": [
+      "GLDS-563_rna_seq_raw_multiqc_GLbulkRNAseq_report.zip"
+    ]
+  },
+  {
+    "dataset_id": "OSD-571-GeneLab_Processed_Whole_Genome_Sequencing-Merged_Sequence_Data",
+    "study_id": "OSD-571",
+    "title": "GeneLab Processed Whole Genome Sequencing / Merged Sequence Data",
+    "modality": "OMICS",
+    "measurement_types": [
+      "GeneLab Processed Whole Genome Sequencing"
+    ],
+    "measurement_units": [],
+    "subject_count": null,
+    "timepoint_count": null,
+    "file_count": 1,
+    "access_level": "PUBLIC",
+    "verification_status": "VERIFIED_FILES",
+    "source_url": "https://osdr.nasa.gov/geode-py/ws/studies/OSD-571/download?source=datamanager&file=GLDS-563_Gwgs_raw_multiqc_GLwgs_report.zip",
+    "last_verified_utc": "2026-11-14T10:40:17Z",
+    "continuous_telemetry": false,
+    "notes": "Public file index inspected; table content is parsed separately.",
+    "category": "DIRECT_HUMAN_SPACEFLIGHT",
+    "assay_types": [
+      "GeneLab Processed Whole Genome Sequencing"
+    ],
+    "collection_timepoints": [],
+    "public_files": 1,
+    "restricted_files": 0,
+    "downloaded_files": 0,
+    "relevance_score": 55.0,
+    "scientific_relevance": "OSDR public dataset grouped by category and subcategory.",
+    "limitations": [
+      "File-level measurement counts and units are recorded only for parsed files."
+    ],
+    "publication_references": [],
+    "ingestion_status": "CATALOGUED",
+    "source_file_names": [
+      "GLDS-563_Gwgs_raw_multiqc_GLwgs_report.zip"
+    ]
+  },
+  {
+    "dataset_id": "OSD-571-Metabolomics_Data_Files-MD5_Checksums",
+    "study_id": "OSD-571",
+    "title": "Metabolomics Data Files / MD5 Checksums",
+    "modality": "OMICS",
+    "measurement_types": [
+      "Metabolomics Data Files"
+    ],
+    "measurement_units": [],
+    "subject_count": null,
+    "timepoint_count": null,
+    "file_count": 1,
+    "access_level": "PUBLIC",
+    "verification_status": "VERIFIED_FILES",
+    "source_url": "https://osdr.nasa.gov/geode-py/ws/studies/OSD-571/download?source=datamanager&file=GLDS-563_metabolomics_raw_md5sum_GLmetabolomics.txt",
+    "last_verified_utc": "2026-11-14T10:40:17Z",
+    "continuous_telemetry": false,
+    "notes": "Public file index inspected; table content is parsed separately.",
+    "category": "DIRECT_HUMAN_SPACEFLIGHT",
+    "assay_types": [
+      "Metabolomics Data Files"
+    ],
+    "collection_timepoints": [],
+    "public_files": 1,
+    "restricted_files": 0,
+    "downloaded_files": 0,
+    "relevance_score": 55.0,
+    "scientific_relevance": "OSDR public dataset grouped by category and subcategory.",
+    "limitations": [
+      "File-level measurement counts and units are recorded only for parsed files."
+    ],
+    "publication_references": [],
+    "ingestion_status": "CATALOGUED",
+    "source_file_names": [
+      "GLDS-563_metabolomics_raw_md5sum_GLmetabolomics.txt"
+    ]
+  },
+  {
+    "dataset_id": "OSD-571-Metabolomics_Data_Files-Processed_Data_Files",
+    "study_id": "OSD-571",
+    "title": "Metabolomics Data Files / Processed Data Files",
+    "modality": "OMICS",
+    "measurement_types": [
+      "Metabolomics Data Files"
+    ],
+    "measurement_units": [],
+    "subject_count": null,
+    "timepoint_count": null,
+    "file_count": 3,
+    "access_level": "PUBLIC",
+    "verification_status": "VERIFIED_FILES",
+    "source_url": "https://osdr.nasa.gov/geode-py/ws/studies/OSD-571/download?source=datamanager&file=GLDS-563_metabolomics_Plasma_Metabolomics_Processed_Data.xlsx",
+    "last_verified_utc": "2026-11-14T10:40:17Z",
+    "continuous_telemetry": false,
+    "notes": "Public file index inspected; table content is parsed separately.",
+    "category": "DIRECT_HUMAN_SPACEFLIGHT",
+    "assay_types": [
+      "Metabolomics Data Files"
+    ],
+    "collection_timepoints": [],
+    "public_files": 3,
+    "restricted_files": 0,
+    "downloaded_files": 3,
+    "relevance_score": 90.0,
+    "scientific_relevance": "OSDR public dataset grouped by category and subcategory.",
+    "limitations": [
+      "File-level measurement counts and units are recorded only for parsed files."
+    ],
+    "publication_references": [],
+    "ingestion_status": "DOWNLOADED",
+    "source_file_names": [
+      "GLDS-563_metabolomics_Plasma_Metabolomics_Processed_Data.xlsx",
+      "GLDS-563_metabolomics_metabolomics_RPPOS-NEG_preprocessed_data.xlsx",
+      "GLDS-563_metabolomics_metabolomics_ANPPOS-NEG_preprocessed_data.xlsx"
+    ]
+  },
+  {
+    "dataset_id": "OSD-571-Proteomics_Data_Files-MD5_Checksums",
+    "study_id": "OSD-571",
+    "title": "Proteomics Data Files / MD5 Checksums",
+    "modality": "OMICS",
+    "measurement_types": [
+      "Proteomics Data Files"
+    ],
+    "measurement_units": [],
+    "subject_count": null,
+    "timepoint_count": null,
+    "file_count": 1,
+    "access_level": "PUBLIC",
+    "verification_status": "VERIFIED_FILES",
+    "source_url": "https://osdr.nasa.gov/geode-py/ws/studies/OSD-571/download?source=datamanager&file=GLDS-563_proteomics_raw_md5sum_GLproteomics-EVP.txt",
+    "last_verified_utc": "2026-11-14T10:40:17Z",
+    "continuous_telemetry": false,
+    "notes": "Public file index inspected; table content is parsed separately.",
+    "category": "DIRECT_HUMAN_SPACEFLIGHT",
+    "assay_types": [
+      "Proteomics Data Files"
+    ],
+    "collection_timepoints": [],
+    "public_files": 1,
+    "restricted_files": 0,
+    "downloaded_files": 0,
+    "relevance_score": 55.0,
+    "scientific_relevance": "OSDR public dataset grouped by category and subcategory.",
+    "limitations": [
+      "File-level measurement counts and units are recorded only for parsed files."
+    ],
+    "publication_references": [],
+    "ingestion_status": "CATALOGUED",
+    "source_file_names": [
+      "GLDS-563_proteomics_raw_md5sum_GLproteomics-EVP.txt"
+    ]
+  },
+  {
+    "dataset_id": "OSD-571-Proteomics_Data_Files-Processed_Data_Files",
+    "study_id": "OSD-571",
+    "title": "Proteomics Data Files / Processed Data Files",
+    "modality": "OMICS",
+    "measurement_types": [
+      "Proteomics Data Files"
+    ],
+    "measurement_units": [],
+    "subject_count": null,
+    "timepoint_count": null,
+    "file_count": 6,
+    "access_level": "PUBLIC",
+    "verification_status": "VERIFIED_FILES",
+    "source_url": "https://osdr.nasa.gov/geode-py/ws/studies/OSD-571/download?source=datamanager&file=GLDS-563_proteomics_plasma_metadata_all_samples_collapsed.csv",
+    "last_verified_utc": "2026-11-14T10:40:17Z",
+    "continuous_telemetry": false,
+    "notes": "Public file index inspected; table content is parsed separately.",
+    "category": "DIRECT_HUMAN_SPACEFLIGHT",
+    "assay_types": [
+      "Proteomics Data Files"
+    ],
+    "collection_timepoints": [],
+    "public_files": 6,
+    "restricted_files": 0,
+    "downloaded_files": 5,
+    "relevance_score": 90.0,
+    "scientific_relevance": "OSDR public dataset grouped by category and subcategory.",
+    "limitations": [
+      "File-level measurement counts and units are recorded only for parsed files."
+    ],
+    "publication_references": [],
+    "ingestion_status": "DOWNLOADED",
+    "source_file_names": [
+      "GLDS-563_proteomics_plasma_metadata_all_samples_collapsed.csv",
+      "GLDS-563_proteomics_EVPs_proteomics_preprocessed_data.txt",
+      "GLDS-563_proteomics_Plasma_Proteomics_Processed_Data.xlsx",
+      "GLDS-563_proteomics_EVPs_sample_metadata.csv",
+      "GLDS-563_proteomics_EVP_Proteomics_Processed_Data.xlsx",
+      "GLDS-563_proteomics_plasma_proteomics_preprocessed_data.tsv"
+    ]
+  },
+  {
+    "dataset_id": "OSD-571-Study_Metadata_Files",
+    "study_id": "OSD-571",
+    "title": "Study Metadata Files / files",
+    "modality": "OTHER",
+    "measurement_types": [
+      "Study Metadata Files"
+    ],
+    "measurement_units": [],
+    "subject_count": null,
+    "timepoint_count": null,
+    "file_count": 1,
+    "access_level": "PUBLIC",
+    "verification_status": "VERIFIED_FILES",
+    "source_url": "https://osdr.nasa.gov/geode-py/ws/studies/OSD-571/download?source=datamanager&file=OSD-571_metadata_OSD-571-ISA.zip",
+    "last_verified_utc": "2026-11-14T10:40:17Z",
+    "continuous_telemetry": false,
+    "notes": "Public file index inspected; table content is parsed separately.",
+    "category": "DIRECT_HUMAN_SPACEFLIGHT",
+    "assay_types": [
+      "Study Metadata Files"
+    ],
+    "collection_timepoints": [],
+    "public_files": 1,
+    "restricted_files": 0,
+    "downloaded_files": 1,
+    "relevance_score": 90.0,
+    "scientific_relevance": "OSDR public dataset grouped by category and subcategory.",
+    "limitations": [
+      "File-level measurement counts and units are recorded only for parsed files."
+    ],
+    "publication_references": [],
+    "ingestion_status": "DOWNLOADED",
+    "source_file_names": [
+      "OSD-571_metadata_OSD-571-ISA.zip"
+    ]
+  },
+  {
+    "dataset_id": "OSD-572-GeneLab_Processed_Metagenomics_Files-Assembly-based_Processing",
+    "study_id": "OSD-572",
+    "title": "GeneLab Processed Metagenomics Files / Assembly-based Processing",
+    "modality": "MICROBIOME",
+    "measurement_types": [
+      "GeneLab Processed Metagenomics Files"
+    ],
+    "measurement_units": [],
+    "subject_count": null,
+    "timepoint_count": null,
+    "file_count": 3435,
+    "access_level": "PUBLIC",
+    "verification_status": "VERIFIED_FILES",
+    "source_url": "https://osdr.nasa.gov/geode-py/ws/studies/OSD-572/download?source=datamanager&file=GLDS-564_GMetagenomics_Combined-gene-level-taxonomy-coverages_GLmetagenomics.tsv",
+    "last_verified_utc": "2026-11-14T10:40:17Z",
+    "continuous_telemetry": false,
+    "notes": "Public file index inspected; table content is parsed separately.",
+    "category": "DIRECT_HUMAN_SPACEFLIGHT",
+    "assay_types": [
+      "GeneLab Processed Metagenomics Files"
+    ],
+    "collection_timepoints": [],
+    "public_files": 3435,
+    "restricted_files": 0,
+    "downloaded_files": 0,
+    "relevance_score": 55.0,
+    "scientific_relevance": "OSDR public dataset grouped by category and subcategory.",
+    "limitations": [
+      "File-level measurement counts and units are recorded only for parsed files."
+    ],
+    "publication_references": [],
+    "ingestion_status": "CATALOGUED",
+    "source_file_names": [
+      "GLDS-564_GMetagenomics_Combined-gene-level-taxonomy-coverages_GLmetagenomics.tsv",
+      "GLDS-564_GMetagenomics_Combined-gene-level-taxonomy-coverages-CPM_GLmetagenomics.tsv",
+      "GLDS-564_GMetagenomics_Combined-gene-level-KO-function-coverages_GLmetagenomics.tsv",
+      "GLDS-564_GMetagenomics_Combined-gene-level-KO-function-coverages-CPM_GLmetagenomics.tsv",
+      "GLDS-564_GMetagenomics_Combined-contig-level-taxonomy-coverages_GLmetagenomics.tsv",
+      "GLDS-564_GMetagenomics_Combined-contig-level-taxonomy-coverages-CPM_GLmetagenomics.tsv",
+      "GLDS-564_GMetagenomics_MAGs-overview_GLmetagenomics.tsv",
+      "GLDS-564_GMetagenomics_MAG-level-KO-annotations_GLmetagenomics.tsv",
+      "GLDS-564_GMetagenomics_MAG-KEGG-Decoder-out_GLmetagenomics.tsv",
+      "GLDS-564_GMetagenomics_MAG-KEGG-Decoder-out_GLmetagenomics.html",
+      "GLDS-564_GMetagenomics_C004_R+82_WEB-MAGs.zip",
+      "GLDS-564_GMetagenomics_C004_R+82_UMB-MAGs.zip",
+      "GLDS-564_GMetagenomics_C004_R+82_TZO-MAGs.zip",
+      "GLDS-564_GMetagenomics_C004_R+82_NAP-MAGs.zip",
+      "GLDS-564_GMetagenomics_C004_R+82_NAC-MAGs.zip",
+      "GLDS-564_GMetagenomics_C004_R+82_GLU-MAGs.zip",
+      "GLDS-564_GMetagenomics_C004_R+82_EAR-MAGs.zip",
+      "GLDS-564_GMetagenomics_C004_R+45_UMB-MAGs.zip",
+      "GLDS-564_GMetagenomics_C004_R+45_TZO-MAGs.zip",
+      "GLDS-564_GMetagenomics_C004_R+45_PIT-MAGs.zip",
+      "GLDS-564_GMetagenomics_C004_R+45_NAP-MAGs.zip",
+      "GLDS-564_GMetagenomics_C004_R+45_GLU-MAGs.zip",
+      "GLDS-564_GMetagenomics_C004_R+45_EAR-MAGs.zip",
+      "GLDS-564_GMetagenomics_C004_R+45_ARM-MAGs.zip",
+      "GLDS-564_GMetagenomics_C004_R+1_WEB-MAGs.zip",
+      "GLDS-564_GMetagenomics_C004_R+1_UMB-MAGs.zip",
+      "GLDS-564_GMetagenomics_C004_R+1_TZO-MAGs.zip",
+      "GLDS-564_GMetagenomics_C004_R+1_PIT-MAGs.zip",
+      "GLDS-564_GMetagenomics_C004_R+1_NAP-MAGs.zip",
+      "GLDS-564_GMetagenomics_C004_R+1_GLU-MAGs.zip",
+      "GLDS-564_GMetagenomics_C004_R+1_EAR-MAGs.zip",
+      "GLDS-564_GMetagenomics_C004_R+1_ARM-MAGs.zip",
+      "GLDS-564_GMetagenomics_C004_L-92_UMB-MAGs.zip",
+      "GLDS-564_GMetagenomics_C004_L-92_TZO-MAGs.zip",
+      "GLDS-564_GMetagenomics_C004_L-92_NAP-MAGs.zip",
+      "GLDS-564_GMetagenomics_C004_L-92_GLU-MAGs.zip",
+      "GLDS-564_GMetagenomics_C004_L-92_EAR-MAGs.zip",
+      "GLDS-564_GMetagenomics_C004_L-92_ARM-MAGs.zip",
+      "GLDS-564_GMetagenomics_C004_L-44_UMB-MAGs.zip",
+      "GLDS-564_GMetagenomics_C004_L-44_TZO-MAGs.zip",
+      "GLDS-564_GMetagenomics_Assembly-based-processing-overview_GLmetagenomics.tsv",
+      "GLDS-564_GMetagenomics_C004_L-44_ORC-MAGs.zip",
+      "GLDS-564_GMetagenomics_C004_L-44_NAP-MAGs.zip",
+      "GLDS-564_GMetagenomics_assembly-summaries_GLmetagenomics.tsv",
+      "GLDS-564_GMetagenomics_C004_L-44_EAR-MAGs.zip",
+      "GLDS-564_GMetagenomics_C004_L-44_ARM-MAGs.zip",
+      "GLDS-564_GMetagenomics_C004_L-3_WEB-MAGs.zip",
+      "GLDS-564_GMetagenomics_Communal_L-92_H20-assembly.fasta",
+      "GLDS-564_GMetagenomics_C004_L-3_UMB-MAGs.zip",
+      "GLDS-564_GMetagenomics_Communal_AllFlight_H20-assembly.fasta"
+    ]
+  },
+  {
+    "dataset_id": "OSD-572-GeneLab_Processed_Metagenomics_Files-FastQC_Outputs",
+    "study_id": "OSD-572",
+    "title": "GeneLab Processed Metagenomics Files / FastQC Outputs",
+    "modality": "MICROBIOME",
+    "measurement_types": [
+      "GeneLab Processed Metagenomics Files"
+    ],
+    "measurement_units": [],
+    "subject_count": null,
+    "timepoint_count": null,
+    "file_count": 2,
+    "access_level": "PUBLIC",
+    "verification_status": "VERIFIED_FILES",
+    "source_url": "https://osdr.nasa.gov/geode-py/ws/studies/OSD-572/download?source=datamanager&file=GLDS-564_GMetagenomics_filtered_multiqc_GLmetagenomics_report.zip",
+    "last_verified_utc": "2026-11-14T10:40:17Z",
+    "continuous_telemetry": false,
+    "notes": "Public file index inspected; table content is parsed separately.",
+    "category": "DIRECT_HUMAN_SPACEFLIGHT",
+    "assay_types": [
+      "GeneLab Processed Metagenomics Files"
+    ],
+    "collection_timepoints": [],
+    "public_files": 2,
+    "restricted_files": 0,
+    "downloaded_files": 0,
+    "relevance_score": 55.0,
+    "scientific_relevance": "OSDR public dataset grouped by category and subcategory.",
+    "limitations": [
+      "File-level measurement counts and units are recorded only for parsed files."
+    ],
+    "publication_references": [],
+    "ingestion_status": "CATALOGUED",
+    "source_file_names": [
+      "GLDS-564_GMetagenomics_filtered_multiqc_GLmetagenomics_report.zip",
+      "GLDS-564_GMetagenomics_raw_multiqc_GLmetagenomics_report.zip"
+    ]
+  },
+  {
+    "dataset_id": "OSD-572-GeneLab_Processed_Metagenomics_Files-Filtered_Sequence_Data",
+    "study_id": "OSD-572",
+    "title": "GeneLab Processed Metagenomics Files / Filtered Sequence Data",
+    "modality": "MICROBIOME",
+    "measurement_types": [
+      "GeneLab Processed Metagenomics Files"
+    ],
+    "measurement_units": [],
+    "subject_count": null,
+    "timepoint_count": null,
+    "file_count": 658,
+    "access_level": "PUBLIC",
+    "verification_status": "VERIFIED_FILES",
+    "source_url": "https://osdr.nasa.gov/geode-py/ws/studies/OSD-572/download?source=datamanager&file=GLDS-564_GMetagenomics_Control_AllFlight_H20_R2_filtered.fastq.gz",
+    "last_verified_utc": "2026-11-14T10:40:17Z",
+    "continuous_telemetry": false,
+    "notes": "Public file index inspected; table content is parsed separately.",
+    "category": "DIRECT_HUMAN_SPACEFLIGHT",
+    "assay_types": [
+      "GeneLab Processed Metagenomics Files"
+    ],
+    "collection_timepoints": [],
+    "public_files": 658,
+    "restricted_files": 0,
+    "downloaded_files": 0,
+    "relevance_score": 55.0,
+    "scientific_relevance": "OSDR public dataset grouped by category and subcategory.",
+    "limitations": [
+      "File-level measurement counts and units are recorded only for parsed files."
+    ],
+    "publication_references": [],
+    "ingestion_status": "CATALOGUED",
+    "source_file_names": [
+      "GLDS-564_GMetagenomics_Control_AllFlight_H20_R2_filtered.fastq.gz",
+      "GLDS-564_GMetagenomics_Control_AllFlight_H20_R1_filtered.fastq.gz",
+      "GLDS-564_GMetagenomics_Communal_R+1_H20_R2_filtered.fastq.gz",
+      "GLDS-564_GMetagenomics_Communal_R+1_H20_R1_filtered.fastq.gz",
+      "GLDS-564_GMetagenomics_Communal_L-92_H20_R2_filtered.fastq.gz",
+      "GLDS-564_GMetagenomics_Communal_L-92_H20_R1_filtered.fastq.gz",
+      "GLDS-564_GMetagenomics_Communal_AllFlight_H20_R2_filtered.fastq.gz",
+      "GLDS-564_GMetagenomics_Communal_AllFlight_H20_R1_filtered.fastq.gz",
+      "GLDS-564_GMetagenomics_C004_R+82_WEB_R2_filtered.fastq.gz",
+      "GLDS-564_GMetagenomics_C004_R+82_WEB_R1_filtered.fastq.gz",
+      "GLDS-564_GMetagenomics_C004_R+82_UMB_R2_filtered.fastq.gz",
+      "GLDS-564_GMetagenomics_C004_R+82_UMB_R1_filtered.fastq.gz",
+      "GLDS-564_GMetagenomics_C004_R+82_TZO_R2_filtered.fastq.gz",
+      "GLDS-564_GMetagenomics_C004_R+82_TZO_R1_filtered.fastq.gz",
+      "GLDS-564_GMetagenomics_C004_R+82_PIT_R2_filtered.fastq.gz",
+      "GLDS-564_GMetagenomics_C004_R+82_PIT_R1_filtered.fastq.gz",
+      "GLDS-564_GMetagenomics_C004_R+82_ORC_R2_filtered.fastq.gz",
+      "GLDS-564_GMetagenomics_C004_R+82_ORC_R1_filtered.fastq.gz",
+      "GLDS-564_GMetagenomics_C004_R+82_NAP_R2_filtered.fastq.gz",
+      "GLDS-564_GMetagenomics_C004_R+82_NAP_R1_filtered.fastq.gz",
+      "GLDS-564_GMetagenomics_C004_R+82_NAC_R2_filtered.fastq.gz",
+      "GLDS-564_GMetagenomics_C004_R+82_NAC_R1_filtered.fastq.gz",
+      "GLDS-564_GMetagenomics_C004_R+82_H20_R2_filtered.fastq.gz",
+      "GLDS-564_GMetagenomics_C004_R+82_H20_R1_filtered.fastq.gz",
+      "GLDS-564_GMetagenomics_C004_R+82_GLU_R2_filtered.fastq.gz",
+      "GLDS-564_GMetagenomics_C004_R+82_GLU_R1_filtered.fastq.gz",
+      "GLDS-564_GMetagenomics_C004_R+82_EAR_R2_filtered.fastq.gz",
+      "GLDS-564_GMetagenomics_C004_R+82_EAR_R1_filtered.fastq.gz",
+      "GLDS-564_GMetagenomics_C004_R+82_ARM_R2_filtered.fastq.gz",
+      "GLDS-564_GMetagenomics_C004_R+82_ARM_R1_filtered.fastq.gz",
+      "GLDS-564_GMetagenomics_C004_R+45_WEB_R2_filtered.fastq.gz",
+      "GLDS-564_GMetagenomics_C004_R+45_WEB_R1_filtered.fastq.gz",
+      "GLDS-564_GMetagenomics_C004_R+45_UMB_R2_filtered.fastq.gz",
+      "GLDS-564_GMetagenomics_C004_R+45_UMB_R1_filtered.fastq.gz",
+      "GLDS-564_GMetagenomics_C004_R+45_TZO_R2_filtered.fastq.gz",
+      "GLDS-564_GMetagenomics_C004_R+45_TZO_R1_filtered.fastq.gz",
+      "GLDS-564_GMetagenomics_C004_R+45_PIT_R2_filtered.fastq.gz",
+      "GLDS-564_GMetagenomics_C004_R+45_PIT_R1_filtered.fastq.gz",
+      "GLDS-564_GMetagenomics_C004_R+45_ORC_R2_filtered.fastq.gz",
+      "GLDS-564_GMetagenomics_C004_R+45_ORC_R1_filtered.fastq.gz",
+      "GLDS-564_GMetagenomics_C004_R+45_OAC_R2_filtered.fastq.gz",
+      "GLDS-564_GMetagenomics_C004_R+45_OAC_R1_filtered.fastq.gz",
+      "GLDS-564_GMetagenomics_C004_R+45_NAP_R2_filtered.fastq.gz",
+      "GLDS-564_GMetagenomics_C004_R+45_NAP_R1_filtered.fastq.gz",
+      "GLDS-564_GMetagenomics_C004_R+45_NAC_R2_filtered.fastq.gz",
+      "GLDS-564_GMetagenomics_C004_R+45_NAC_R1_filtered.fastq.gz",
+      "GLDS-564_GMetagenomics_C004_R+45_H20_R2_filtered.fastq.gz",
+      "GLDS-564_GMetagenomics_C004_R+45_H20_R1_filtered.fastq.gz",
+      "GLDS-564_GMetagenomics_C004_R+45_GLU_R2_filtered.fastq.gz",
+      "GLDS-564_GMetagenomics_C004_R+45_GLU_R1_filtered.fastq.gz"
+    ]
+  },
+  {
+    "dataset_id": "OSD-572-GeneLab_Processed_Metagenomics_Files-MD5_Checksums",
+    "study_id": "OSD-572",
+    "title": "GeneLab Processed Metagenomics Files / MD5 Checksums",
+    "modality": "MICROBIOME",
+    "measurement_types": [
+      "GeneLab Processed Metagenomics Files"
+    ],
+    "measurement_units": [],
+    "subject_count": null,
+    "timepoint_count": null,
+    "file_count": 1,
+    "access_level": "PUBLIC",
+    "verification_status": "VERIFIED_FILES",
+    "source_url": "https://osdr.nasa.gov/geode-py/ws/studies/OSD-572/download?source=datamanager&file=GLDS-564_GMetagenomics_processed_md5sum_GLmetagenomics.tsv",
+    "last_verified_utc": "2026-11-14T10:40:17Z",
+    "continuous_telemetry": false,
+    "notes": "Public file index inspected; table content is parsed separately.",
+    "category": "DIRECT_HUMAN_SPACEFLIGHT",
+    "assay_types": [
+      "GeneLab Processed Metagenomics Files"
+    ],
+    "collection_timepoints": [],
+    "public_files": 1,
+    "restricted_files": 0,
+    "downloaded_files": 0,
+    "relevance_score": 55.0,
+    "scientific_relevance": "OSDR public dataset grouped by category and subcategory.",
+    "limitations": [
+      "File-level measurement counts and units are recorded only for parsed files."
+    ],
+    "publication_references": [],
+    "ingestion_status": "CATALOGUED",
+    "source_file_names": [
+      "GLDS-564_GMetagenomics_processed_md5sum_GLmetagenomics.tsv"
+    ]
+  },
+  {
+    "dataset_id": "OSD-572-GeneLab_Processed_Metagenomics_Files-Processing_Info",
+    "study_id": "OSD-572",
+    "title": "GeneLab Processed Metagenomics Files / Processing Info",
+    "modality": "MICROBIOME",
+    "measurement_types": [
+      "GeneLab Processed Metagenomics Files"
+    ],
+    "measurement_units": [],
+    "subject_count": null,
+    "timepoint_count": null,
+    "file_count": 1,
+    "access_level": "PUBLIC",
+    "verification_status": "VERIFIED_FILES",
+    "source_url": "https://osdr.nasa.gov/geode-py/ws/studies/OSD-572/download?source=datamanager&file=GLDS-564_GMetagenomics_processing_info_GLmetagenomics.zip",
+    "last_verified_utc": "2026-11-14T10:40:17Z",
+    "continuous_telemetry": false,
+    "notes": "Public file index inspected; table content is parsed separately.",
+    "category": "DIRECT_HUMAN_SPACEFLIGHT",
+    "assay_types": [
+      "GeneLab Processed Metagenomics Files"
+    ],
+    "collection_timepoints": [],
+    "public_files": 1,
+    "restricted_files": 0,
+    "downloaded_files": 0,
+    "relevance_score": 55.0,
+    "scientific_relevance": "OSDR public dataset grouped by category and subcategory.",
+    "limitations": [
+      "File-level measurement counts and units are recorded only for parsed files."
+    ],
+    "publication_references": [],
+    "ingestion_status": "CATALOGUED",
+    "source_file_names": [
+      "GLDS-564_GMetagenomics_processing_info_GLmetagenomics.zip"
+    ]
+  },
+  {
+    "dataset_id": "OSD-572-GeneLab_Processed_Metagenomics_Files-README",
+    "study_id": "OSD-572",
+    "title": "GeneLab Processed Metagenomics Files / README",
+    "modality": "MICROBIOME",
+    "measurement_types": [
+      "GeneLab Processed Metagenomics Files"
+    ],
+    "measurement_units": [],
+    "subject_count": null,
+    "timepoint_count": null,
+    "file_count": 1,
+    "access_level": "PUBLIC",
+    "verification_status": "VERIFIED_FILES",
+    "source_url": "https://osdr.nasa.gov/geode-py/ws/studies/OSD-572/download?source=datamanager&file=GLDS-564_GMetagenomics_README_GLmetagenomics.txt",
+    "last_verified_utc": "2026-11-14T10:40:17Z",
+    "continuous_telemetry": false,
+    "notes": "Public file index inspected; table content is parsed separately.",
+    "category": "DIRECT_HUMAN_SPACEFLIGHT",
+    "assay_types": [
+      "GeneLab Processed Metagenomics Files"
+    ],
+    "collection_timepoints": [],
+    "public_files": 1,
+    "restricted_files": 0,
+    "downloaded_files": 1,
+    "relevance_score": 90.0,
+    "scientific_relevance": "OSDR public dataset grouped by category and subcategory.",
+    "limitations": [
+      "File-level measurement counts and units are recorded only for parsed files."
+    ],
+    "publication_references": [],
+    "ingestion_status": "DOWNLOADED",
+    "source_file_names": [
+      "GLDS-564_GMetagenomics_README_GLmetagenomics.txt"
+    ]
+  },
+  {
+    "dataset_id": "OSD-572-GeneLab_Processed_Metagenomics_Files-Read-based_Processing",
+    "study_id": "OSD-572",
+    "title": "GeneLab Processed Metagenomics Files / Read-based Processing",
+    "modality": "MICROBIOME",
+    "measurement_types": [
+      "GeneLab Processed Metagenomics Files"
+    ],
+    "measurement_units": [],
+    "subject_count": null,
+    "timepoint_count": null,
+    "file_count": 10,
+    "access_level": "PUBLIC",
+    "verification_status": "VERIFIED_FILES",
+    "source_url": "https://osdr.nasa.gov/geode-py/ws/studies/OSD-572/download?source=datamanager&file=GLDS-564_GMetagenomics_Pathway-coverages_GLmetagenomics.tsv",
+    "last_verified_utc": "2026-11-14T10:40:17Z",
+    "continuous_telemetry": false,
+    "notes": "Public file index inspected; table content is parsed separately.",
+    "category": "DIRECT_HUMAN_SPACEFLIGHT",
+    "assay_types": [
+      "GeneLab Processed Metagenomics Files"
+    ],
+    "collection_timepoints": [],
+    "public_files": 10,
+    "restricted_files": 0,
+    "downloaded_files": 2,
+    "relevance_score": 90.0,
+    "scientific_relevance": "OSDR public dataset grouped by category and subcategory.",
+    "limitations": [
+      "File-level measurement counts and units are recorded only for parsed files."
+    ],
+    "publication_references": [],
+    "ingestion_status": "DOWNLOADED",
+    "source_file_names": [
+      "GLDS-564_GMetagenomics_Pathway-coverages_GLmetagenomics.tsv",
+      "GLDS-564_GMetagenomics_Pathway-coverages-grouped-by-taxa_GLmetagenomics.tsv",
+      "GLDS-564_GMetagenomics_Pathway-abundances_GLmetagenomics.tsv",
+      "GLDS-564_GMetagenomics_Pathway-abundances-grouped-by-taxa_GLmetagenomics.tsv",
+      "GLDS-564_GMetagenomics_Pathway-abundances-cpm_GLmetagenomics.tsv",
+      "GLDS-564_GMetagenomics_Metaphlan-taxonomy_GLmetagenomics.tsv",
+      "GLDS-564_GMetagenomics_Gene-families_GLmetagenomics.tsv",
+      "GLDS-564_GMetagenomics_Gene-families-grouped-by-taxa_GLmetagenomics.tsv",
+      "GLDS-564_GMetagenomics_Gene-families-cpm_GLmetagenomics.tsv",
+      "GLDS-564_GMetagenomics_Gene-families-KO-cpm_GLmetagenomics.tsv"
+    ]
+  },
+  {
+    "dataset_id": "OSD-572-Metagenomics_Data_Files-MD5_Checksums",
+    "study_id": "OSD-572",
+    "title": "Metagenomics Data Files / MD5 Checksums",
+    "modality": "MICROBIOME",
+    "measurement_types": [
+      "Metagenomics Data Files"
+    ],
+    "measurement_units": [],
+    "subject_count": null,
+    "timepoint_count": null,
+    "file_count": 1,
+    "access_level": "PUBLIC",
+    "verification_status": "VERIFIED_FILES",
+    "source_url": "https://osdr.nasa.gov/geode-py/ws/studies/OSD-572/download?source=datamanager&file=GLDS-564_metagenomics_raw_md5sum_GLmetagenomics.txt",
+    "last_verified_utc": "2026-11-14T10:40:17Z",
+    "continuous_telemetry": false,
+    "notes": "Public file index inspected; table content is parsed separately.",
+    "category": "DIRECT_HUMAN_SPACEFLIGHT",
+    "assay_types": [
+      "Metagenomics Data Files"
+    ],
+    "collection_timepoints": [],
+    "public_files": 1,
+    "restricted_files": 0,
+    "downloaded_files": 0,
+    "relevance_score": 55.0,
+    "scientific_relevance": "OSDR public dataset grouped by category and subcategory.",
+    "limitations": [
+      "File-level measurement counts and units are recorded only for parsed files."
+    ],
+    "publication_references": [],
+    "ingestion_status": "CATALOGUED",
+    "source_file_names": [
+      "GLDS-564_metagenomics_raw_md5sum_GLmetagenomics.txt"
+    ]
+  },
+  {
+    "dataset_id": "OSD-572-Metagenomics_Data_Files-Raw_sequence_data",
+    "study_id": "OSD-572",
+    "title": "Metagenomics Data Files / Raw sequence data",
+    "modality": "MICROBIOME",
+    "measurement_types": [
+      "Metagenomics Data Files"
+    ],
+    "measurement_units": [],
+    "subject_count": null,
+    "timepoint_count": null,
+    "file_count": 658,
+    "access_level": "PUBLIC",
+    "verification_status": "VERIFIED_FILES",
+    "source_url": "https://osdr.nasa.gov/geode-py/ws/studies/OSD-572/download?source=datamanager&file=GLDS-564_metagenomics_metaG_I4_Control_AllFlight_H20_R2_HRremoved_raw.fastq.gz",
+    "last_verified_utc": "2026-11-14T10:40:17Z",
+    "continuous_telemetry": false,
+    "notes": "Public file index inspected; table content is parsed separately.",
+    "category": "DIRECT_HUMAN_SPACEFLIGHT",
+    "assay_types": [
+      "Metagenomics Data Files"
+    ],
+    "collection_timepoints": [],
+    "public_files": 658,
+    "restricted_files": 0,
+    "downloaded_files": 0,
+    "relevance_score": 55.0,
+    "scientific_relevance": "OSDR public dataset grouped by category and subcategory.",
+    "limitations": [
+      "File-level measurement counts and units are recorded only for parsed files."
+    ],
+    "publication_references": [],
+    "ingestion_status": "CATALOGUED",
+    "source_file_names": [
+      "GLDS-564_metagenomics_metaG_I4_Control_AllFlight_H20_R2_HRremoved_raw.fastq.gz",
+      "GLDS-564_metagenomics_metaG_I4_Control_AllFlight_H20_R1_HRremoved_raw.fastq.gz",
+      "GLDS-564_metagenomics_metaG_I4_Communal_R+1_H20_R2_HRremoved_raw.fastq.gz",
+      "GLDS-564_metagenomics_metaG_I4_Communal_R+1_H20_R1_HRremoved_raw.fastq.gz",
+      "GLDS-564_metagenomics_metaG_I4_Communal_L-92_H20_R2_HRremoved_raw.fastq.gz",
+      "GLDS-564_metagenomics_metaG_I4_Communal_L-92_H20_R1_HRremoved_raw.fastq.gz",
+      "GLDS-564_metagenomics_metaG_I4_Communal_AllFlight_H20_R2_HRremoved_raw.fastq.gz",
+      "GLDS-564_metagenomics_metaG_I4_Communal_AllFlight_H20_R1_HRremoved_raw.fastq.gz",
+      "GLDS-564_metagenomics_metaG_I4_C004_R+82_WEB_R2_HRremoved_raw.fastq.gz",
+      "GLDS-564_metagenomics_metaG_I4_C004_R+82_WEB_R1_HRremoved_raw.fastq.gz",
+      "GLDS-564_metagenomics_metaG_I4_C004_R+82_UMB_R2_HRremoved_raw.fastq.gz",
+      "GLDS-564_metagenomics_metaG_I4_C004_R+82_UMB_R1_HRremoved_raw.fastq.gz",
+      "GLDS-564_metagenomics_metaG_I4_C004_R+82_TZO_R2_HRremoved_raw.fastq.gz",
+      "GLDS-564_metagenomics_metaG_I4_C004_R+82_TZO_R1_HRremoved_raw.fastq.gz",
+      "GLDS-564_metagenomics_metaG_I4_C004_R+82_PIT_R2_HRremoved_raw.fastq.gz",
+      "GLDS-564_metagenomics_metaG_I4_C004_R+82_PIT_R1_HRremoved_raw.fastq.gz",
+      "GLDS-564_metagenomics_metaG_I4_C004_R+82_ORC_R2_HRremoved_raw.fastq.gz",
+      "GLDS-564_metagenomics_metaG_I4_C004_R+82_ORC_R1_HRremoved_raw.fastq.gz",
+      "GLDS-564_metagenomics_metaG_I4_C004_R+82_NAP_R2_HRremoved_raw.fastq.gz",
+      "GLDS-564_metagenomics_metaG_I4_C004_R+82_NAP_R1_HRremoved_raw.fastq.gz",
+      "GLDS-564_metagenomics_metaG_I4_C004_R+82_NAC_R2_HRremoved_raw.fastq.gz",
+      "GLDS-564_metagenomics_metaG_I4_C004_R+82_NAC_R1_HRremoved_raw.fastq.gz",
+      "GLDS-564_metagenomics_metaG_I4_C004_R+82_H20_R2_HRremoved_raw.fastq.gz",
+      "GLDS-564_metagenomics_metaG_I4_C004_R+82_H20_R1_HRremoved_raw.fastq.gz",
+      "GLDS-564_metagenomics_metaG_I4_C004_R+82_GLU_R2_HRremoved_raw.fastq.gz",
+      "GLDS-564_metagenomics_metaG_I4_C004_R+82_GLU_R1_HRremoved_raw.fastq.gz",
+      "GLDS-564_metagenomics_metaG_I4_C004_R+82_EAR_R2_HRremoved_raw.fastq.gz",
+      "GLDS-564_metagenomics_metaG_I4_C004_R+82_EAR_R1_HRremoved_raw.fastq.gz",
+      "GLDS-564_metagenomics_metaG_I4_C004_R+82_ARM_R2_HRremoved_raw.fastq.gz",
+      "GLDS-564_metagenomics_metaG_I4_C004_R+82_ARM_R1_HRremoved_raw.fastq.gz",
+      "GLDS-564_metagenomics_metaG_I4_C004_R+45_WEB_R2_HRremoved_raw.fastq.gz",
+      "GLDS-564_metagenomics_metaG_I4_C004_R+45_WEB_R1_HRremoved_raw.fastq.gz",
+      "GLDS-564_metagenomics_metaG_I4_C004_R+45_UMB_R2_HRremoved_raw.fastq.gz",
+      "GLDS-564_metagenomics_metaG_I4_C004_R+45_UMB_R1_HRremoved_raw.fastq.gz",
+      "GLDS-564_metagenomics_metaG_I4_C004_R+45_TZO_R2_HRremoved_raw.fastq.gz",
+      "GLDS-564_metagenomics_metaG_I4_C004_R+45_TZO_R1_HRremoved_raw.fastq.gz",
+      "GLDS-564_metagenomics_metaG_I4_C004_R+45_PIT_R2_HRremoved_raw.fastq.gz",
+      "GLDS-564_metagenomics_metaG_I4_C004_R+45_PIT_R1_HRremoved_raw.fastq.gz",
+      "GLDS-564_metagenomics_metaG_I4_C004_R+45_ORC_R2_HRremoved_raw.fastq.gz",
+      "GLDS-564_metagenomics_metaG_I4_C004_R+45_ORC_R1_HRremoved_raw.fastq.gz",
+      "GLDS-564_metagenomics_metaG_I4_C004_R+45_OAC_R2_HRremoved_raw.fastq.gz",
+      "GLDS-564_metagenomics_metaG_I4_C004_R+45_OAC_R1_HRremoved_raw.fastq.gz",
+      "GLDS-564_metagenomics_metaG_I4_C004_R+45_NAP_R2_HRremoved_raw.fastq.gz",
+      "GLDS-564_metagenomics_metaG_I4_C004_R+45_NAP_R1_HRremoved_raw.fastq.gz",
+      "GLDS-564_metagenomics_metaG_I4_C004_R+45_NAC_R2_HRremoved_raw.fastq.gz",
+      "GLDS-564_metagenomics_metaG_I4_C004_R+45_NAC_R1_HRremoved_raw.fastq.gz",
+      "GLDS-564_metagenomics_metaG_I4_C004_R+45_H20_R2_HRremoved_raw.fastq.gz",
+      "GLDS-564_metagenomics_metaG_I4_C004_R+45_H20_R1_HRremoved_raw.fastq.gz",
+      "GLDS-564_metagenomics_metaG_I4_C004_R+45_GLU_R2_HRremoved_raw.fastq.gz",
+      "GLDS-564_metagenomics_metaG_I4_C004_R+45_GLU_R1_HRremoved_raw.fastq.gz"
+    ]
+  },
+  {
+    "dataset_id": "OSD-572-Metatranscriptomics-Merged_Sequence_Data",
+    "study_id": "OSD-572",
+    "title": "Metatranscriptomics / Merged Sequence Data",
+    "modality": "MICROBIOME",
+    "measurement_types": [
+      "Metatranscriptomics"
+    ],
+    "measurement_units": [],
+    "subject_count": null,
+    "timepoint_count": null,
+    "file_count": 1,
+    "access_level": "PUBLIC",
+    "verification_status": "VERIFIED_FILES",
+    "source_url": "https://osdr.nasa.gov/geode-py/ws/studies/OSD-572/download?source=datamanager&file=GLDS-564_GMetatranscriptomics_raw_multiqc_GLmetatranscriptomics_report.zip",
+    "last_verified_utc": "2026-11-14T10:40:17Z",
+    "continuous_telemetry": false,
+    "notes": "Public file index inspected; table content is parsed separately.",
+    "category": "DIRECT_HUMAN_SPACEFLIGHT",
+    "assay_types": [
+      "Metatranscriptomics"
+    ],
+    "collection_timepoints": [],
+    "public_files": 1,
+    "restricted_files": 0,
+    "downloaded_files": 0,
+    "relevance_score": 55.0,
+    "scientific_relevance": "OSDR public dataset grouped by category and subcategory.",
+    "limitations": [
+      "File-level measurement counts and units are recorded only for parsed files."
+    ],
+    "publication_references": [],
+    "ingestion_status": "CATALOGUED",
+    "source_file_names": [
+      "GLDS-564_GMetatranscriptomics_raw_multiqc_GLmetatranscriptomics_report.zip"
+    ]
+  },
+  {
+    "dataset_id": "OSD-572-Metatranscriptomics_Data_Files-MD5_Checksums",
+    "study_id": "OSD-572",
+    "title": "Metatranscriptomics Data Files / MD5 Checksums",
+    "modality": "MICROBIOME",
+    "measurement_types": [
+      "Metatranscriptomics Data Files"
+    ],
+    "measurement_units": [],
+    "subject_count": null,
+    "timepoint_count": null,
+    "file_count": 1,
+    "access_level": "PUBLIC",
+    "verification_status": "VERIFIED_FILES",
+    "source_url": "https://osdr.nasa.gov/geode-py/ws/studies/OSD-572/download?source=datamanager&file=GLDS-564_metatranscriptomics_raw_md5sum_GLmetatranscriptomics.txt",
+    "last_verified_utc": "2026-11-14T10:40:17Z",
+    "continuous_telemetry": false,
+    "notes": "Public file index inspected; table content is parsed separately.",
+    "category": "DIRECT_HUMAN_SPACEFLIGHT",
+    "assay_types": [
+      "Metatranscriptomics Data Files"
+    ],
+    "collection_timepoints": [],
+    "public_files": 1,
+    "restricted_files": 0,
+    "downloaded_files": 0,
+    "relevance_score": 55.0,
+    "scientific_relevance": "OSDR public dataset grouped by category and subcategory.",
+    "limitations": [
+      "File-level measurement counts and units are recorded only for parsed files."
+    ],
+    "publication_references": [],
+    "ingestion_status": "CATALOGUED",
+    "source_file_names": [
+      "GLDS-564_metatranscriptomics_raw_md5sum_GLmetatranscriptomics.txt"
+    ]
+  },
+  {
+    "dataset_id": "OSD-572-Metatranscriptomics_Data_Files-Raw_Sequence_Data",
+    "study_id": "OSD-572",
+    "title": "Metatranscriptomics Data Files / Raw Sequence Data",
+    "modality": "MICROBIOME",
+    "measurement_types": [
+      "Metatranscriptomics Data Files"
+    ],
+    "measurement_units": [],
+    "subject_count": null,
+    "timepoint_count": null,
+    "file_count": 634,
+    "access_level": "PUBLIC",
+    "verification_status": "VERIFIED_FILES",
+    "source_url": "https://osdr.nasa.gov/geode-py/ws/studies/OSD-572/download?source=datamanager&file=GLDS-564_metatranscriptomics_metaT_I4_Communal_L-92_H20_R2_HRremoved_raw.fastq.gz",
+    "last_verified_utc": "2026-11-14T10:40:17Z",
+    "continuous_telemetry": false,
+    "notes": "Public file index inspected; table content is parsed separately.",
+    "category": "DIRECT_HUMAN_SPACEFLIGHT",
+    "assay_types": [
+      "Metatranscriptomics Data Files"
+    ],
+    "collection_timepoints": [],
+    "public_files": 634,
+    "restricted_files": 0,
+    "downloaded_files": 0,
+    "relevance_score": 55.0,
+    "scientific_relevance": "OSDR public dataset grouped by category and subcategory.",
+    "limitations": [
+      "File-level measurement counts and units are recorded only for parsed files."
+    ],
+    "publication_references": [],
+    "ingestion_status": "CATALOGUED",
+    "source_file_names": [
+      "GLDS-564_metatranscriptomics_metaT_I4_Communal_L-92_H20_R2_HRremoved_raw.fastq.gz",
+      "GLDS-564_metatranscriptomics_metaT_I4_Communal_L-92_H20_R1_HRremoved_raw.fastq.gz",
+      "GLDS-564_metatranscriptomics_metaT_I4_C004_R+82_WEB_R2_HRremoved_raw.fastq.gz",
+      "GLDS-564_metatranscriptomics_metaT_I4_C004_R+82_WEB_R1_HRremoved_raw.fastq.gz",
+      "GLDS-564_metatranscriptomics_metaT_I4_C004_R+82_UMB_R2_HRremoved_raw.fastq.gz",
+      "GLDS-564_metatranscriptomics_metaT_I4_C004_R+82_UMB_R1_HRremoved_raw.fastq.gz",
+      "GLDS-564_metatranscriptomics_metaT_I4_C004_R+82_TZO_R2_HRremoved_raw.fastq.gz",
+      "GLDS-564_metatranscriptomics_metaT_I4_C004_R+82_TZO_R1_HRremoved_raw.fastq.gz",
+      "GLDS-564_metatranscriptomics_metaT_I4_C004_R+82_PIT_R2_HRremoved_raw.fastq.gz",
+      "GLDS-564_metatranscriptomics_metaT_I4_C004_R+82_PIT_R1_HRremoved_raw.fastq.gz",
+      "GLDS-564_metatranscriptomics_metaT_I4_C004_R+82_ORC_R2_HRremoved_raw.fastq.gz",
+      "GLDS-564_metatranscriptomics_metaT_I4_C004_R+82_ORC_R1_HRremoved_raw.fastq.gz",
+      "GLDS-564_metatranscriptomics_metaT_I4_C004_R+82_NAP_R2_HRremoved_raw.fastq.gz",
+      "GLDS-564_metatranscriptomics_metaT_I4_C004_R+82_NAP_R1_HRremoved_raw.fastq.gz",
+      "GLDS-564_metatranscriptomics_metaT_I4_C004_R+82_NAC_R2_HRremoved_raw.fastq.gz",
+      "GLDS-564_metatranscriptomics_metaT_I4_C004_R+82_NAC_R1_HRremoved_raw.fastq.gz",
+      "GLDS-564_metatranscriptomics_metaT_I4_C004_R+82_GLU_R2_HRremoved_raw.fastq.gz",
+      "GLDS-564_metatranscriptomics_metaT_I4_C004_R+82_GLU_R1_HRremoved_raw.fastq.gz",
+      "GLDS-564_metatranscriptomics_metaT_I4_C004_R+82_EAR_R2_HRremoved_raw.fastq.gz",
+      "GLDS-564_metatranscriptomics_metaT_I4_C004_R+82_EAR_R1_HRremoved_raw.fastq.gz",
+      "GLDS-564_metatranscriptomics_metaT_I4_C004_R+82_ARM_R2_HRremoved_raw.fastq.gz",
+      "GLDS-564_metatranscriptomics_metaT_I4_C004_R+82_ARM_R1_HRremoved_raw.fastq.gz",
+      "GLDS-564_metatranscriptomics_metaT_I4_C004_R+45_WEB_R2_HRremoved_raw.fastq.gz",
+      "GLDS-564_metatranscriptomics_metaT_I4_C004_R+45_WEB_R1_HRremoved_raw.fastq.gz",
+      "GLDS-564_metatranscriptomics_metaT_I4_C004_R+45_UMB_R2_HRremoved_raw.fastq.gz",
+      "GLDS-564_metatranscriptomics_metaT_I4_C004_R+45_UMB_R1_HRremoved_raw.fastq.gz",
+      "GLDS-564_metatranscriptomics_metaT_I4_C004_R+45_TZO_R2_HRremoved_raw.fastq.gz",
+      "GLDS-564_metatranscriptomics_metaT_I4_C004_R+45_TZO_R1_HRremoved_raw.fastq.gz",
+      "GLDS-564_metatranscriptomics_metaT_I4_C004_R+45_PIT_R2_HRremoved_raw.fastq.gz",
+      "GLDS-564_metatranscriptomics_metaT_I4_C004_R+45_PIT_R1_HRremoved_raw.fastq.gz",
+      "GLDS-564_metatranscriptomics_metaT_I4_C004_R+45_ORC_R2_HRremoved_raw.fastq.gz",
+      "GLDS-564_metatranscriptomics_metaT_I4_C004_R+45_ORC_R1_HRremoved_raw.fastq.gz",
+      "GLDS-564_metatranscriptomics_metaT_I4_C004_R+45_OAC_R2_HRremoved_raw.fastq.gz",
+      "GLDS-564_metatranscriptomics_metaT_I4_C004_R+45_OAC_R1_HRremoved_raw.fastq.gz",
+      "GLDS-564_metatranscriptomics_metaT_I4_C004_R+45_NAP_R2_HRremoved_raw.fastq.gz",
+      "GLDS-564_metatranscriptomics_metaT_I4_C004_R+45_NAP_R1_HRremoved_raw.fastq.gz",
+      "GLDS-564_metatranscriptomics_metaT_I4_C004_R+45_NAC_R2_HRremoved_raw.fastq.gz",
+      "GLDS-564_metatranscriptomics_metaT_I4_C004_R+45_NAC_R1_HRremoved_raw.fastq.gz",
+      "GLDS-564_metatranscriptomics_metaT_I4_C004_R+45_GLU_R2_HRremoved_raw.fastq.gz",
+      "GLDS-564_metatranscriptomics_metaT_I4_C004_R+45_GLU_R1_HRremoved_raw.fastq.gz",
+      "GLDS-564_metatranscriptomics_metaT_I4_C004_R+45_EAR_R2_HRremoved_raw.fastq.gz",
+      "GLDS-564_metatranscriptomics_metaT_I4_C004_R+45_EAR_R1_HRremoved_raw.fastq.gz",
+      "GLDS-564_metatranscriptomics_metaT_I4_C004_R+45_ARM_R2_HRremoved_raw.fastq.gz",
+      "GLDS-564_metatranscriptomics_metaT_I4_C004_R+45_ARM_R1_HRremoved_raw.fastq.gz",
+      "GLDS-564_metatranscriptomics_metaT_I4_C004_R+1_WEB_R2_HRremoved_raw.fastq.gz",
+      "GLDS-564_metatranscriptomics_metaT_I4_C004_R+1_WEB_R1_HRremoved_raw.fastq.gz",
+      "GLDS-564_metatranscriptomics_metaT_I4_C004_R+1_UMB_R2_HRremoved_raw.fastq.gz",
+      "GLDS-564_metatranscriptomics_metaT_I4_C004_R+1_UMB_R1_HRremoved_raw.fastq.gz",
+      "GLDS-564_metatranscriptomics_metaT_I4_C004_R+1_TZO_R2_HRremoved_raw.fastq.gz",
+      "GLDS-564_metatranscriptomics_metaT_I4_C004_R+1_TZO_R1_HRremoved_raw.fastq.gz"
+    ]
+  },
+  {
+    "dataset_id": "OSD-572-Study_Metadata_Files",
+    "study_id": "OSD-572",
+    "title": "Study Metadata Files / files",
+    "modality": "OTHER",
+    "measurement_types": [
+      "Study Metadata Files"
+    ],
+    "measurement_units": [],
+    "subject_count": null,
+    "timepoint_count": null,
+    "file_count": 1,
+    "access_level": "PUBLIC",
+    "verification_status": "VERIFIED_FILES",
+    "source_url": "https://osdr.nasa.gov/geode-py/ws/studies/OSD-572/download?source=datamanager&file=OSD-572_metadata_OSD-572-ISA.zip",
+    "last_verified_utc": "2026-11-14T10:40:17Z",
+    "continuous_telemetry": false,
+    "notes": "Public file index inspected; table content is parsed separately.",
+    "category": "DIRECT_HUMAN_SPACEFLIGHT",
+    "assay_types": [
+      "Study Metadata Files"
+    ],
+    "collection_timepoints": [],
+    "public_files": 1,
+    "restricted_files": 0,
+    "downloaded_files": 1,
+    "relevance_score": 90.0,
+    "scientific_relevance": "OSDR public dataset grouped by category and subcategory.",
+    "limitations": [
+      "File-level measurement counts and units are recorded only for parsed files."
+    ],
+    "publication_references": [],
+    "ingestion_status": "DOWNLOADED",
+    "source_file_names": [
+      "OSD-572_metadata_OSD-572-ISA.zip"
+    ]
+  },
+  {
+    "dataset_id": "OSD-573-GeneLab_Processed_Metagenomics_Files-Assembly-based_Processing",
+    "study_id": "OSD-573",
+    "title": "GeneLab Processed Metagenomics Files / Assembly-based Processing",
+    "modality": "MICROBIOME",
+    "measurement_types": [
+      "GeneLab Processed Metagenomics Files"
+    ],
+    "measurement_units": [],
+    "subject_count": null,
+    "timepoint_count": null,
+    "file_count": 404,
+    "access_level": "PUBLIC",
+    "verification_status": "VERIFIED_FILES",
+    "source_url": "https://osdr.nasa.gov/geode-py/ws/studies/OSD-573/download?source=datamanager&file=GLDS-565_GMetagenomics_Assembly-based-processing-overview_GLmetagenomics.tsv",
+    "last_verified_utc": "2026-11-14T10:40:17Z",
+    "continuous_telemetry": false,
+    "notes": "Public file index inspected; table content is parsed separately.",
+    "category": "DIRECT_HUMAN_SPACEFLIGHT",
+    "assay_types": [
+      "GeneLab Processed Metagenomics Files"
+    ],
+    "collection_timepoints": [],
+    "public_files": 404,
+    "restricted_files": 0,
+    "downloaded_files": 0,
+    "relevance_score": 55.0,
+    "scientific_relevance": "OSDR public dataset grouped by category and subcategory.",
+    "limitations": [
+      "File-level measurement counts and units are recorded only for parsed files."
+    ],
+    "publication_references": [],
+    "ingestion_status": "CATALOGUED",
+    "source_file_names": [
+      "GLDS-565_GMetagenomics_Assembly-based-processing-overview_GLmetagenomics.tsv",
+      "GLDS-565_GMetagenomics_assembly-summaries_GLmetagenomics.tsv",
+      "GLDS-565_GMetagenomics_I4_Capsule_LM92_9-assembly.fasta",
+      "GLDS-565_GMetagenomics_I4_Capsule_LM92_7-assembly.fasta",
+      "GLDS-565_GMetagenomics_I4_Capsule_LM92_6-assembly.fasta",
+      "GLDS-565_GMetagenomics_I4_Capsule_LM92_5-assembly.fasta",
+      "GLDS-565_GMetagenomics_I4_Capsule_LM92_4-assembly.fasta",
+      "GLDS-565_GMetagenomics_I4_Capsule_LM92_3-assembly.fasta",
+      "GLDS-565_GMetagenomics_I4_Capsule_LM92_2-assembly.fasta",
+      "GLDS-565_GMetagenomics_I4_Capsule_LM92_1-assembly.fasta",
+      "GLDS-565_GMetagenomics_I4_Capsule_LM92_0-assembly.fasta",
+      "GLDS-565_GMetagenomics_I4_Capsule_LM44_9-assembly.fasta",
+      "GLDS-565_GMetagenomics_I4_Capsule_LM44_8-assembly.fasta",
+      "GLDS-565_GMetagenomics_I4_Capsule_LM44_7-assembly.fasta",
+      "GLDS-565_GMetagenomics_I4_Capsule_LM44_6-assembly.fasta",
+      "GLDS-565_GMetagenomics_I4_Capsule_LM44_5-assembly.fasta",
+      "GLDS-565_GMetagenomics_I4_Capsule_LM44_4-assembly.fasta",
+      "GLDS-565_GMetagenomics_I4_Capsule_LM44_3-assembly.fasta",
+      "GLDS-565_GMetagenomics_I4_Capsule_LM44_2-assembly.fasta",
+      "GLDS-565_GMetagenomics_I4_Capsule_LM44_1-assembly.fasta",
+      "GLDS-565_GMetagenomics_I4_Capsule_LM44_0-assembly.fasta",
+      "GLDS-565_GMetagenomics_I4_Capsule_FD3_9-assembly.fasta",
+      "GLDS-565_GMetagenomics_I4_Capsule_FD3_8-assembly.fasta",
+      "GLDS-565_GMetagenomics_I4_Capsule_FD3_7-assembly.fasta",
+      "GLDS-565_GMetagenomics_I4_Capsule_FD3_6-assembly.fasta",
+      "GLDS-565_GMetagenomics_I4_Capsule_FD3_5-assembly.fasta",
+      "GLDS-565_GMetagenomics_I4_Capsule_FD3_4-assembly.fasta",
+      "GLDS-565_GMetagenomics_I4_Capsule_FD3_3-assembly.fasta",
+      "GLDS-565_GMetagenomics_I4_Capsule_FD3_2-assembly.fasta",
+      "GLDS-565_GMetagenomics_I4_Capsule_FD3_1-assembly.fasta",
+      "GLDS-565_GMetagenomics_I4_Capsule_FD3_0-assembly.fasta",
+      "GLDS-565_GMetagenomics_I4_Capsule_FD2_9-assembly.fasta",
+      "GLDS-565_GMetagenomics_I4_Capsule_FD2_8-assembly.fasta",
+      "GLDS-565_GMetagenomics_I4_Capsule_FD2_7-assembly.fasta",
+      "GLDS-565_GMetagenomics_I4_Capsule_FD2_6-assembly.fasta",
+      "GLDS-565_GMetagenomics_I4_Capsule_FD2_5-assembly.fasta",
+      "GLDS-565_GMetagenomics_I4_Capsule_FD2_4-assembly.fasta",
+      "GLDS-565_GMetagenomics_I4_Capsule_FD2_3-assembly.fasta",
+      "GLDS-565_GMetagenomics_I4_Capsule_FD2_2-assembly.fasta",
+      "GLDS-565_GMetagenomics_I4_Capsule_FD2_1-assembly.fasta",
+      "GLDS-565_GMetagenomics_I4_Capsule_FD2_0-assembly.fasta",
+      "GLDS-565_GMetagenomics_I4_Capsule_LM92_9-genes.gff",
+      "GLDS-565_GMetagenomics_I4_Capsule_LM92_9-genes.fasta",
+      "GLDS-565_GMetagenomics_I4_Capsule_LM92_9-genes.faa",
+      "GLDS-565_GMetagenomics_I4_Capsule_LM92_7-genes.gff",
+      "GLDS-565_GMetagenomics_I4_Capsule_LM92_7-genes.fasta",
+      "GLDS-565_GMetagenomics_I4_Capsule_LM92_7-genes.faa",
+      "GLDS-565_GMetagenomics_I4_Capsule_LM92_6-genes.gff",
+      "GLDS-565_GMetagenomics_I4_Capsule_LM92_6-genes.fasta",
+      "GLDS-565_GMetagenomics_I4_Capsule_LM92_6-genes.faa"
+    ]
+  },
+  {
+    "dataset_id": "OSD-573-GeneLab_Processed_Metagenomics_Files-FastQC_Outputs",
+    "study_id": "OSD-573",
+    "title": "GeneLab Processed Metagenomics Files / FastQC Outputs",
+    "modality": "MICROBIOME",
+    "measurement_types": [
+      "GeneLab Processed Metagenomics Files"
+    ],
+    "measurement_units": [],
+    "subject_count": null,
+    "timepoint_count": null,
+    "file_count": 2,
+    "access_level": "PUBLIC",
+    "verification_status": "VERIFIED_FILES",
+    "source_url": "https://osdr.nasa.gov/geode-py/ws/studies/OSD-573/download?source=datamanager&file=GLDS-565_GMetagenomics_filtered_multiqc_GLmetagenomics_report.zip",
+    "last_verified_utc": "2026-11-14T10:40:17Z",
+    "continuous_telemetry": false,
+    "notes": "Public file index inspected; table content is parsed separately.",
+    "category": "DIRECT_HUMAN_SPACEFLIGHT",
+    "assay_types": [
+      "GeneLab Processed Metagenomics Files"
+    ],
+    "collection_timepoints": [],
+    "public_files": 2,
+    "restricted_files": 0,
+    "downloaded_files": 0,
+    "relevance_score": 55.0,
+    "scientific_relevance": "OSDR public dataset grouped by category and subcategory.",
+    "limitations": [
+      "File-level measurement counts and units are recorded only for parsed files."
+    ],
+    "publication_references": [],
+    "ingestion_status": "CATALOGUED",
+    "source_file_names": [
+      "GLDS-565_GMetagenomics_filtered_multiqc_GLmetagenomics_report.zip",
+      "GLDS-565_GMetagenomics_raw_multiqc_GLmetagenomics_report.zip"
+    ]
+  },
+  {
+    "dataset_id": "OSD-573-GeneLab_Processed_Metagenomics_Files-Filtered_Sequence_Data",
+    "study_id": "OSD-573",
+    "title": "GeneLab Processed Metagenomics Files / Filtered Sequence Data",
+    "modality": "MICROBIOME",
+    "measurement_types": [
+      "GeneLab Processed Metagenomics Files"
+    ],
+    "measurement_units": [],
+    "subject_count": null,
+    "timepoint_count": null,
+    "file_count": 78,
+    "access_level": "PUBLIC",
+    "verification_status": "VERIFIED_FILES",
+    "source_url": "https://osdr.nasa.gov/geode-py/ws/studies/OSD-573/download?source=datamanager&file=GLDS-565_GMetagenomics_I4_Capsule_LM92_9_R2_filtered.fastq.gz",
+    "last_verified_utc": "2026-11-14T10:40:17Z",
+    "continuous_telemetry": false,
+    "notes": "Public file index inspected; table content is parsed separately.",
+    "category": "DIRECT_HUMAN_SPACEFLIGHT",
+    "assay_types": [
+      "GeneLab Processed Metagenomics Files"
+    ],
+    "collection_timepoints": [],
+    "public_files": 78,
+    "restricted_files": 0,
+    "downloaded_files": 0,
+    "relevance_score": 55.0,
+    "scientific_relevance": "OSDR public dataset grouped by category and subcategory.",
+    "limitations": [
+      "File-level measurement counts and units are recorded only for parsed files."
+    ],
+    "publication_references": [],
+    "ingestion_status": "CATALOGUED",
+    "source_file_names": [
+      "GLDS-565_GMetagenomics_I4_Capsule_LM92_9_R2_filtered.fastq.gz",
+      "GLDS-565_GMetagenomics_I4_Capsule_LM92_9_R1_filtered.fastq.gz",
+      "GLDS-565_GMetagenomics_I4_Capsule_LM92_7_R2_filtered.fastq.gz",
+      "GLDS-565_GMetagenomics_I4_Capsule_LM92_7_R1_filtered.fastq.gz",
+      "GLDS-565_GMetagenomics_I4_Capsule_LM92_6_R2_filtered.fastq.gz",
+      "GLDS-565_GMetagenomics_I4_Capsule_LM92_6_R1_filtered.fastq.gz",
+      "GLDS-565_GMetagenomics_I4_Capsule_LM92_5_R2_filtered.fastq.gz",
+      "GLDS-565_GMetagenomics_I4_Capsule_LM92_5_R1_filtered.fastq.gz",
+      "GLDS-565_GMetagenomics_I4_Capsule_LM92_4_R2_filtered.fastq.gz",
+      "GLDS-565_GMetagenomics_I4_Capsule_LM92_4_R1_filtered.fastq.gz",
+      "GLDS-565_GMetagenomics_I4_Capsule_LM92_3_R2_filtered.fastq.gz",
+      "GLDS-565_GMetagenomics_I4_Capsule_LM92_3_R1_filtered.fastq.gz",
+      "GLDS-565_GMetagenomics_I4_Capsule_LM92_2_R2_filtered.fastq.gz",
+      "GLDS-565_GMetagenomics_I4_Capsule_LM92_2_R1_filtered.fastq.gz",
+      "GLDS-565_GMetagenomics_I4_Capsule_LM92_1_R2_filtered.fastq.gz",
+      "GLDS-565_GMetagenomics_I4_Capsule_LM92_1_R1_filtered.fastq.gz",
+      "GLDS-565_GMetagenomics_I4_Capsule_LM92_0_R2_filtered.fastq.gz",
+      "GLDS-565_GMetagenomics_I4_Capsule_LM92_0_R1_filtered.fastq.gz",
+      "GLDS-565_GMetagenomics_I4_Capsule_LM44_9_R2_filtered.fastq.gz",
+      "GLDS-565_GMetagenomics_I4_Capsule_LM44_9_R1_filtered.fastq.gz",
+      "GLDS-565_GMetagenomics_I4_Capsule_LM44_8_R2_filtered.fastq.gz",
+      "GLDS-565_GMetagenomics_I4_Capsule_LM44_8_R1_filtered.fastq.gz",
+      "GLDS-565_GMetagenomics_I4_Capsule_LM44_7_R2_filtered.fastq.gz",
+      "GLDS-565_GMetagenomics_I4_Capsule_LM44_7_R1_filtered.fastq.gz",
+      "GLDS-565_GMetagenomics_I4_Capsule_LM44_6_R2_filtered.fastq.gz",
+      "GLDS-565_GMetagenomics_I4_Capsule_LM44_6_R1_filtered.fastq.gz",
+      "GLDS-565_GMetagenomics_I4_Capsule_LM44_5_R2_filtered.fastq.gz",
+      "GLDS-565_GMetagenomics_I4_Capsule_LM44_5_R1_filtered.fastq.gz",
+      "GLDS-565_GMetagenomics_I4_Capsule_LM44_4_R2_filtered.fastq.gz",
+      "GLDS-565_GMetagenomics_I4_Capsule_LM44_4_R1_filtered.fastq.gz",
+      "GLDS-565_GMetagenomics_I4_Capsule_LM44_3_R2_filtered.fastq.gz",
+      "GLDS-565_GMetagenomics_I4_Capsule_LM44_3_R1_filtered.fastq.gz",
+      "GLDS-565_GMetagenomics_I4_Capsule_LM44_2_R2_filtered.fastq.gz",
+      "GLDS-565_GMetagenomics_I4_Capsule_LM44_2_R1_filtered.fastq.gz",
+      "GLDS-565_GMetagenomics_I4_Capsule_LM44_1_R2_filtered.fastq.gz",
+      "GLDS-565_GMetagenomics_I4_Capsule_LM44_1_R1_filtered.fastq.gz",
+      "GLDS-565_GMetagenomics_I4_Capsule_LM44_0_R2_filtered.fastq.gz",
+      "GLDS-565_GMetagenomics_I4_Capsule_LM44_0_R1_filtered.fastq.gz",
+      "GLDS-565_GMetagenomics_I4_Capsule_FD3_9_R2_filtered.fastq.gz",
+      "GLDS-565_GMetagenomics_I4_Capsule_FD3_9_R1_filtered.fastq.gz",
+      "GLDS-565_GMetagenomics_I4_Capsule_FD3_8_R2_filtered.fastq.gz",
+      "GLDS-565_GMetagenomics_I4_Capsule_FD3_8_R1_filtered.fastq.gz",
+      "GLDS-565_GMetagenomics_I4_Capsule_FD3_7_R2_filtered.fastq.gz",
+      "GLDS-565_GMetagenomics_I4_Capsule_FD3_7_R1_filtered.fastq.gz",
+      "GLDS-565_GMetagenomics_I4_Capsule_FD3_6_R2_filtered.fastq.gz",
+      "GLDS-565_GMetagenomics_I4_Capsule_FD3_6_R1_filtered.fastq.gz",
+      "GLDS-565_GMetagenomics_I4_Capsule_FD3_5_R2_filtered.fastq.gz",
+      "GLDS-565_GMetagenomics_I4_Capsule_FD3_5_R1_filtered.fastq.gz",
+      "GLDS-565_GMetagenomics_I4_Capsule_FD3_4_R2_filtered.fastq.gz",
+      "GLDS-565_GMetagenomics_I4_Capsule_FD3_4_R1_filtered.fastq.gz"
+    ]
+  },
+  {
+    "dataset_id": "OSD-573-GeneLab_Processed_Metagenomics_Files-MD5_Checksums",
+    "study_id": "OSD-573",
+    "title": "GeneLab Processed Metagenomics Files / MD5 Checksums",
+    "modality": "MICROBIOME",
+    "measurement_types": [
+      "GeneLab Processed Metagenomics Files"
+    ],
+    "measurement_units": [],
+    "subject_count": null,
+    "timepoint_count": null,
+    "file_count": 1,
+    "access_level": "PUBLIC",
+    "verification_status": "VERIFIED_FILES",
+    "source_url": "https://osdr.nasa.gov/geode-py/ws/studies/OSD-573/download?source=datamanager&file=GLDS-565_GMetagenomics_processed_md5sum_GLmetagenomics.tsv",
+    "last_verified_utc": "2026-11-14T10:40:17Z",
+    "continuous_telemetry": false,
+    "notes": "Public file index inspected; table content is parsed separately.",
+    "category": "DIRECT_HUMAN_SPACEFLIGHT",
+    "assay_types": [
+      "GeneLab Processed Metagenomics Files"
+    ],
+    "collection_timepoints": [],
+    "public_files": 1,
+    "restricted_files": 0,
+    "downloaded_files": 0,
+    "relevance_score": 55.0,
+    "scientific_relevance": "OSDR public dataset grouped by category and subcategory.",
+    "limitations": [
+      "File-level measurement counts and units are recorded only for parsed files."
+    ],
+    "publication_references": [],
+    "ingestion_status": "CATALOGUED",
+    "source_file_names": [
+      "GLDS-565_GMetagenomics_processed_md5sum_GLmetagenomics.tsv"
+    ]
+  },
+  {
+    "dataset_id": "OSD-573-GeneLab_Processed_Metagenomics_Files-Processing_Info",
+    "study_id": "OSD-573",
+    "title": "GeneLab Processed Metagenomics Files / Processing Info",
+    "modality": "MICROBIOME",
+    "measurement_types": [
+      "GeneLab Processed Metagenomics Files"
+    ],
+    "measurement_units": [],
+    "subject_count": null,
+    "timepoint_count": null,
+    "file_count": 1,
+    "access_level": "PUBLIC",
+    "verification_status": "VERIFIED_FILES",
+    "source_url": "https://osdr.nasa.gov/geode-py/ws/studies/OSD-573/download?source=datamanager&file=GLDS-565_GMetagenomics_processing_info.zip",
+    "last_verified_utc": "2026-11-14T10:40:17Z",
+    "continuous_telemetry": false,
+    "notes": "Public file index inspected; table content is parsed separately.",
+    "category": "DIRECT_HUMAN_SPACEFLIGHT",
+    "assay_types": [
+      "GeneLab Processed Metagenomics Files"
+    ],
+    "collection_timepoints": [],
+    "public_files": 1,
+    "restricted_files": 0,
+    "downloaded_files": 0,
+    "relevance_score": 55.0,
+    "scientific_relevance": "OSDR public dataset grouped by category and subcategory.",
+    "limitations": [
+      "File-level measurement counts and units are recorded only for parsed files."
+    ],
+    "publication_references": [],
+    "ingestion_status": "CATALOGUED",
+    "source_file_names": [
+      "GLDS-565_GMetagenomics_processing_info.zip"
+    ]
+  },
+  {
+    "dataset_id": "OSD-573-GeneLab_Processed_Metagenomics_Files-README",
+    "study_id": "OSD-573",
+    "title": "GeneLab Processed Metagenomics Files / README",
+    "modality": "MICROBIOME",
+    "measurement_types": [
+      "GeneLab Processed Metagenomics Files"
+    ],
+    "measurement_units": [],
+    "subject_count": null,
+    "timepoint_count": null,
+    "file_count": 1,
+    "access_level": "PUBLIC",
+    "verification_status": "VERIFIED_FILES",
+    "source_url": "https://osdr.nasa.gov/geode-py/ws/studies/OSD-573/download?source=datamanager&file=GLDS-565_GMetagenomics_README.txt",
+    "last_verified_utc": "2026-11-14T10:40:17Z",
+    "continuous_telemetry": false,
+    "notes": "Public file index inspected; table content is parsed separately.",
+    "category": "DIRECT_HUMAN_SPACEFLIGHT",
+    "assay_types": [
+      "GeneLab Processed Metagenomics Files"
+    ],
+    "collection_timepoints": [],
+    "public_files": 1,
+    "restricted_files": 0,
+    "downloaded_files": 0,
+    "relevance_score": 55.0,
+    "scientific_relevance": "OSDR public dataset grouped by category and subcategory.",
+    "limitations": [
+      "File-level measurement counts and units are recorded only for parsed files."
+    ],
+    "publication_references": [],
+    "ingestion_status": "CATALOGUED",
+    "source_file_names": [
+      "GLDS-565_GMetagenomics_README.txt"
+    ]
+  },
+  {
+    "dataset_id": "OSD-573-GeneLab_Processed_Metagenomics_Files-Read-based_Processing",
+    "study_id": "OSD-573",
+    "title": "GeneLab Processed Metagenomics Files / Read-based Processing",
+    "modality": "MICROBIOME",
+    "measurement_types": [
+      "GeneLab Processed Metagenomics Files"
+    ],
+    "measurement_units": [],
+    "subject_count": null,
+    "timepoint_count": null,
+    "file_count": 10,
+    "access_level": "PUBLIC",
+    "verification_status": "VERIFIED_FILES",
+    "source_url": "https://osdr.nasa.gov/geode-py/ws/studies/OSD-573/download?source=datamanager&file=GLDS-565_GMetagenomics_Pathway-coverages_GLmetagenomics.tsv",
+    "last_verified_utc": "2026-11-14T10:40:17Z",
+    "continuous_telemetry": false,
+    "notes": "Public file index inspected; table content is parsed separately.",
+    "category": "DIRECT_HUMAN_SPACEFLIGHT",
+    "assay_types": [
+      "GeneLab Processed Metagenomics Files"
+    ],
+    "collection_timepoints": [],
+    "public_files": 10,
+    "restricted_files": 0,
+    "downloaded_files": 0,
+    "relevance_score": 55.0,
+    "scientific_relevance": "OSDR public dataset grouped by category and subcategory.",
+    "limitations": [
+      "File-level measurement counts and units are recorded only for parsed files."
+    ],
+    "publication_references": [],
+    "ingestion_status": "CATALOGUED",
+    "source_file_names": [
+      "GLDS-565_GMetagenomics_Pathway-coverages_GLmetagenomics.tsv",
+      "GLDS-565_GMetagenomics_Pathway-coverages-grouped-by-taxa_GLmetagenomics.tsv",
+      "GLDS-565_GMetagenomics_Pathway-abundances_GLmetagenomics.tsv",
+      "GLDS-565_GMetagenomics_Pathway-abundances-grouped-by-taxa_GLmetagenomics.tsv",
+      "GLDS-565_GMetagenomics_Pathway-abundances-cpm_GLmetagenomics.tsv",
+      "GLDS-565_GMetagenomics_Metaphlan-taxonomy_GLmetagenomics.tsv",
+      "GLDS-565_GMetagenomics_Gene-families_GLmetagenomics.tsv",
+      "GLDS-565_GMetagenomics_Gene-families-cpm_GLmetagenomics.tsv",
+      "GLDS-565_GMetagenomics_Gene-families-grouped-by-taxa_GLmetagenomics.tsv",
+      "GLDS-565_GMetagenomics_Gene-families-KO-cpm_GLmetagenomics.tsv"
+    ]
+  },
+  {
+    "dataset_id": "OSD-573-Metagenomics_Data_Files-MD5_Checksums",
+    "study_id": "OSD-573",
+    "title": "Metagenomics Data Files / MD5 Checksums",
+    "modality": "MICROBIOME",
+    "measurement_types": [
+      "Metagenomics Data Files"
+    ],
+    "measurement_units": [],
+    "subject_count": null,
+    "timepoint_count": null,
+    "file_count": 1,
+    "access_level": "PUBLIC",
+    "verification_status": "VERIFIED_FILES",
+    "source_url": "https://osdr.nasa.gov/geode-py/ws/studies/OSD-573/download?source=datamanager&file=GLDS-565_metagenomics_raw_GLmetagenomics_md5sum.txt",
+    "last_verified_utc": "2026-11-14T10:40:17Z",
+    "continuous_telemetry": false,
+    "notes": "Public file index inspected; table content is parsed separately.",
+    "category": "DIRECT_HUMAN_SPACEFLIGHT",
+    "assay_types": [
+      "Metagenomics Data Files"
+    ],
+    "collection_timepoints": [],
+    "public_files": 1,
+    "restricted_files": 0,
+    "downloaded_files": 0,
+    "relevance_score": 55.0,
+    "scientific_relevance": "OSDR public dataset grouped by category and subcategory.",
+    "limitations": [
+      "File-level measurement counts and units are recorded only for parsed files."
+    ],
+    "publication_references": [],
+    "ingestion_status": "CATALOGUED",
+    "source_file_names": [
+      "GLDS-565_metagenomics_raw_GLmetagenomics_md5sum.txt"
+    ]
+  },
+  {
+    "dataset_id": "OSD-573-Metagenomics_Data_Files-Raw_sequence_data",
+    "study_id": "OSD-573",
+    "title": "Metagenomics Data Files / Raw sequence data",
+    "modality": "MICROBIOME",
+    "measurement_types": [
+      "Metagenomics Data Files"
+    ],
+    "measurement_units": [],
+    "subject_count": null,
+    "timepoint_count": null,
+    "file_count": 78,
+    "access_level": "PUBLIC",
+    "verification_status": "VERIFIED_FILES",
+    "source_url": "https://osdr.nasa.gov/geode-py/ws/studies/OSD-573/download?source=datamanager&file=GLDS-565_metagenomics_metaG_I4_Capsule_LM92_9_R2_HRremoved_raw.fastq.gz",
+    "last_verified_utc": "2026-11-14T10:40:17Z",
+    "continuous_telemetry": false,
+    "notes": "Public file index inspected; table content is parsed separately.",
+    "category": "DIRECT_HUMAN_SPACEFLIGHT",
+    "assay_types": [
+      "Metagenomics Data Files"
+    ],
+    "collection_timepoints": [],
+    "public_files": 78,
+    "restricted_files": 0,
+    "downloaded_files": 0,
+    "relevance_score": 55.0,
+    "scientific_relevance": "OSDR public dataset grouped by category and subcategory.",
+    "limitations": [
+      "File-level measurement counts and units are recorded only for parsed files."
+    ],
+    "publication_references": [],
+    "ingestion_status": "CATALOGUED",
+    "source_file_names": [
+      "GLDS-565_metagenomics_metaG_I4_Capsule_LM92_9_R2_HRremoved_raw.fastq.gz",
+      "GLDS-565_metagenomics_metaG_I4_Capsule_LM92_9_R1_HRremoved_raw.fastq.gz",
+      "GLDS-565_metagenomics_metaG_I4_Capsule_LM92_7_R2_HRremoved_raw.fastq.gz",
+      "GLDS-565_metagenomics_metaG_I4_Capsule_LM92_7_R1_HRremoved_raw.fastq.gz",
+      "GLDS-565_metagenomics_metaG_I4_Capsule_LM92_6_R2_HRremoved_raw.fastq.gz",
+      "GLDS-565_metagenomics_metaG_I4_Capsule_LM92_6_R1_HRremoved_raw.fastq.gz",
+      "GLDS-565_metagenomics_metaG_I4_Capsule_LM92_5_R2_HRremoved_raw.fastq.gz",
+      "GLDS-565_metagenomics_metaG_I4_Capsule_LM92_5_R1_HRremoved_raw.fastq.gz",
+      "GLDS-565_metagenomics_metaG_I4_Capsule_LM92_4_R2_HRremoved_raw.fastq.gz",
+      "GLDS-565_metagenomics_metaG_I4_Capsule_LM92_4_R1_HRremoved_raw.fastq.gz",
+      "GLDS-565_metagenomics_metaG_I4_Capsule_LM92_3_R2_HRremoved_raw.fastq.gz",
+      "GLDS-565_metagenomics_metaG_I4_Capsule_LM92_3_R1_HRremoved_raw.fastq.gz",
+      "GLDS-565_metagenomics_metaG_I4_Capsule_LM92_2_R2_HRremoved_raw.fastq.gz",
+      "GLDS-565_metagenomics_metaG_I4_Capsule_LM92_2_R1_HRremoved_raw.fastq.gz",
+      "GLDS-565_metagenomics_metaG_I4_Capsule_LM92_1_R2_HRremoved_raw.fastq.gz",
+      "GLDS-565_metagenomics_metaG_I4_Capsule_LM92_1_R1_HRremoved_raw.fastq.gz",
+      "GLDS-565_metagenomics_metaG_I4_Capsule_LM92_0_R2_HRremoved_raw.fastq.gz",
+      "GLDS-565_metagenomics_metaG_I4_Capsule_LM92_0_R1_HRremoved_raw.fastq.gz",
+      "GLDS-565_metagenomics_metaG_I4_Capsule_LM44_9_R2_HRremoved_raw.fastq.gz",
+      "GLDS-565_metagenomics_metaG_I4_Capsule_LM44_9_R1_HRremoved_raw.fastq.gz",
+      "GLDS-565_metagenomics_metaG_I4_Capsule_LM44_8_R2_HRremoved_raw.fastq.gz",
+      "GLDS-565_metagenomics_metaG_I4_Capsule_LM44_8_R1_HRremoved_raw.fastq.gz",
+      "GLDS-565_metagenomics_metaG_I4_Capsule_LM44_7_R2_HRremoved_raw.fastq.gz",
+      "GLDS-565_metagenomics_metaG_I4_Capsule_LM44_7_R1_HRremoved_raw.fastq.gz",
+      "GLDS-565_metagenomics_metaG_I4_Capsule_LM44_6_R2_HRremoved_raw.fastq.gz",
+      "GLDS-565_metagenomics_metaG_I4_Capsule_LM44_6_R1_HRremoved_raw.fastq.gz",
+      "GLDS-565_metagenomics_metaG_I4_Capsule_LM44_5_R2_HRremoved_raw.fastq.gz",
+      "GLDS-565_metagenomics_metaG_I4_Capsule_LM44_5_R1_HRremoved_raw.fastq.gz",
+      "GLDS-565_metagenomics_metaG_I4_Capsule_LM44_4_R2_HRremoved_raw.fastq.gz",
+      "GLDS-565_metagenomics_metaG_I4_Capsule_LM44_4_R1_HRremoved_raw.fastq.gz",
+      "GLDS-565_metagenomics_metaG_I4_Capsule_LM44_3_R2_HRremoved_raw.fastq.gz",
+      "GLDS-565_metagenomics_metaG_I4_Capsule_LM44_3_R1_HRremoved_raw.fastq.gz",
+      "GLDS-565_metagenomics_metaG_I4_Capsule_LM44_2_R2_HRremoved_raw.fastq.gz",
+      "GLDS-565_metagenomics_metaG_I4_Capsule_LM44_2_R1_HRremoved_raw.fastq.gz",
+      "GLDS-565_metagenomics_metaG_I4_Capsule_LM44_1_R2_HRremoved_raw.fastq.gz",
+      "GLDS-565_metagenomics_metaG_I4_Capsule_LM44_1_R1_HRremoved_raw.fastq.gz",
+      "GLDS-565_metagenomics_metaG_I4_Capsule_LM44_0_R2_HRremoved_raw.fastq.gz",
+      "GLDS-565_metagenomics_metaG_I4_Capsule_LM44_0_R1_HRremoved_raw.fastq.gz",
+      "GLDS-565_metagenomics_metaG_I4_Capsule_FD3_9_R2_HRremoved_raw.fastq.gz",
+      "GLDS-565_metagenomics_metaG_I4_Capsule_FD3_9_R1_HRremoved_raw.fastq.gz",
+      "GLDS-565_metagenomics_metaG_I4_Capsule_FD3_8_R2_HRremoved_raw.fastq.gz",
+      "GLDS-565_metagenomics_metaG_I4_Capsule_FD3_8_R1_HRremoved_raw.fastq.gz",
+      "GLDS-565_metagenomics_metaG_I4_Capsule_FD3_7_R2_HRremoved_raw.fastq.gz",
+      "GLDS-565_metagenomics_metaG_I4_Capsule_FD3_7_R1_HRremoved_raw.fastq.gz",
+      "GLDS-565_metagenomics_metaG_I4_Capsule_FD3_6_R2_HRremoved_raw.fastq.gz",
+      "GLDS-565_metagenomics_metaG_I4_Capsule_FD3_6_R1_HRremoved_raw.fastq.gz",
+      "GLDS-565_metagenomics_metaG_I4_Capsule_FD3_5_R2_HRremoved_raw.fastq.gz",
+      "GLDS-565_metagenomics_metaG_I4_Capsule_FD3_5_R1_HRremoved_raw.fastq.gz",
+      "GLDS-565_metagenomics_metaG_I4_Capsule_FD3_4_R2_HRremoved_raw.fastq.gz",
+      "GLDS-565_metagenomics_metaG_I4_Capsule_FD3_4_R1_HRremoved_raw.fastq.gz"
+    ]
+  },
+  {
+    "dataset_id": "OSD-573-Metatranscriptomics-Merged_Sequence_Data",
+    "study_id": "OSD-573",
+    "title": "Metatranscriptomics / Merged Sequence Data",
+    "modality": "MICROBIOME",
+    "measurement_types": [
+      "Metatranscriptomics"
+    ],
+    "measurement_units": [],
+    "subject_count": null,
+    "timepoint_count": null,
+    "file_count": 1,
+    "access_level": "PUBLIC",
+    "verification_status": "VERIFIED_FILES",
+    "source_url": "https://osdr.nasa.gov/geode-py/ws/studies/OSD-573/download?source=datamanager&file=GLDS-565_GMetatranscriptomics_raw_multiqc_GLmetatranscriptomics_report.zip",
+    "last_verified_utc": "2026-11-14T10:40:17Z",
+    "continuous_telemetry": false,
+    "notes": "Public file index inspected; table content is parsed separately.",
+    "category": "DIRECT_HUMAN_SPACEFLIGHT",
+    "assay_types": [
+      "Metatranscriptomics"
+    ],
+    "collection_timepoints": [],
+    "public_files": 1,
+    "restricted_files": 0,
+    "downloaded_files": 0,
+    "relevance_score": 55.0,
+    "scientific_relevance": "OSDR public dataset grouped by category and subcategory.",
+    "limitations": [
+      "File-level measurement counts and units are recorded only for parsed files."
+    ],
+    "publication_references": [],
+    "ingestion_status": "CATALOGUED",
+    "source_file_names": [
+      "GLDS-565_GMetatranscriptomics_raw_multiqc_GLmetatranscriptomics_report.zip"
+    ]
+  },
+  {
+    "dataset_id": "OSD-573-Metatranscriptomics_Data_Files-MD5_Checksums",
+    "study_id": "OSD-573",
+    "title": "Metatranscriptomics Data Files / MD5 Checksums",
+    "modality": "MICROBIOME",
+    "measurement_types": [
+      "Metatranscriptomics Data Files"
+    ],
+    "measurement_units": [],
+    "subject_count": null,
+    "timepoint_count": null,
+    "file_count": 1,
+    "access_level": "PUBLIC",
+    "verification_status": "VERIFIED_FILES",
+    "source_url": "https://osdr.nasa.gov/geode-py/ws/studies/OSD-573/download?source=datamanager&file=GLDS-565_metatranscriptomics_raw_md5sum_GLmetatranscriptomics.txt",
+    "last_verified_utc": "2026-11-14T10:40:17Z",
+    "continuous_telemetry": false,
+    "notes": "Public file index inspected; table content is parsed separately.",
+    "category": "DIRECT_HUMAN_SPACEFLIGHT",
+    "assay_types": [
+      "Metatranscriptomics Data Files"
+    ],
+    "collection_timepoints": [],
+    "public_files": 1,
+    "restricted_files": 0,
+    "downloaded_files": 0,
+    "relevance_score": 55.0,
+    "scientific_relevance": "OSDR public dataset grouped by category and subcategory.",
+    "limitations": [
+      "File-level measurement counts and units are recorded only for parsed files."
+    ],
+    "publication_references": [],
+    "ingestion_status": "CATALOGUED",
+    "source_file_names": [
+      "GLDS-565_metatranscriptomics_raw_md5sum_GLmetatranscriptomics.txt"
+    ]
+  },
+  {
+    "dataset_id": "OSD-573-Metatranscriptomics_Data_Files-Raw_Sequence_Data",
+    "study_id": "OSD-573",
+    "title": "Metatranscriptomics Data Files / Raw Sequence Data",
+    "modality": "MICROBIOME",
+    "measurement_types": [
+      "Metatranscriptomics Data Files"
+    ],
+    "measurement_units": [],
+    "subject_count": null,
+    "timepoint_count": null,
+    "file_count": 80,
+    "access_level": "PUBLIC",
+    "verification_status": "VERIFIED_FILES",
+    "source_url": "https://osdr.nasa.gov/geode-py/ws/studies/OSD-573/download?source=datamanager&file=GLDS-565_metatranscriptomics_metaT_I4_Capsule_L-92_9_R2_HRremoved_raw.fastq.gz",
+    "last_verified_utc": "2026-11-14T10:40:17Z",
+    "continuous_telemetry": false,
+    "notes": "Public file index inspected; table content is parsed separately.",
+    "category": "DIRECT_HUMAN_SPACEFLIGHT",
+    "assay_types": [
+      "Metatranscriptomics Data Files"
+    ],
+    "collection_timepoints": [],
+    "public_files": 80,
+    "restricted_files": 0,
+    "downloaded_files": 0,
+    "relevance_score": 55.0,
+    "scientific_relevance": "OSDR public dataset grouped by category and subcategory.",
+    "limitations": [
+      "File-level measurement counts and units are recorded only for parsed files."
+    ],
+    "publication_references": [],
+    "ingestion_status": "CATALOGUED",
+    "source_file_names": [
+      "GLDS-565_metatranscriptomics_metaT_I4_Capsule_L-92_9_R2_HRremoved_raw.fastq.gz",
+      "GLDS-565_metatranscriptomics_metaT_I4_Capsule_L-92_9_R1_HRremoved_raw.fastq.gz",
+      "GLDS-565_metatranscriptomics_metaT_I4_Capsule_L-92_8_R2_HRremoved_raw.fastq.gz",
+      "GLDS-565_metatranscriptomics_metaT_I4_Capsule_L-92_8_R1_HRremoved_raw.fastq.gz",
+      "GLDS-565_metatranscriptomics_metaT_I4_Capsule_L-92_7_R2_HRremoved_raw.fastq.gz",
+      "GLDS-565_metatranscriptomics_metaT_I4_Capsule_L-92_7_R1_HRremoved_raw.fastq.gz",
+      "GLDS-565_metatranscriptomics_metaT_I4_Capsule_L-92_6_R2_HRremoved_raw.fastq.gz",
+      "GLDS-565_metatranscriptomics_metaT_I4_Capsule_L-92_6_R1_HRremoved_raw.fastq.gz",
+      "GLDS-565_metatranscriptomics_metaT_I4_Capsule_L-92_5_R2_HRremoved_raw.fastq.gz",
+      "GLDS-565_metatranscriptomics_metaT_I4_Capsule_L-92_5_R1_HRremoved_raw.fastq.gz",
+      "GLDS-565_metatranscriptomics_metaT_I4_Capsule_L-92_4_R2_HRremoved_raw.fastq.gz",
+      "GLDS-565_metatranscriptomics_metaT_I4_Capsule_L-92_4_R1_HRremoved_raw.fastq.gz",
+      "GLDS-565_metatranscriptomics_metaT_I4_Capsule_L-92_3_R2_HRremoved_raw.fastq.gz",
+      "GLDS-565_metatranscriptomics_metaT_I4_Capsule_L-92_3_R1_HRremoved_raw.fastq.gz",
+      "GLDS-565_metatranscriptomics_metaT_I4_Capsule_L-92_2_R2_HRremoved_raw.fastq.gz",
+      "GLDS-565_metatranscriptomics_metaT_I4_Capsule_L-92_2_R1_HRremoved_raw.fastq.gz",
+      "GLDS-565_metatranscriptomics_metaT_I4_Capsule_L-92_1_R2_HRremoved_raw.fastq.gz",
+      "GLDS-565_metatranscriptomics_metaT_I4_Capsule_L-92_1_R1_HRremoved_raw.fastq.gz",
+      "GLDS-565_metatranscriptomics_metaT_I4_Capsule_L-92_0_R2_HRremoved_raw.fastq.gz",
+      "GLDS-565_metatranscriptomics_metaT_I4_Capsule_L-92_0_R1_HRremoved_raw.fastq.gz",
+      "GLDS-565_metatranscriptomics_metaT_I4_Capsule_L-44_9_R2_HRremoved_raw.fastq.gz",
+      "GLDS-565_metatranscriptomics_metaT_I4_Capsule_L-44_9_R1_HRremoved_raw.fastq.gz",
+      "GLDS-565_metatranscriptomics_metaT_I4_Capsule_L-44_8_R2_HRremoved_raw.fastq.gz",
+      "GLDS-565_metatranscriptomics_metaT_I4_Capsule_L-44_8_R1_HRremoved_raw.fastq.gz",
+      "GLDS-565_metatranscriptomics_metaT_I4_Capsule_L-44_7_R2_HRremoved_raw.fastq.gz",
+      "GLDS-565_metatranscriptomics_metaT_I4_Capsule_L-44_7_R1_HRremoved_raw.fastq.gz",
+      "GLDS-565_metatranscriptomics_metaT_I4_Capsule_L-44_6_R2_HRremoved_raw.fastq.gz",
+      "GLDS-565_metatranscriptomics_metaT_I4_Capsule_L-44_6_R1_HRremoved_raw.fastq.gz",
+      "GLDS-565_metatranscriptomics_metaT_I4_Capsule_L-44_5_R2_HRremoved_raw.fastq.gz",
+      "GLDS-565_metatranscriptomics_metaT_I4_Capsule_L-44_5_R1_HRremoved_raw.fastq.gz",
+      "GLDS-565_metatranscriptomics_metaT_I4_Capsule_L-44_4_R2_HRremoved_raw.fastq.gz",
+      "GLDS-565_metatranscriptomics_metaT_I4_Capsule_L-44_4_R1_HRremoved_raw.fastq.gz",
+      "GLDS-565_metatranscriptomics_metaT_I4_Capsule_L-44_3_R2_HRremoved_raw.fastq.gz",
+      "GLDS-565_metatranscriptomics_metaT_I4_Capsule_L-44_3_R1_HRremoved_raw.fastq.gz",
+      "GLDS-565_metatranscriptomics_metaT_I4_Capsule_L-44_2_R2_HRremoved_raw.fastq.gz",
+      "GLDS-565_metatranscriptomics_metaT_I4_Capsule_L-44_2_R1_HRremoved_raw.fastq.gz",
+      "GLDS-565_metatranscriptomics_metaT_I4_Capsule_L-44_1_R2_HRremoved_raw.fastq.gz",
+      "GLDS-565_metatranscriptomics_metaT_I4_Capsule_L-44_1_R1_HRremoved_raw.fastq.gz",
+      "GLDS-565_metatranscriptomics_metaT_I4_Capsule_L-44_0_R2_HRremoved_raw.fastq.gz",
+      "GLDS-565_metatranscriptomics_metaT_I4_Capsule_L-44_0_R1_HRremoved_raw.fastq.gz",
+      "GLDS-565_metatranscriptomics_metaT_I4_Capsule_FD3_9_R2_HRremoved_raw.fastq.gz",
+      "GLDS-565_metatranscriptomics_metaT_I4_Capsule_FD3_9_R1_HRremoved_raw.fastq.gz",
+      "GLDS-565_metatranscriptomics_metaT_I4_Capsule_FD3_8_R2_HRremoved_raw.fastq.gz",
+      "GLDS-565_metatranscriptomics_metaT_I4_Capsule_FD3_8_R1_HRremoved_raw.fastq.gz",
+      "GLDS-565_metatranscriptomics_metaT_I4_Capsule_FD3_7_R2_HRremoved_raw.fastq.gz",
+      "GLDS-565_metatranscriptomics_metaT_I4_Capsule_FD3_7_R1_HRremoved_raw.fastq.gz",
+      "GLDS-565_metatranscriptomics_metaT_I4_Capsule_FD3_6_R2_HRremoved_raw.fastq.gz",
+      "GLDS-565_metatranscriptomics_metaT_I4_Capsule_FD3_6_R1_HRremoved_raw.fastq.gz",
+      "GLDS-565_metatranscriptomics_metaT_I4_Capsule_FD3_5_R2_HRremoved_raw.fastq.gz",
+      "GLDS-565_metatranscriptomics_metaT_I4_Capsule_FD3_5_R1_HRremoved_raw.fastq.gz"
+    ]
+  },
+  {
+    "dataset_id": "OSD-573-Study_Metadata_Files",
+    "study_id": "OSD-573",
+    "title": "Study Metadata Files / files",
+    "modality": "OTHER",
+    "measurement_types": [
+      "Study Metadata Files"
+    ],
+    "measurement_units": [],
+    "subject_count": null,
+    "timepoint_count": null,
+    "file_count": 1,
+    "access_level": "PUBLIC",
+    "verification_status": "VERIFIED_FILES",
+    "source_url": "https://osdr.nasa.gov/geode-py/ws/studies/OSD-573/download?source=datamanager&file=OSD-573_metadata_OSD-573-ISA.zip",
+    "last_verified_utc": "2026-11-14T10:40:17Z",
+    "continuous_telemetry": false,
+    "notes": "Public file index inspected; table content is parsed separately.",
+    "category": "DIRECT_HUMAN_SPACEFLIGHT",
+    "assay_types": [
+      "Study Metadata Files"
+    ],
+    "collection_timepoints": [],
+    "public_files": 1,
+    "restricted_files": 0,
+    "downloaded_files": 1,
+    "relevance_score": 90.0,
+    "scientific_relevance": "OSDR public dataset grouped by category and subcategory.",
+    "limitations": [
+      "File-level measurement counts and units are recorded only for parsed files."
+    ],
+    "publication_references": [],
+    "ingestion_status": "DOWNLOADED",
+    "source_file_names": [
+      "OSD-573_metadata_OSD-573-ISA.zip"
+    ]
+  },
+  {
+    "dataset_id": "OSD-575-Comprehensive_Metabolic_Panel-Tabular_Results_Files",
+    "study_id": "OSD-575",
+    "title": "Comprehensive Metabolic Panel / Tabular Results Files",
+    "modality": "LAB_PANEL",
+    "measurement_types": [
+      "Comprehensive Metabolic Panel"
+    ],
+    "measurement_units": [],
+    "subject_count": null,
+    "timepoint_count": null,
+    "file_count": 2,
+    "access_level": "PUBLIC",
+    "verification_status": "VERIFIED_FILES",
+    "source_url": "https://osdr.nasa.gov/geode-py/ws/studies/OSD-575/download?source=datamanager&file=LSDS-8_Comprehensive_Metabolic_Panel_CMP.upload_SUBMITTED.csv",
+    "last_verified_utc": "2026-11-14T10:40:17Z",
+    "continuous_telemetry": false,
+    "notes": "Public file index inspected; table content is parsed separately.",
+    "category": "DIRECT_HUMAN_SPACEFLIGHT",
+    "assay_types": [
+      "Comprehensive Metabolic Panel"
+    ],
+    "collection_timepoints": [],
+    "public_files": 2,
+    "restricted_files": 0,
+    "downloaded_files": 2,
+    "relevance_score": 90.0,
+    "scientific_relevance": "OSDR public dataset grouped by category and subcategory.",
+    "limitations": [
+      "File-level measurement counts and units are recorded only for parsed files."
+    ],
+    "publication_references": [],
+    "ingestion_status": "DOWNLOADED",
+    "source_file_names": [
+      "LSDS-8_Comprehensive_Metabolic_Panel_CMP.upload_SUBMITTED.csv",
+      "LSDS-8_Comprehensive_Metabolic_Panel_CMP_TRANSFORMED.csv"
+    ]
+  },
+  {
+    "dataset_id": "OSD-575-Immunoassay-Tabular_Results_Files",
+    "study_id": "OSD-575",
+    "title": "Immunoassay / Tabular Results Files",
+    "modality": "LAB_PANEL",
+    "measurement_types": [
+      "Immunoassay"
+    ],
+    "measurement_units": [],
+    "subject_count": null,
+    "timepoint_count": null,
+    "file_count": 6,
+    "access_level": "PUBLIC",
+    "verification_status": "VERIFIED_FILES",
+    "source_url": "https://osdr.nasa.gov/geode-py/ws/studies/OSD-575/download?source=datamanager&file=LSDS-8_Multiplex_serum.immune.EvePanel_SUBMITTED.csv",
+    "last_verified_utc": "2026-11-14T10:40:17Z",
+    "continuous_telemetry": false,
+    "notes": "Public file index inspected; table content is parsed separately.",
+    "category": "DIRECT_HUMAN_SPACEFLIGHT",
+    "assay_types": [
+      "Immunoassay"
+    ],
+    "collection_timepoints": [],
+    "public_files": 6,
+    "restricted_files": 0,
+    "downloaded_files": 6,
+    "relevance_score": 90.0,
+    "scientific_relevance": "OSDR public dataset grouped by category and subcategory.",
+    "limitations": [
+      "File-level measurement counts and units are recorded only for parsed files."
+    ],
+    "publication_references": [],
+    "ingestion_status": "DOWNLOADED",
+    "source_file_names": [
+      "LSDS-8_Multiplex_serum.immune.EvePanel_SUBMITTED.csv",
+      "LSDS-8_Multiplex_serum.cardiovascular.EvePanel_SUBMITTED.csv",
+      "LSDS-8_Multiplex_serum.immune.AlamarPanel_SUBMITTED.xlsx",
+      "LSDS-8_Multiplex_serum_immune_EvePanel_TRANSFORMED.csv",
+      "LSDS-8_Multiplex_serum_cardiovascular_EvePanel_TRANSFORMED.csv",
+      "LSDS-8_Multiplex_serum.immune.AlamarPanel_TRANSFORMED.csv"
+    ]
+  },
+  {
+    "dataset_id": "OSD-575-Study_Metadata_Files",
+    "study_id": "OSD-575",
+    "title": "Study Metadata Files / files",
+    "modality": "OTHER",
+    "measurement_types": [
+      "Study Metadata Files"
+    ],
+    "measurement_units": [],
+    "subject_count": null,
+    "timepoint_count": null,
+    "file_count": 1,
+    "access_level": "PUBLIC",
+    "verification_status": "VERIFIED_FILES",
+    "source_url": "https://osdr.nasa.gov/geode-py/ws/studies/OSD-575/download?source=datamanager&file=OSD-575_metadata_OSD-575-ISA.zip",
+    "last_verified_utc": "2026-11-14T10:40:17Z",
+    "continuous_telemetry": false,
+    "notes": "Public file index inspected; table content is parsed separately.",
+    "category": "DIRECT_HUMAN_SPACEFLIGHT",
+    "assay_types": [
+      "Study Metadata Files"
+    ],
+    "collection_timepoints": [],
+    "public_files": 1,
+    "restricted_files": 0,
+    "downloaded_files": 1,
+    "relevance_score": 90.0,
+    "scientific_relevance": "OSDR public dataset grouped by category and subcategory.",
+    "limitations": [
+      "File-level measurement counts and units are recorded only for parsed files."
+    ],
+    "publication_references": [],
+    "ingestion_status": "DOWNLOADED",
+    "source_file_names": [
+      "OSD-575_metadata_OSD-575-ISA.zip"
+    ]
+  },
+  {
+    "dataset_id": "OSD-656-Immunoassay-Supplementary_and_Metadata_Files",
+    "study_id": "OSD-656",
+    "title": "Immunoassay / Supplementary and Metadata Files",
+    "modality": "LAB_PANEL",
+    "measurement_types": [
+      "Immunoassay"
+    ],
+    "measurement_units": [],
+    "subject_count": null,
+    "timepoint_count": null,
+    "file_count": 1,
+    "access_level": "PUBLIC",
+    "verification_status": "VERIFIED_FILES",
+    "source_url": "https://osdr.nasa.gov/geode-py/ws/studies/OSD-656/download?source=datamanager&file=LSDS-64_Multiplex_200plex+v1-Target+Information.csv",
+    "last_verified_utc": "2026-11-14T10:40:17Z",
+    "continuous_telemetry": false,
+    "notes": "Public file index inspected; table content is parsed separately.",
+    "category": "DIRECT_HUMAN_SPACEFLIGHT",
+    "assay_types": [
+      "Immunoassay"
+    ],
+    "collection_timepoints": [],
+    "public_files": 1,
+    "restricted_files": 0,
+    "downloaded_files": 1,
+    "relevance_score": 90.0,
+    "scientific_relevance": "OSDR public dataset grouped by category and subcategory.",
+    "limitations": [
+      "File-level measurement counts and units are recorded only for parsed files."
+    ],
+    "publication_references": [],
+    "ingestion_status": "DOWNLOADED",
+    "source_file_names": [
+      "LSDS-64_Multiplex_200plex v1-Target Information.csv"
+    ]
+  },
+  {
+    "dataset_id": "OSD-656-Immunoassay-Tabular_Results_Files",
+    "study_id": "OSD-656",
+    "title": "Immunoassay / Tabular Results Files",
+    "modality": "LAB_PANEL",
+    "measurement_types": [
+      "Immunoassay"
+    ],
+    "measurement_units": [],
+    "subject_count": null,
+    "timepoint_count": null,
+    "file_count": 2,
+    "access_level": "PUBLIC",
+    "verification_status": "VERIFIED_FILES",
+    "source_url": "https://osdr.nasa.gov/geode-py/ws/studies/OSD-656/download?source=datamanager&file=LSDS-64_Multiplex_urine.immune.AlamarPanel_SUBMITTED.xlsx",
+    "last_verified_utc": "2026-11-14T10:40:17Z",
+    "continuous_telemetry": false,
+    "notes": "Public file index inspected; table content is parsed separately.",
+    "category": "DIRECT_HUMAN_SPACEFLIGHT",
+    "assay_types": [
+      "Immunoassay"
+    ],
+    "collection_timepoints": [],
+    "public_files": 2,
+    "restricted_files": 0,
+    "downloaded_files": 2,
+    "relevance_score": 90.0,
+    "scientific_relevance": "OSDR public dataset grouped by category and subcategory.",
+    "limitations": [
+      "File-level measurement counts and units are recorded only for parsed files."
+    ],
+    "publication_references": [],
+    "ingestion_status": "DOWNLOADED",
+    "source_file_names": [
+      "LSDS-64_Multiplex_urine.immune.AlamarPanel_SUBMITTED.xlsx",
+      "LSDS-64_Multiplex_urine.immune.AlamarPanel_TRANSFORMED.csv"
+    ]
+  },
+  {
+    "dataset_id": "OSD-656-Study_Metadata_Files",
+    "study_id": "OSD-656",
+    "title": "Study Metadata Files / files",
+    "modality": "OTHER",
+    "measurement_types": [
+      "Study Metadata Files"
+    ],
+    "measurement_units": [],
+    "subject_count": null,
+    "timepoint_count": null,
+    "file_count": 1,
+    "access_level": "PUBLIC",
+    "verification_status": "VERIFIED_FILES",
+    "source_url": "https://osdr.nasa.gov/geode-py/ws/studies/OSD-656/download?source=datamanager&file=OSD-656_metadata_OSD-656-ISA.zip",
+    "last_verified_utc": "2026-11-14T10:40:17Z",
+    "continuous_telemetry": false,
+    "notes": "Public file index inspected; table content is parsed separately.",
+    "category": "DIRECT_HUMAN_SPACEFLIGHT",
+    "assay_types": [
+      "Study Metadata Files"
+    ],
+    "collection_timepoints": [],
+    "public_files": 1,
+    "restricted_files": 0,
+    "downloaded_files": 1,
+    "relevance_score": 90.0,
+    "scientific_relevance": "OSDR public dataset grouped by category and subcategory.",
+    "limitations": [
+      "File-level measurement counts and units are recorded only for parsed files."
+    ],
+    "publication_references": [],
+    "ingestion_status": "DOWNLOADED",
+    "source_file_names": [
+      "OSD-656_metadata_OSD-656-ISA.zip"
+    ]
+  }
+]

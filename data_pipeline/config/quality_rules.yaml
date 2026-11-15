@@ -1,0 +1,63 @@
+# Quality, normalization, and baseline sufficiency rules.
+
+quality_statuses:
+  - VALID
+  - VALID_WITH_WARNINGS
+  - VALIDATED
+  - ACCEPTED
+  - SUSPECT
+  - MISSING
+  - INVALID
+  - INVALID_UNIT
+  - INSUFFICIENT_BASELINE
+  - UNVERIFIED
+  - NOT_ASSESSED
+
+missing_value_tokens:
+  - ""
+  - NA
+  - N/A
+  - NaN
+  - none
+  - null
+  - missing
+  - not reported
+  - not available
+  - NR
+  - ND
+  - "."
+  - "-"
+
+normalization:
+  preserve_original_value: true
+  guess_unknown_unit_conversion: false
+  ambiguous_unit_status: VALID_WITH_WARNINGS
+  missing_value_status: MISSING
+  unparseable_number_status: SUSPECT
+  timestamp_policy: "ISO-8601 UTC when absolute time exists; never fill with current time."
+
+physiological_ranges:
+  hr_bpm: [20, 250]
+  hrv_rmssd_ms: [0, 300]
+  spo2_pct: [50, 100]
+  systolic_bp_mmhg: [50, 260]
+  diastolic_bp_mmhg: [20, 160]
+  temp_c: [30, 45]
+  resp_rate_per_min: [4, 60]
+  cabin_ppco2_mmhg: [0, 20]
+  radiation_dose_rate_msv_h: [0, 1000]
+  iop_mmhg: [0, 60]
+  pvt_slowest10_rt_ms: [100, 1000]
+
+baseline:
+  minimum_sample_days: 7
+  minimum_completeness_pct: 70
+  weak_confidence_score: 0.60
+  phase_1_days: [1, 14]
+  phase_2_days: [15, 180]
+
+safety:
+  no_silent_imputation: true
+  incomplete_data_never_green: true
+  synthetic_data_must_be_labeled: true
+  restricted_data_retrieval_forbidden: true

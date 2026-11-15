@@ -1,0 +1,85 @@
+# Deterministic synthetic scenarios for ASTRALIS A1/A2.
+# A1 and A2 are fictional demo crew members, not NASA astronauts.
+
+generator:
+  seed: 20260501
+  stream_generator: astralis-stream-generator
+  stream_version: astralis-stream-1.0.0
+  daily_generator: astralis-daily-generator
+  daily_version: astralis-daily-1.0.0
+  lab_generator: astralis-lab-generator
+  lab_version: astralis-lab-1.0.0
+
+crew:
+  A1:
+    role: Commander
+    is_control: false
+    anomalies: [ANOM-A1-01, ANOM-A1-02, ANOM-A1-03, ANOM-A1-04]
+  A2:
+    role: Mission Specialist
+    is_control: true
+    anomalies: []
+
+stream:
+  start_utc: 2026-05-01T08:00:00Z
+  mission_day: 10
+  mission_phase: PHASE_1_ACUTE_ADAPTATION
+  frequency_hz: 1
+  duration_minutes: 60
+  ticks_per_astronaut: 3600
+  total_ticks: 7200
+
+daily:
+  start_utc: 2026-04-22T08:00:00Z
+  days_per_astronaut: 180
+  total_records: 360
+  phase_1_days: [1, 14]
+  phase_2_days: [15, 180]
+  gcr_daily_msv: 0.48
+  spe_day: 120
+  spe_daily_msv: 3.30
+  vo2max_decline_per_missed_ared_day: 0.18
+  vo2max_initial_a1: 44.0
+  vo2max_initial_a2: 43.0
+  ared_adherence_a1: 0.72
+  ared_adherence_a2: 0.96
+
+anomalies:
+  ANOM-A1-01:
+    detector: DET-01
+    start_minute: 8
+    end_minute: 18
+    yellow_minute: 10
+    red_minute: 15
+    peak_minute: 16
+    recovery_minute: 19
+  ANOM-A1-02:
+    detector: DET-03
+    start_minute: 22
+    end_minute: 32
+    yellow_minute: 25
+    red_minute: 28
+    peak_minute: 30
+    recovery_minute: 34
+  ANOM-A1-03:
+    detector: DET-05
+    start_minute: 36
+    end_minute: 46
+    yellow_minute: 39
+    red_minute: 43
+    peak_minute: 44
+    recovery_minute: 49
+  ANOM-A1-04:
+    detector: DET-06
+    start_minute: 48
+    end_minute: 56
+    yellow_minute: 48
+    red_minute: 49
+    peak_minute: 50
+    recovery_minute: 57
+
+lab_panels:
+  days: [1, 30, 90, 180]
+  panel_types: [CBC, CMP, CYTOKINES]
+  panels_total: 24
+  source_type: SYNTHETIC

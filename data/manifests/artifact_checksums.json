@@ -1,0 +1,149 @@
+[
+  {
+    "path": "data_bundle/telemetry_stream_60m.jsonl",
+    "sha256": "cf0fc8e1289b0e317931565df2bd7da31e0f2ce2d57779dd04ff9e72cccb2e50",
+    "size_bytes": 2851810,
+    "artifact_class": "SYNTHETIC",
+    "row_count": 7200
+  },
+  {
+    "path": "data_bundle/telemetry_180d.json",
+    "sha256": "6a2f784ff567a76c095d20b14a381d3ed6faa96eaa026dfa495972e3fd37d5ce",
+    "size_bytes": 341352,
+    "artifact_class": "SYNTHETIC",
+    "row_count": 360
+  },
+  {
+    "path": "data_bundle/nasa_baselines.json",
+    "sha256": "b38def3dc409d8ce3e3a38914e95feaa0930593c48a51300ad762cd7abec44ae",
+    "size_bytes": 37171,
+    "artifact_class": "SYNTHETIC",
+    "row_count": 4
+  },
+  {
+    "path": "data_bundle/processed/nasa_baseline_statistics.json",
+    "sha256": "98ca1f5ccd1d966890e1f5bf59d72a7702ad68bbe286a2ea0e74801ddc21f0a7",
+    "size_bytes": 40835,
+    "artifact_class": "NASA_DERIVED",
+    "row_count": null
+  },
+  {
+    "path": "data_bundle/astronaut_profiles.json",
+    "sha256": "84516ca47d6f178ee17f110cc561428e0bc1a48b4a62cafdc2af242c7ae6b694",
+    "size_bytes": 796,
+    "artifact_class": "SYNTHETIC",
+    "row_count": 2
+  },
+  {
+    "path": "data_bundle/synthetic/anomaly_manifest.json",
+    "sha256": "4c72d2ef263ad18904b148b19b42195cb771fc4515999b58ee337c5d46da3209",
+    "size_bytes": 7833,
+    "artifact_class": "SYNTHETIC",
+    "row_count": 4
+  },
+  {
+    "path": "data_bundle/synthetic/generation_config.json",
+    "sha256": "fd249c32051a7e9be064dd4c03734a21c4b087efd247e9c2232dd2573c0f0859",
+    "size_bytes": 4038,
+    "artifact_class": "SYNTHETIC",
+    "row_count": null
+  },
+  {
+    "path": "data_bundle/clinical/nasa_medical_guidelines.json",
+    "sha256": "f7b22d19a5ac14d34586e276e9acf66b0263fa64823ed467b028836abe757c81",
+    "size_bytes": 21654,
+    "artifact_class": "NASA_REFERENCE",
+    "row_count": 14
+  },
+  {
+    "path": "data_bundle/clinical/triage_protocols.json",
+    "sha256": "0de94b3b6f1939375c56e2d3c747d81b1525b597afded9c5b2fa90dfc92941ba",
+    "size_bytes": 17900,
+    "artifact_class": "PROJECT_PROTOCOL",
+    "row_count": 8
+  },
+  {
+    "path": "data_bundle/clinical/nasa_evidence_cards.json",
+    "sha256": "644fe805b2880a9366f7032068d9fd2c31898f0dfd21d92a80c7161536d00314",
+    "size_bytes": 24382,
+    "artifact_class": "NASA_REFERENCE",
+    "row_count": 12
+  },
+  {
+    "path": "data_bundle/clinical/laboratory_panels_seed.json",
+    "sha256": "22769618aba0c25fce5a0e7efed1aed4c6bdc3e2c23aea3ec939cd9425fa767a",
+    "size_bytes": 173138,
+    "artifact_class": "SYNTHETIC",
+    "row_count": 24
+  },
+  {
+    "path": "data_bundle/processed/nasa_laboratory_results.json",
+    "sha256": "db5252e5c4fb857d7652804d8817f4827915e8d15cf6705257cf15c8e3abf256",
+    "size_bytes": 15196110,
+    "artifact_class": "NASA_REAL",
+    "row_count": 23174
+  },
+  {
+    "path": "data_bundle/processed/nasa_lab_reference_statistics.json",
+    "sha256": "3db684bb48598d06668f2eac61a594d899df9762e3ace856fb2bdb3106a6ffc4",
+    "size_bytes": 2281223,
+    "artifact_class": "NASA_DERIVED",
+    "row_count": null
+  },
+  {
+    "path": "data_bundle/processed/nasa_laboratory_panels.json",
+    "sha256": "5b48948d88a94321badf6cb332e3ff85c7f610fbc3846ca83aae8b3b4440cdfb",
+    "size_bytes": 8427824,
+    "artifact_class": "NASA_REAL",
+    "row_count": 133
+  },
+  {
+    "path": "data_bundle/processed/microbiome_diversity.json",
+    "sha256": "1f176f160d33325e5860e1ccd1a7741ca175bd4387da50fc3659425f0ea1c5f6",
+    "size_bytes": 106521,
+    "artifact_class": "NASA_DERIVED",
+    "row_count": 329
+  },
+  {
+    "path": "data_bundle/provenance/study_catalog.json",
+    "sha256": "176a4d9e391b3e02d027c8a2979ac380f20bbf26d4b9f11e30770ca5bd184554",
+    "size_bytes": 202743,
+    "artifact_class": "NASA_METADATA",
+    "row_count": 79
+  },
+  {
+    "path": "data_bundle/provenance/dataset_registry.json",
+    "sha256": "ea0368e2e86fcfa4ade006faa3ca0c2708ec96778044164e90516e154a0d8df2",
+    "size_bytes": 114059,
+    "artifact_class": "NASA_METADATA",
+    "row_count": 59
+  },
+  {
+    "path": "data_bundle/provenance/radiation_evidence.json",
+    "sha256": "cec930a9a1cb088ac1442b32870b2bfc497276ed76b05d2385b0929c55eed081",
+    "size_bytes": 4424,
+    "artifact_class": "NASA_REFERENCE",
+    "row_count": null
+  },
+  {
+    "path": "data_bundle/provenance/nasa_publications.json",
+    "sha256": "8999e1e0f0de860c951c4764d0f1e6415e517fad93f189e91297cf171f58cb5d",
+    "size_bytes": 8812,
+    "artifact_class": "NASA_REFERENCE",
+    "row_count": 25
+  },
+  {
+    "path": "data_bundle/provenance/provenance_manifest.json",
+    "sha256": "658e75f61b2cbb4cfdcdbe950e17d990446fbd15bddee3f47f6df1a3f3bd3512",
+    "size_bytes": 63237037,
+    "artifact_class": "PROVENANCE",
+    "row_count": 31339
+  },
+  {
+    "path": "data_bundle/provenance/data_dictionary.json",
+    "sha256": "e7710cbe1f2bd6f005602e98ddd9bca361fbe508cad87b2ac91395278b0e7a67",
+    "size_bytes": 3019,
+    "artifact_class": "DOCUMENTATION",
+    "row_count": null
+  }
+]
