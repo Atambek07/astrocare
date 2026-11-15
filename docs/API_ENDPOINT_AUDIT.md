@@ -70,9 +70,10 @@ All routes were exercised against the unified service.
 | --- | --- | --- |
 | `/` | Main AstroCare Digital Twin application. | 200 |
 | `/crew` | Crew overview route. | 200 |
+| `/analytics`, `/assistant`, `/training`, `/history`, `/radar`, `/routine`, `/learn`, `/data`, `/simulation` | Direct routes to client-side product views. | 200 |
 | Any unknown path | Intentional Next.js 404. | 404 |
 
-The primary application is a client-side view switcher. Internal sections such as Overview, Analytics, Assistant, Training, History, Data Sources and Simulation are states, not separate HTTP routes.
+The primary application uses client-side view state. Known views are also exposed through the `/[view]` route so that direct navigation and refresh work. Unknown view identifiers intentionally return 404.
 
 ---
 

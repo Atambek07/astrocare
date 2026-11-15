@@ -12,9 +12,10 @@
 | --- | --- |
 | `/` | Main Digital Twin application. |
 | `/crew` | Crew overview route. |
+| `/analytics`, `/assistant`, `/training`, `/history`, `/radar`, `/routine`, `/learn`, `/data`, `/simulation` | Direct routes to client-side product views. |
 | Unknown route | Intentional Next.js 404. |
 
-Most product sections are client-side states within `/` rather than separate server routes.
+Most product sections are client-side states within `/`, but known views are also exposed through the `/[view]` route for direct navigation and refresh.
 
 ---
 
