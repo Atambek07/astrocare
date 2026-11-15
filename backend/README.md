@@ -88,7 +88,12 @@ The Doctor Layer talks to a local [Ollama](https://ollama.com) server running
 ollama pull qwen2.5:7b-instruct
 ```
 
-To run without the model (rule-based text only, no network calls), either pass `--offline` to the
+The AI Assistant can also select a local chat model through `GET /models` and pass it to
+`POST /ask` as `model`. The complete site still works without Ollama: built-in rule-based
+answers remain available.
+
+To run without the background recommendation model (rule-based text only, no network calls),
+either pass `--offline` to the
 dashboard or set `ASTRO_DOCTOR_OFFLINE=1` for any entry point that builds a default `Brain()`:
 
 ```bash
@@ -97,13 +102,16 @@ dashboard or set `ASTRO_DOCTOR_OFFLINE=1` for any entry point that builds a defa
 ASTRO_DOCTOR_OFFLINE=1 .venv/bin/python -m astro_brain.qa
 ```
 
+`ASTRO_DOCTOR_OFFLINE=1` disables the background recommendation layer. It does **not** block
+an explicitly selected model in `/ask`.
+
 Other environment variables read by the default `Brain()` (see `pipeline.py`):
 
 | variable | meaning | default |
 |---|---|---|
 | `ASTRO_OLLAMA_URL` | base URL of the Ollama server | `http://localhost:11434` |
 | `ASTRO_OLLAMA_MODEL` | model name to request | `qwen2.5:7b-instruct` |
-| `ASTRO_DOCTOR_OFFLINE` | `"1"` disables the Doctor Layer entirely | unset |
+| `ASTRO_DOCTOR_OFFLINE` | `"1"` disables the background recommendation layer; explicit `/ask` chat models still work | unset |
 
 ## Contracts
 
@@ -187,6 +195,10 @@ Sources and limitations: [docs/EVIDENCE.md](docs/EVIDENCE.md).
 - `doctorSource` tells the caller where the text came from: `"llm"` (fresh model call that
   answered in time), `"cache"` (previously computed, model or fallback), or `"fallback"`
   (rule-based template, no model involved).
+- The AI Assistant can also select a local chat model. `DoctorLayer.list_models()` backs
+  `GET /models`, and `DoctorLayer.ask(..., model=...)` backs the optional `model` field in
+  `POST /ask`. An explicit model works even when `ASTRO_DOCTOR_OFFLINE=1`; that variable
+  disables only the background recommendation layer.
 
 ## Project layout
 

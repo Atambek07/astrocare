@@ -25,7 +25,7 @@ Most product sections are client-side states within `/`, but known views are als
 | --- | --- |
 | Overview | Critical alerts, status, vitals, 3D twin, next actions, cabin environment. |
 | Health Analytics | Trends, baselines, abnormal readings, mission explorer. |
-| AI Assistant | Offline rule-based role-specific briefing and question interface. |
+| AI Assistant | Role-specific briefing and question interface. Uses built-in rules by default; optionally selects a local Ollama model, with silent fallback to built-in answers. |
 | Training & Recovery | Recovery, readiness, exercise and bone/muscle status. |
 | Mission History | Daily status, events, reports and activity log. |
 | Data Sources | NASA provenance, pipeline status and study catalog. |
@@ -106,7 +106,19 @@ The client reconnects with exponential backoff. If disconnected, explicit mock m
 NEXT_PUBLIC_BACKEND_HTTP_URL
 ```
 
-Used by Simulation view for status, lifecycle, scenario, countermeasure and What-If calls.
+Used by Simulation view for status, lifecycle, scenario, countermeasure and What-If calls. The AI Assistant uses the same backend for `GET /models` and `POST /ask`.
+
+### Local AI model
+
+The AI Assistant shows a **Local AI model** selector when the backend exposes installed non-embedding Ollama models. The choice is stored in browser `localStorage` under `astrocare.aiModel`.
+
+If no model is available, the assistant shows:
+
+```text
+No local model available — using built-in answers.
+```
+
+and continues to use built-in rule-based answers. When a model is selected, the built-in answer is calculated first; the local model may replace its first message after a successful `/ask` response. The UI waits up to 45 seconds and silently keeps the built-in answer on failure. See [LOCAL_AI_MODEL.md](LOCAL_AI_MODEL.md).
 
 ### Static NASA artifacts
 

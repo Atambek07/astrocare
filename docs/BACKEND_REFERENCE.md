@@ -95,7 +95,25 @@ Mode sequence:
 - `cache`;
 - `fallback`.
 
-Setting `ASTRO_DOCTOR_OFFLINE=1` disables Ollama and uses fallback only.
+Setting `ASTRO_DOCTOR_OFFLINE=1` disables the background recommendation layer and uses fallback only.
+
+### 5.1 Local chat model selection
+
+The AI Assistant can select a local chat model independently of the background recommendation layer. `DoctorLayer.ask(..., model=None)` supports this flow:
+
+- with `model=None`, `/ask` uses the configured default model and respects `ASTRO_DOCTOR_OFFLINE`;
+- with an explicit `model`, `/ask` uses the user-selected model even when `ASTRO_DOCTOR_OFFLINE=1`;
+- an invalid model name is rejected with `400 invalid model name`.
+
+`DoctorLayer.list_models()` and `OllamaClient.list_models()` provide `GET /models`. Embedding models are excluded. If Ollama is unavailable, `/models` returns `available: false` and an empty list.
+
+### 5.2 `/ask` prompt
+
+The `/ask` prompt uses `ASK_SYSTEM_PROMPT` and `build_ask_prompt` from `backend/src/astro_brain/doctor/prompts.py`.
+
+The prompt is intentionally short, includes one example, refuses non-health requests, and avoids markdown. It does not send `likelyConditions` to the model.
+
+The model receives backend status data only: `alertLevel`, `news2Score`, `activeFlags`, `flagDetails`, `doctorRecommendation` and plan status. Frontend-only demo values, such as displayed cabin CO₂ and sleep fields, are not sent.
 
 ---
 

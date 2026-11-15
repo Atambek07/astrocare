@@ -50,6 +50,11 @@
 4. The WebSocket broadcaster is simple and does not include authentication, backpressure or horizontal scaling.
 5. `SimulationEvent` is an internal contract, not yet an Architect-approved shared contract.
 6. Request IDs and structured metrics are not yet implemented.
+7. Local AI model selection was verified only with `qwen2.5:7b-instruct`. Smaller 1.5B and 3B models were not tested with the current prompt.
+8. There are no dedicated automated tests for `GET /models` or the optional `model` field in `/ask`.
+9. The local model receives backend status data only; frontend-generated cabin CO₂ and sleep display values are not sent.
+10. The local model may invent values that are not present in backend data.
+11. The AI Assistant waits up to 45 seconds for a local model response, and inference can be slow on weak hardware.
 
 ---
 
@@ -66,7 +71,7 @@
 ## 6. Operational limitations
 
 1. NASA data refresh requires internet access.
-2. Local Ollama is optional; CPU-only inference may be slower than the doctor timeout, in which case fallback is used.
+2. Local Ollama is optional; CPU-only inference may be slower than the doctor timeout, in which case fallback is used. The AI Assistant's explicit chat-model timeout is 45 seconds.
 3. Docker Compose is provided but native startup is the verified primary path.
 4. Data persistence currently uses files and manifests rather than a production database.
 

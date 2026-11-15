@@ -81,6 +81,7 @@ flowchart TB
       SCORE[NEWS2, radiation, lifestyle, environment]
       IMM[IMM-lite conditions]
       DOCTOR[Doctor Layer]
+      MODELS[Local AI model registry]
       STORE[State/history/log]
       TRANSPORT[HTTP and WebSocket]
     end
@@ -89,13 +90,19 @@ flowchart TB
       STATE[Zustand state]
       TWIN[3D Digital Twin]
       VIEWS[Analytics and mission views]
+      AI[AI Assistant]
       PROVUI[Data Sources]
       CONTROL[Simulation controls]
     end
 
+    OLLAMA[Optional local Ollama]
+
     Data --> Simulation
     Simulation --> Backend
     Backend --> Frontend
+    AI --> MODELS
+    AI --> DOCTOR
+    DOCTOR --> OLLAMA
 ```
 
 ---
@@ -145,6 +152,16 @@ This is a deliberate integration choice for the competition demonstration. It av
 6. Brain validates and analyzes the sample.
 7. WebSocket broadcasts a BrainTick.
 8. Frontend updates the selected astronaut view.
+
+### Local AI model flow
+
+1. AI Assistant calls `GET /models` through the backend.
+2. Backend asks the configured local Ollama endpoint for installed models and excludes embedding models.
+3. If no eligible model exists, the frontend shows a no-model message and continues with built-in rule-based answers.
+4. If the user selects a model, AstroCare first computes the built-in rule-based answer.
+5. AI Assistant sends `POST /ask` with the selected `model` and waits up to 45 seconds.
+6. If Ollama answers successfully, the model text replaces the first built-in message and is labeled `Local AI model · decision support only`.
+7. If Ollama fails, times out, or does not return `source: llm`, the UI silently keeps the built-in answer.
 
 ---
 

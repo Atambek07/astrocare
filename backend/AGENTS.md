@@ -27,7 +27,7 @@ JSON numbers; booleans are JSON `true`/`false` (never `0`/`1`).
 | field | type | unit | range | required | meaning |
 |---|---|---|---|---|---|
 | `timestamp` | string | ISO-8601 UTC | non-empty, e.g. `"2026-11-14T10:00:00Z"` | yes | When the sample was taken. Passed through unchanged. |
-| `astronaut_id` | string | — | non-empty | yes | Stable identifier of the crew member, e.g. `"ASTRO-01"`. |
+| `astronaut_id` | string | — | non-empty | yes | Stable identifier of the crew member, e.g. `"astro-01"`. |
 | `hr` | int | bpm | 0 – 300 | yes | Heart rate. |
 | `spo2` | int | % | 0 – 100 | yes | Peripheral oxygen saturation. |
 | `bp` | object | mmHg | `{"systolic": int 0–300, "diastolic": int 0–300}`, diastolic ≤ systolic | yes | Blood pressure. |
@@ -73,7 +73,7 @@ guesses.** Error messages look like `'spo2' out of range: 101 not within [0, 100
 ```json
 {
   "timestamp": "2026-11-14T10:00:00Z",
-  "astronaut_id": "ASTRO-01",
+  "astronaut_id": "astro-01",
   "hr": 72,
   "spo2": 98,
   "bp": { "systolic": 120, "diastolic": 80 },
@@ -124,7 +124,7 @@ One output object per processed input sample. Keys are **camelCase**.
 ```json
 {
   "timestamp": "2026-11-14T10:00:00Z",
-  "astronautId": "ASTRO-01",
+  "astronautId": "astro-01",
   "alertLevel": "yellow",
   "news2Score": 2,
   "activeFlags": ["RADIATION_ELEVATED", "SLEEP_DEFICIT"],
@@ -279,11 +279,12 @@ violates the contract; the message names the offending field.
 | `POST` | `/ingest` | one input-contract JSON object | the output-contract JSON for that sample (HTTP 200), or HTTP 400 with `{"error": "<message naming the field>"}` on contract violation |
 | `GET` | `/state` | — | the latest output-contract JSON produced (HTTP 200), or HTTP 200 with `{"status": "no data yet"}` if nothing has been ingested yet |
 | `GET` | `/state?astronaut_id=X` | — | latest output for X, or HTTP 200 with `{"status":"no data yet","astronautId":"X"}` |
-| `GET` | `/state/all` | — | HTTP 200 with `{"astronauts":{"ASTRO-01":{...}},"count":N}` |
+| `GET` | `/state/all` | — | HTTP 200 with `{"astronauts":{"astro-01":{...}},"count":N}` |
 | `GET` | `/history` | — | HTTP 200 with the last 50 outputs in global arrival order |
 | `GET` | `/history?astronaut_id=X` | — | HTTP 200 with the last 50 outputs for X, or `[]` |
 | `GET` | `/` | — | plain text: one latest-output block per astronaut, followed by doctorStats |
-| `POST` | `/ask` | `{"astronaut_id":"X","question":"..."}` | interactive doctor answer; CORS enabled |
+| `GET` | `/models` | — | local Ollama models exposed to the AI Assistant; embedding models are excluded; empty list if Ollama is unavailable |
+| `POST` | `/ask` | `{"astronaut_id":"X","question":"...","model":"optional-local-model"}` | interactive doctor answer; CORS enabled; invalid model name returns `400 {"error":"invalid model name"}` |
 | `OPTIONS` | `*` | — | CORS preflight, HTTP 204 |
 | `GET` | `/log` | `?astronaut_id=X` optional | Mission episodes, globally or per astronaut |
 | `GET` | `/report` | `?astronaut_id=X[&format=text]` | EMCL-vocabulary mission report, JSON or SBAR text |
@@ -326,7 +327,7 @@ Every output includes `bodySystems` with all 16 frontend zone IDs, defaulting to
 |---|---|
 | `contract-agent` | `src/astro_brain/contract.py`, `src/astro_brain/flags.py`, their tests, `AGENTS.md`, `pyproject.toml`. Owns input/output contract definitions. |
 | `scoring-agent` | `src/astro_brain/news2.py`, `src/astro_brain/radiation.py`, `src/astro_brain/lifestyle.py`, `src/astro_brain/vitals_flags.py`, `src/astro_brain/scoring.py`, `src/astro_brain/conditions.py` (NEWS2 + all flag rules and IMM-lite conditions from section 3) and their tests. |
-| `doctor-agent` | `src/astro_brain/doctor/` (`__init__.py`, `layer.py`, `fallback.py`, `ollama_client.py`, `prompts.py` — recommendation text: llm / cache / fallback) and its tests, `src/astro_brain/pipeline.py` (`Brain`). |
+| `doctor-agent` | `src/astro_brain/doctor/` (`__init__.py`, `layer.py`, `fallback.py`, `ollama_client.py`, `prompts.py` — recommendation text: llm / cache / fallback; local chat-model selection and `/ask` prompt) and its tests, `src/astro_brain/pipeline.py` (`Brain`). |
 | `brain-qa-agent` | `src/astro_brain/mock.py`, `src/astro_brain/qa.py`, `examples/`, end-to-end tests, mock sample generators, contract conformance checks. |
 | `dashboard-agent` | `src/astro_brain/dashboard.py`, `src/astro_brain/ws_server.py` and their tests. |
 | `adapters-agent` | `src/astro_brain/adapters/`, `src/astro_brain/feed_astralis.py`, `docs/INTEGRATION.md` and adapter tests. |

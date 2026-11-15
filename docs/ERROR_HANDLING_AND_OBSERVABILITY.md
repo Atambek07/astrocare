@@ -8,7 +8,7 @@
 
 1. Invalid data is rejected; it is never silently repaired.
 2. Missing data remains missing.
-3. Optional AI failure degrades to deterministic fallback.
+3. Optional AI failure degrades to deterministic fallback or built-in assistant answers.
 4. Runtime and network failures do not corrupt simulation state.
 5. User-facing errors are safe and actionable.
 6. Internal diagnostics are logged without exposing filesystem paths or stack traces to end users.
@@ -24,7 +24,8 @@
 | Unknown route | HTTP 404 JSON with path. |
 | Unknown astronaut/report | HTTP 404 JSON. |
 | Unexpected exception | HTTP 500 with exception class only. |
-| Ollama unavailable/slow | Doctor Layer uses rule-based fallback. |
+| Ollama unavailable | Doctor Layer uses rule-based fallback; `/models` returns an empty list. |
+| AI Assistant `/ask` model failure or timeout | Response has `source: fallback`; UI silently keeps the built-in rule-based answer and shows no error. |
 | WebSocket client disconnect | Client removed; other clients continue. |
 
 The dashboard logs only when verbose mode is enabled. The simulation loop logs skipped Brain samples to stderr; it does not crash the service.
@@ -54,6 +55,8 @@ Events are stored for mission lifecycle, scenario lifecycle, daily sleep, counte
 | WebSocket reconnecting | `reconnecting` state; mock does not masquerade as live. |
 | Simulation service unavailable | Simulation view shows error banner; polling continues. |
 | Simulation command fails | Error banner with backend detail or HTTP status. |
+| Local AI model unavailable | AI Assistant shows “No local model available — using built-in answers.” |
+| Local AI request fails or exceeds 45 seconds | UI silently keeps the built-in rule-based answer; no user-facing error is shown. |
 | NASA static artifact absent | Data Sources shows “NASA data manifests are not available.” |
 | Malformed WebSocket tick | zod parser rejects and logs a warning; UI does not crash. |
 | 3D/WebGL failure | 2D twin fallback. |

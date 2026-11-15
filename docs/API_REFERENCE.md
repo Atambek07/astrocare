@@ -131,6 +131,32 @@ Errors:
 
 ---
 
+### GET `/models`
+
+Returns local Ollama models available to the AI Assistant.
+
+```json
+{
+  "available": true,
+  "models": ["qwen2.5:7b-instruct"],
+  "default": "qwen2.5:7b-instruct"
+}
+```
+
+When Ollama is unreachable:
+
+```json
+{
+  "available": false,
+  "models": [],
+  "default": null
+}
+```
+
+Model names containing `embed` are excluded.
+
+---
+
 ### POST `/ask`
 
 Asks the Doctor Layer a contextual question.
@@ -140,15 +166,34 @@ Request:
 ```json
 {
   "astronaut_id": "astro-01",
-  "question": "What should the crew monitor next?"
+  "question": "What should the crew monitor next?",
+  "model": "qwen2.5:3b-instruct"
 }
 ```
 
-Success: `200`.
+`model` is optional. It must match `[A-Za-z0-9._:/-]{1,100}`.
+
+Without `model`, `/ask` uses the configured default model and respects `ASTRO_DOCTOR_OFFLINE`. With an explicit `model`, the selected chat model is used even when `ASTRO_DOCTOR_OFFLINE=1`, because that variable disables only the background recommendation layer.
+
+Success response:
+
+```json
+{
+  "answer": "...",
+  "source": "llm",
+  "disclaimer": "...",
+  "contextTimestamp": "..."
+}
+```
+
+`source` is `llm` for a successful model answer or `fallback` when the model is unavailable or fails.
+
+Backend astronaut IDs are lowercase, for example `astro-01`; other casing returns `404`.
 
 Errors:
 
 - `400` missing/invalid fields;
+- `400 invalid model name` for an invalid `model` value;
 - `404` no context for astronaut.
 
 ---

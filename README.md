@@ -92,6 +92,8 @@ ollama pull qwen2.5:7b-instruct
 ASTRO_DOCTOR_OFFLINE=0 scripts/run.sh
 ```
 
+The AI Assistant can also select a local chat model independently of the background recommendation layer. If no model is available, the UI falls back to built-in rule-based answers. See [docs/LOCAL_AI_MODEL.md](docs/LOCAL_AI_MODEL.md).
+
 ---
 
 ## 4. NASA data

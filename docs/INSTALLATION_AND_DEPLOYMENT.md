@@ -57,9 +57,9 @@ Variables:
 | `ASTROCARE_BACKEND_PORT` | `8765` | Backend HTTP port. |
 | `ASTROCARE_WS_PORT` | `8787` | WebSocket port. |
 | `ASTROCARE_FRONTEND_PORT` | `3000` | Frontend port. |
-| `ASTRO_DOCTOR_OFFLINE` | `1` in scripts | Disable Ollama and use deterministic fallback. |
-| `ASTRO_OLLAMA_URL` | `http://localhost:11434` | Local Ollama URL. |
-| `ASTRO_OLLAMA_MODEL` | `qwen2.5:7b-instruct` | Local model. |
+| `ASTRO_DOCTOR_OFFLINE` | `1` in scripts | Disables the background Ollama recommendation layer; an explicitly selected AI Assistant chat model still works. |
+| `ASTRO_OLLAMA_URL` | `http://localhost:11434` | Local Ollama URL used by Doctor Layer and AI Assistant chat. |
+| `ASTRO_OLLAMA_MODEL` | `qwen2.5:7b-instruct` | Default/background recommendation model; does not override a user-selected chat model. |
 | `NEXT_PUBLIC_BRAIN_WS_URL` | `ws://localhost:8787` | Frontend WebSocket URL. |
 | `NEXT_PUBLIC_BACKEND_HTTP_URL` | `http://localhost:8765` | Frontend simulation/data status URL. |
 
@@ -84,6 +84,30 @@ ASTRALIS_OFFLINE_DATA=1 python -m data_pipeline.build_offline_bundle
 ```
 
 Internet is required only for fresh OSDR retrieval.
+
+### Optional: local AI model
+
+AstroCare works fully without Ollama. To enable the optional local model:
+
+1. Install [Ollama](https://ollama.com).
+2. Pull a model, for example:
+
+   ```bash
+   ollama pull qwen2.5:7b-instruct
+   ```
+
+3. Start the unified backend.
+4. Open **AI Assistant**.
+5. Pick the model in **Local AI model**.
+6. If it does not appear, use **Check again**.
+
+`qwen2.5:7b-instruct` is the model verified with the current prompt. Smaller 1.5B and 3B models may be useful on weak laptops, but they have **not** been tested with the current AstroCare prompt; do not present them as verified.
+
+On Windows, cloning to a short path and enabling long paths avoids `Filename too long` errors from long NASA file names:
+
+```bash
+git config --global core.longpaths true
+```
 
 ---
 

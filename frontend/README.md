@@ -38,7 +38,7 @@ Press **Demo**. It plays astro-01, days 45 → 53, on a Mars transit. During the
 |---|---|
 | **Overview** | In priority order: critical alert with the action to take → overall status (STABLE / WARNING / CRITICAL), the most important issue, recovery score, active alerts, last sync → six vital cards (HR, BP, SpO₂, respiration, temperature, glucose; click for 24 h / 7 d / 30 d history) → interactive 3D body (front/back, layers, click an organ) → next actions + alerts → spacecraft environment. |
 | **Health Analytics** | Trend charts with 24 h / 7 d / 30 d filters, personal baseline band, abnormal readings marked; detected patterns; readiness scores; any-metric mission explorer. |
-| **AI Assistant** | *Astro AI* — offline, rule-based companion with four roles (Doctor, Fitness Coach, Nutritionist, Mind & Sleep): briefings, priority alerts, quick actions, free-text questions, guided breathing. It explains data and onboard protocols; it does not diagnose. |
+| **AI Assistant** | *Astro AI* — built-in rule-based companion with four roles (Doctor, Fitness Coach, Nutritionist, Mind & Sleep): briefings, priority alerts, quick actions, free-text questions, guided breathing. Optional local Ollama model can replace the first answer; without a model it uses built-in answers. It explains data and onboard protocols; it does not diagnose. |
 | **Training & Recovery** | Recovery / strain / EVA readiness / bone health, today's exercise plan, muscle & bone status, daily measurement routine. |
 | **Mission History** | Daily status across the mission, events (EVA, SPE, CO₂ scrubber failures), reports to Mission Control, activity log. |
 

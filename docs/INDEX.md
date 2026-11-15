@@ -25,6 +25,7 @@
 | [FRONTEND_REFERENCE.md](FRONTEND_REFERENCE.md) | Frontend routes, twin, state, controls and error states. |
 | [ADVANCED_HYBRID_SIMULATION.md](ADVANCED_HYBRID_SIMULATION.md) | Simulation modules, equations, scenarios and What-If methodology. |
 | [API_REFERENCE.md](API_REFERENCE.md) | Every implemented HTTP route and WebSocket contract. |
+| [LOCAL_AI_MODEL.md](LOCAL_AI_MODEL.md) | Optional local Ollama model selection, fallback behavior and limitations. |
 | [DATA_CONTRACTS.md](DATA_CONTRACTS.md) | Adapter and contract compatibility rules. |
 | [ERROR_HANDLING_AND_OBSERVABILITY.md](ERROR_HANDLING_AND_OBSERVABILITY.md) | Failure behavior and diagnostics. |
 

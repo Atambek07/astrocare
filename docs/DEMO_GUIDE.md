@@ -89,6 +89,26 @@ All telemetry is labeled `SYNTHETIC`.
 
 ---
 
+## Optional stage — Local AI Assistant
+
+Open **AI Assistant**.
+
+If a local Ollama model is available:
+
+1. Select the model in **Local AI model**.
+2. Ask a health-monitoring question.
+3. Show the label `Local AI model · decision support only`.
+
+If no model is available, the block shows:
+
+```text
+No local model available — using built-in answers.
+```
+
+and the assistant continues with built-in rule-based answers. Emphasize that the model is optional and decision support only.
+
+---
+
 ## 6. Stage 4 — Hypercapnic cabin
 
 In **Simulation**, start:

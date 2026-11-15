@@ -41,7 +41,7 @@
 
 ## 2. Backend route inventory
 
-All routes were exercised against the unified service.
+All pre-existing routes were exercised against the unified service. The newer local-AI routes are documented with their verification method below.
 
 | Method | Path | Purpose | Success | Errors | Verified |
 | --- | --- | --- | --- | --- | --- |
@@ -50,7 +50,8 @@ All routes were exercised against the unified service.
 | GET | `/state/all` | Latest output for every astronaut. | 200 mapping | None | Live check |
 | GET | `/history` | Last 50 outputs; supports `astronaut_id`. | 200 list | None | Live check |
 | GET | `/` | Plain-text operational snapshot. | 200 text | None | Existing backend tests |
-| POST | `/ask` | Doctor Layer question using latest context. | 200 answer | 400 invalid; 404 no data | Existing backend tests |
+| GET | `/models` | List selectable local Ollama models. | 200 with availability/models/default | 200 with empty list when Ollama is unavailable | Manual browser/API check; no dedicated automated endpoint test |
+| POST | `/ask` | Doctor Layer question using latest context; optional `model`. | 200 answer | 400 invalid/missing fields; 400 invalid model name; 404 no data | Existing backend tests; explicit model and invalid-model paths manually checked |
 | GET | `/log` | Mission episodes; supports `astronaut_id`. | 200 episodes | None | Live check |
 | GET | `/report` | Mission report; supports `format=text`. | 200 report | 400 missing astronaut; 404 no data | Live check |
 | GET | `/simulation/status` | Simulation and environment status. | 200 | 503 if runtime absent | Live check |
@@ -83,7 +84,7 @@ The primary application uses client-side view state. Known views are also expose
 | --- | --- |
 | 200 | Successful query or accepted command. |
 | 204 | CORS preflight. |
-| 400 | Malformed JSON, invalid action, unknown scenario/countermeasure, contract violation. |
+| 400 | Malformed JSON, invalid action, unknown scenario/countermeasure, contract violation, invalid local-AI model name. |
 | 404 | Intentionally absent route or no report for an astronaut. |
 | 500 | Unexpected backend exception; response contains only an error class. |
 

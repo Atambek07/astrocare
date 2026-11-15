@@ -63,6 +63,23 @@ PYTHONPATH=. backend/.venv/bin/python shared/generate_contracts_schema.py --chec
 | HTTP endpoints | live service checks | PASS |
 | WebSocket | live frame check | PASS |
 
+### Local AI model check status
+
+The local AI model feature was checked as follows:
+
+- 55 related backend pytest tests passed after the change (doctor, dashboard, ask, layer, service and Ollama selection).
+- The full backend suite had **656 tests passed before the last feature edits** and was not rerun afterward.
+- There are **no new automated tests** for `GET /models` or the `model` field in `/ask`.
+- `npx tsc --noEmit` was clean.
+- `npx vitest run` passed **39 frontend tests**.
+- There is no automated test for the AI Assistant model drop-down.
+
+Manual checks:
+
+- With Ollama running, the drop-down listed `qwen2.5:7b-instruct` and an answer was returned with the label `Local AI model`.
+- With the backend stopped, the block showed `No local model available — using built-in answers.` and chat used built-in text.
+- A manual prompt evaluation used 8 questions across nominal, radiation-storm and severe-vitals scenarios, including a prompt-injection question. After the prompt rewrite, answers had no disease names or markdown, and the injection was refused. This was **not** a formal benchmark.
+
 ---
 
 ## 4. Backend test coverage

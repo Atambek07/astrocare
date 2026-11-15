@@ -4,6 +4,27 @@ All notable changes are documented here. Dates use UTC.
 
 ---
 
+## [2026-11-15] Local AI model selection
+
+### Added
+
+- Selectable local Ollama chat model in the AI Assistant view.
+- `GET /models` for available non-embedding local models.
+- Optional `model` field in `POST /ask`.
+- Rewritten `/ask` prompt using `ASK_SYSTEM_PROMPT` and `build_ask_prompt`.
+- `OllamaClient.list_models` for local model discovery.
+- Built-in rule-based fallback when no local model is available.
+- `docs/LOCAL_AI_MODEL.md` with the complete feature description.
+
+### Changed
+
+- `ASTRO_DOCTOR_OFFLINE=1` now disables only the background recommendation layer; an explicitly selected `/ask` chat model still works.
+- AI Assistant UI stores the selected model in `localStorage` under `astrocare.aiModel`.
+- The model answer replaces the first built-in assistant message and is labeled `Local AI model · decision support only`.
+- `/ask` prompt status data is limited to backend fields; frontend-only CO₂ and sleep display values are not sent to the model.
+
+---
+
 ## [2026-11-15] QA stabilization release
 
 ### Added
