@@ -12,7 +12,7 @@
 | --- | --- | --- |
 | `abdyrazakov/AstroCare` | Backend Brain | 649 tests; 648 passed, 1 WebSocket race failure at baseline. |
 | `Kwandiye/astrocare` | Frontend Digital Twin | 37 tests passed; Next.js production build passed. |
-| `astralis` local workspace | NASA data pipeline + simulation engine | 55 tests passed, 16 skipped. |
+| `AstroCare` local workspace | NASA data pipeline + simulation engine | 55 tests passed, 16 skipped. |
 
 Both public repositories were cloned without changing their remotes.
 
@@ -100,7 +100,7 @@ The frontend expects a normalized `BrainTick` with:
 
 ### Simulation contracts
 
-The simulation engine emits local contract objects with the same names and units as the ASTRALIS contracts. It does not depend on the AstroCare backend.
+The simulation engine emits local contract objects with the same names and units as the AstroCare contracts. It does not depend on the AstroCare backend.
 
 ---
 
@@ -118,7 +118,7 @@ Preserved:
 - HTTP dashboard;
 - WebSocket broadcaster;
 - reports and mission log;
-- Astralis adapter and frontend adapter.
+- AstroCare simulation adapter and frontend adapter.
 
 ### Frontend
 
@@ -138,7 +138,7 @@ Preserved:
 
 ### Data pipeline
 
-Reused from the ASTRALIS workspace:
+Reused from the AstroCare workspace:
 
 - OSDR API connector;
 - file index connector;
@@ -154,7 +154,7 @@ Reused from the ASTRALIS workspace:
 
 ### Simulation
 
-Reused from the ASTRALIS workspace:
+Reused from the AstroCare workspace:
 
 - mission clock;
 - simulation controller;
@@ -298,7 +298,7 @@ Frontend:
 Next.js production build passed
 ```
 
-Existing ASTRALIS workspace:
+Existing AstroCare workspace:
 
 ```text
 55 passed, 16 skipped

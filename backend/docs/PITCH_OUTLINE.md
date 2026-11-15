@@ -9,11 +9,11 @@
 
 NASA Space Apps Challenge 2026, тема **"Create Health Monitoring Software for Astronauts on
 Space Missions"** (заголовок у обоих смежных репозиториев: `/tmp/astrocare-fe/README.md` и
-`/tmp/astralis/README.md`; у нас — `README.md:8`, "NASA Space Apps 2026").
+`/tmp/AstroCare/README.md`; у нас — `README.md:8`, "NASA Space Apps 2026").
 
 Система — три независимых репозитория, каждый со своей ролью:
 
-1. **astralis** (`/tmp/astralis/README.md`) — офлайн-симулятор и дата-пайплайн: синтетический
+1. **AstroCare** (`/tmp/AstroCare/README.md`) — офлайн-симулятор и дата-пайплайн: синтетический
    1 Гц поток, 180-дневные ряды, сценарии аномалий, данные NASA OSDR (Inspiration4: OSD-569…
    OSD-656), провенанс `NASA_REAL`/`NASA_DERIVED`/`SYNTHETIC`.
 2. **astro-brain** (этот репозиторий) — мозг: скоринг, флаги, IMM-lite, рекомендация доктора.
@@ -61,7 +61,7 @@ Space Missions"** (заголовок у обоих смежных репози�
 - **Симулятор синтетический, не реальные астронавты.** OSDR-исследования Inspiration4 — это
   пре/постполётные биообразцы 3-дневной миссии, а не 180-дневная непрерывная телеметрия; явно
   написано "must not be used as a substitute for continuous physiology".
-  `/tmp/astralis/README.md` (раздел "Verified Inspiration4 References"); фронт сам пишет
+  `/tmp/AstroCare/README.md` (раздел "Verified Inspiration4 References"); фронт сам пишет
   "all data is synthetic" (`/tmp/astrocare-fe/README.md:5`).
 - **Живой ответ модели — не типичный случай в демо-среде.** На CPU 7B-модель почти всегда не
   успевает за 3 секунды; чаще всего звучит детерминированный fallback-текст, а не живой ответ
@@ -69,7 +69,7 @@ Space Missions"** (заголовок у обоих смежных репози�
 - **Сравнение накопленной дозы с 30-дневным лимитом — методическое допущение, не конверсия
   единиц.** `RADIATION_30DAY_LIMIT` сравнивает мЗв (effective dose) с лимитом в мГр-экв
   (органная доза) — статус `ASSUMPTION`, не точный расчёт. `docs/EVIDENCE.md:12`.
-- **Контракт держится конвенцией и код-ревью, не общей схемой.** В отличие от astralis
+- **Контракт держится конвенцией и код-ревью, не общей схемой.** В отличие от AstroCare
   (`shared/contracts.schema.json`, единая Pydantic/TS/JSON Schema), у нас контракт — Markdown +
   ручная валидация в `contract.py`. `docs/WHY_ASTROCARE.md:145-149`.
 - **Расхождение в демо-параметре задержки связи:** мозг использует ориентир "до ~20 минут"

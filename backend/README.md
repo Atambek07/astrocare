@@ -218,7 +218,7 @@ examples/             sample input/output JSON for manual testing and docs
 **Done:** contract validation, NEWS2/radiation/lifestyle/environment scoring, IMM-lite condition
 ranking (`likelyConditions`), phase priors and CliFF resources, plans and mission reports, the
 Doctor Layer (cache, timeout, fallback, background upgrade), the HTTP/WebSocket dashboard, the
-Astralis/AstroCare adapters, and the mock-data QA runner. 613 tests passing, QA 24/24.
+AstroCare simulation and frontend adapters, and the mock-data QA runner. 613 tests passing, QA 24/24.
 Each built-in flag now includes `evidenceRef`; sources and verification status: [docs/EVIDENCE.md](docs/EVIDENCE.md).
 
 **Next (planned, not implemented):**
@@ -248,4 +248,4 @@ agents checking their work. Standard library only, test-driven development, 80%+
 ## License
 
 MIT (see [LICENSE](LICENSE)).
-v0.6 wires canonical CliFF resources, renames the CO₂ condition to `CO2_HEADACHE`, and records honest Astralis scenario validation in `docs/VALIDATION.md`.
+v0.6 wires canonical CliFF resources, renames the CO₂ condition to `CO2_HEADACHE`, and records honest AstroCare scenario validation in `docs/VALIDATION.md`.

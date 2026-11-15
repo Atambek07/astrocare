@@ -143,7 +143,7 @@ ground display systems — a single frozen interface, not a shared codebase, is 
 systems independently replaceable and testable.
 
 **Honest limitation:** the contract is enforced by convention and code review, not by a schema
-tool shared across repositories — unlike the parallel astralis project, which generates a single
+tool shared across repositories — unlike the parallel AstroCare project, which generates a single
 JSON Schema (`shared/contracts.schema.json`) from Pydantic models shared by Python and
 TypeScript. AstroCare's contract is currently a Markdown document plus `contract.py`'s manual
 validation, not a machine-checked cross-language schema.

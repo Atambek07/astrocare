@@ -45,8 +45,8 @@ JSON numbers; booleans are JSON `true`/`false` (never `0`/`1`).
 | `noaa_s_scale` | int or null | NOAA S-scale | 0 – 5 or `null` | no (default `null`) | Current NOAA Solar Radiation Storm scale, if known. |
 | `bfo_dose_30day_mgy_eq` | number or null | mGy-Eq | ≥ 0 or `null` | no (default `null`) | BFO dose equivalent over the last 30 days; absent or null disables this rule. |
 | `radiation_dose_career_msv` | number or null | mSv | ≥ 0 or `null` | no (default `null`) | Career effective dose; absent or null disables this rule. |
-| `mission_day` | int or null | day | 1–3650 or null | no | ASTRALIS mission day. |
-| `mission_phase` | string or null | — | `PHASE_1_ACUTE_ADAPTATION` or `PHASE_2_LONG_DURATION` | no | ASTRALIS phase. |
+| `mission_day` | int or null | day | 1–3650 or null | no | AstroCare mission day. |
+| `mission_phase` | string or null | — | `PHASE_1_ACUTE_ADAPTATION` or `PHASE_2_LONG_DURATION` | no | AstroCare phase. |
 | `cabin_ppco2_mmhg` | number or null | mmHg | 0–20 or null | no | Cabin CO₂ partial pressure. |
 | `iop_mmhg` | number or null | mmHg | 0–60 or null | no | Intraocular pressure. |
 | `hrv_rmssd_ms` | number or null | ms | 0–300 or null | no | Passthrough HRV RMSSD. |

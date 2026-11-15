@@ -1,4 +1,4 @@
-# ASTRALIS Data Pipeline (SPEC 1)
+# AstroCare Data Pipeline (SPEC 1)
 
 This package builds the offline `data_bundle/` from NASA OSDR public data and deterministic synthetic scenarios. It is owned by Data-agent (SPEC 1). The demo path never makes network calls; network access is used only during `make data`.
 

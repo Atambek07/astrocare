@@ -1,10 +1,10 @@
-# Astralis validation
+# AstroCare validation
 
 Run with the simulator interpreter:
 
 ```bash
-PYTHONPATH=src /tmp/astralis/.venv/bin/python -m astro_brain.qa_astralis \
-  --astralis-path /tmp/astralis --mission-seconds 2400 --step 15
+PYTHONPATH=src /tmp/AstroCare/.venv/bin/python -m astro_brain.qa_astralis \
+  --astralis-path /tmp/AstroCare --mission-seconds 2400 --step 15
 ```
 
 The run below uses scenario-specific expected signals. Generic signals do not

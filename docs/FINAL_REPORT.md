@@ -2,7 +2,7 @@
 
 **Date:** 2026-11-15  
 **Final status:** `READY_WITH_LIMITATIONS`  
-**Repositories integrated:** `abdyrazakov/AstroCare`, `Kwandiye/astrocare`, local ASTRALIS data pipeline and simulation engine.
+**Repositories integrated:** `abdyrazakov/AstroCare`, `Kwandiye/astrocare`, local AstroCare data pipeline and simulation engine.
 
 ---
 
@@ -12,8 +12,8 @@
 
 - Backend Brain: `abdyrazakov/AstroCare`
 - Frontend Core: `Kwandiye/astrocare`
-- NASA data pipeline: local ASTRALIS `data_pipeline`
-- Advanced Hybrid Simulation Engine: local ASTRALIS `simulation_engine`
+- NASA data pipeline: local AstroCare `data_pipeline`
+- Advanced Hybrid Simulation Engine: local AstroCare `simulation_engine`
 
 ### Final architecture
 
@@ -40,7 +40,7 @@ Backend:
 - HTTP dashboard;
 - WebSocket broadcaster;
 - reports and mission log;
-- existing Astralis and frontend adapters.
+- existing AstroCare simulation and frontend adapters.
 
 Frontend:
 

@@ -2,7 +2,7 @@
 
 Источники: `AGENTS.md` (текущий контракт astro-brain, v0.2.0), `docs/EVIDENCE.md`,
 `src/astro_brain/conditions.py`, `src/astro_brain/doctor/layer.py`, и параллельный репозиторий
-astralis — `AGENTS.md`, `shared/contracts.schema.json` (типы `StreamTick`, `DailyTelemetryLog`,
+AstroCare — `AGENTS.md`, `shared/contracts.schema.json` (типы `StreamTick`, `DailyTelemetryLog`,
 `TriageAssessment`, `AstronautProfile`, `MissionPhase`), `data_pipeline/stream_generator.py`.
 
 ---
@@ -11,34 +11,34 @@ astralis — `AGENTS.md`, `shared/contracts.schema.json` (типы `StreamTick`,
 
 **Один мозг (AstroCare), один контракт.** Вся клиническая логика (скоринг, флаги, IMM-lite,
 рекомендация доктора) живёт только в этом репозитории (astro-brain) и описана только в его
-`AGENTS.md`. astralis — поставщик данных и визуализации для демо: симулятор телеметрии
+`AGENTS.md`. AstroCare — поставщик данных и визуализации для демо: симулятор телеметрии
 (`data_pipeline/stream_generator.py`), офлайн-бандл NASA-данных (`data_pipeline/`, `data_bundle/`)
 и фронтенд-компоненты (`frontend/src/*`).
 
-**Почему это нужно обсудить именно сейчас:** `astralis/AGENTS.md` §3 закрепляет за
+**Почему это нужно обсудить именно сейчас:** `AstroCare/AGENTS.md` §3 закрепляет за
 Backend-agent (SPEC 2) зону `backend/app/*` с задачей "MFI, seven detectors, IMPACT, SBAR,
-API/SSE" — то есть у astralis уже спроектирован **собственный** параллельный медицинский
+API/SSE" — то есть у AstroCare уже спроектирован **собственный** параллельный медицинский
 движок: `TriageAssessment` (свой risk score `mfi_risk_score`, свой `triage_status`
 GREEN/YELLOW/RED/INSUFFICIENT_DATA), семь детекторов DET-01…DET-07, прогноз `ImpactForecast`,
 отчёты `SbarMedicalReport`, и в задачах (§~670) явно стоит пункт реализовать
 `triageEngine.ts` и `impactPredictor.ts` "с численным паритетом Python". Это прямой дубликат
 того, что уже делает astro-brain (`news2.py`, `radiation.py`, `lifestyle.py`, `conditions.py`).
 
-**Правило, которое нужно утвердить голосованием (см. п.7, вопрос 1):** astralis не
+**Правило, которое нужно утвердить голосованием (см. п.7, вопрос 1):** AstroCare не
 реализует `triage_engine`, детекторы DET-01…07 и `lib/triageEngine.ts` как источник истины для
 алертов/статуса; единственный источник `alertLevel`/`news2Score`/`likelyConditions` —
-`astro_brain.pipeline.Brain`. Если какая-то часть этой логики у astralis уже написана —
+`astro_brain.pipeline.Brain`. Если какая-то часть этой логики у AstroCare уже написана —
 она либо выбрасывается, либо переводится в чисто визуальный слой (рисует то, что прислал
 мозг), но не пересчитывает статус самостоятельно.
 
 ---
 
-## 2. Маппинг `StreamTick` (astralis) → входной контракт astro-brain
+## 2. Маппинг `StreamTick` (AstroCare) → входной контракт astro-brain
 
 `StreamTick` — это один тик 1 Гц потока симулятора (`data_pipeline/stream_generator.py`,
 `HEALTHY_BASELINE`). Ниже — что из него реально попадает в наш контракт.
 
-| поле `StreamTick` | тип/единица (astralis) | наше поле | статус |
+| поле `StreamTick` | тип/единица (AstroCare) | наше поле | статус |
 |---|---|---|---|
 | `timestamp` | строка ISO-8601 UTC | `timestamp` | прямое соответствие |
 | `astronaut_id` | строка | `astronaut_id` | прямое соответствие |
@@ -53,10 +53,10 @@ GREEN/YELLOW/RED/INSUFFICIENT_DATA), семь детекторов DET-01…DET-
 | `mission_phase` | enum `PHASE_1_ACUTE_ADAPTATION`/`PHASE_2_LONG_DURATION` | нет поля | **новое аддитивное поле** (см. п.3) |
 | `hrv_rmssd` | number, ms, 0–300 | нет поля | **новое аддитивное поле** (см. п.3) |
 | `iop_mmhg` | number, mmHg, 0–60 | нет поля | **новое аддитивное поле** (см. п.3) |
-| `cabin_ppco2` | number, **по докстрингу схемы — mmHg**, 0–20 | нет поля | **новое аддитивное поле**; несмотря на то, что схема astralis уже фиксирует mmHg, это должна подтвердить data-команда как финальную единицу (см. п.3 и вопрос 1 в п.7) |
+| `cabin_ppco2` | number, **по докстрингу схемы — mmHg**, 0–20 | нет поля | **новое аддитивное поле**; несмотря на то, что схема AstroCare уже фиксирует mmHg, это должна подтвердить data-команда как финальную единицу (см. п.3 и вопрос 1 в п.7) |
 | `pvt_slowest10_rt` | number, ms, 100–1000 | нет поля | **новое аддитивное поле** (см. п.3) |
 | `source_type` | enum `NASA_REAL`/`NASA_DERIVED`/`SYNTHETIC` | — | **не используется**: это метаданные происхождения данных для их провенанса, не клинический вход |
-| `provenance_ids` | array of string, ≥1 | — | **не используется**: внутренний провенанс astralis, не часть нашего контракта |
+| `provenance_ids` | array of string, ≥1 | — | **не используется**: внутренний провенанс AstroCare, не часть нашего контракта |
 
 ### Откуда брать наши daily-поля (exercise/calories/sleep/mood)?
 
@@ -88,7 +88,7 @@ GREEN/YELLOW/RED/INSUFFICIENT_DATA), семь детекторов DET-01…DET-
 |---|---|---|---|---|
 | `mission_phase` | enum `PHASE_1_ACUTE_ADAPTATION` \| `PHASE_2_LONG_DURATION` (их же enum) | контекст фазы миссии для будущей настройки темпа кумулятивных радиационных лимитов и EVA-политики | пока без правила, чисто информационное поле на выходе/в промптах доктора | VERIFY — правило не спроектировано |
 | `mission_day` | int, 1–3650 | привязка к окну кумулятивной дозы (NASA-STD-3001 30-дневное окно уже используется в `RADIATION_30DAY_LIMIT`, но без привязки ко дню) | пока без правила | VERIFY |
-| `cabin_ppco2` | number — **кПа или мм рт.ст., финальную единицу должна зафиксировать data-команда** | гиперкапния — реальная экологическая угроза на орбите; у astralis это уже их аномалия DET-01 "Hypercapnic Cabin" | предлагается флаг `CO2_ELEVATED`/`CO2_CRITICAL` по аналогии с радиацией | VERIFY — пороги не выбраны, источник (NASA SMAC CO2 limits) не внесён в EVIDENCE.md |
+| `cabin_ppco2` | number — **кПа или мм рт.ст., финальную единицу должна зафиксировать data-команда** | гиперкапния — реальная экологическая угроза на орбите; у AstroCare это уже их аномалия DET-01 "Hypercapnic Cabin" | предлагается флаг `CO2_ELEVATED`/`CO2_CRITICAL` по аналогии с радиацией | VERIFY — пороги не выбраны, источник (NASA SMAC CO2 limits) не внесён в EVIDENCE.md |
 | `iop_mmhg` | number, mmHg | внутриглазное давление — биомаркер SANS (neuro-ocular syndrome), релевантно долгим миссиям | без правила на v0.2, информационное | VERIFY |
 | `hrv_rmssd` | number, ms | более чувствительный маркер автономной нервной системы/утомления, чем сырой `hr` | предлагается `HRV_LOW` как дополнительный driver для `CARDIAC_ARRHYTHMIA`/стрессовых IMM-lite условий | VERIFY — порог не выбран |
 | `pvt_slowest10_rt` | number, ms | PVT-B — стандартный NASA-тест бдительности/усталости, прямо дополняет уже существующий `SLEEP_DEFICIT` и условия `SLEEP_DISORDER`/`DEPRESSION` | предлагается `PVT_IMPAIRED` при замедлении относительно базовой линии | VERIFY — нужна ссылка на NASA PVT-B пороги |
@@ -129,17 +129,17 @@ GREEN/YELLOW/RED/INSUFFICIENT_DATA), семь детекторов DET-01…DET-
 
 ## 7. Открытые вопросы для голосования
 
-1. **Разграничение "один мозг":** закрепляем ли мы сейчас, что astralis не реализует
+1. **Разграничение "один мозг":** закрепляем ли мы сейчас, что AstroCare не реализует
    `triage_engine`/DET-01…07/`triageEngine.ts`/`impactPredictor.ts` как источник правды, а
    astro-brain — единственный источник `alertLevel`/скоринга? *(Самый приоритетный вопрос —
    иначе на демо будет два конфликтующих статуса одного и того же астронавта.)*
    — отвечает: оба архитектора + orchestrator.
-2. **Единица `cabin_ppco2`:** кПа или мм рт.ст.? Схема astralis уже пишет mmHg в докстринге —
+2. **Единица `cabin_ppco2`:** кПа или мм рт.ст.? Схема AstroCare уже пишет mmHg в докстринге —
    фиксируем это как финальное решение или нет?
    — отвечает: data-команда (researcher), статус должен попасть в `docs/EVIDENCE.md`.
 3. **Единица `radiation_dose_rate`:** подтверждаем конверсию ×1000 (mSv/h → µSv/h) и кто её
    делает — data-pipeline на их стороне или `contract.py` на нашей?
-   — отвечает: data-agent (astralis) + contract-agent (astro-brain).
+   — отвечает: data-agent (AstroCare) + contract-agent (astro-brain).
 4. **Lifestyle-поля без аналога (exercise minutes, calories):** на демо с их потоком —
    отключаем `EXERCISE_DEFICIT`/`CALORIC_DEFICIT` или data-команда синтезирует отдельные
    значения специально для нас?
