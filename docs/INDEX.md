@@ -10,6 +10,7 @@
 | Document | Purpose |
 | --- | --- |
 | [README.md](../README.md) | Product overview, setup and execution. |
+| [ASTROCARE_PROJECT_OVERVIEW_RU.md](ASTROCARE_PROJECT_OVERVIEW_RU.md) | Подробное описание проекта на русском языке для команды. |
 | [SYSTEM_ARCHITECTURE.md](SYSTEM_ARCHITECTURE.md) | Authoritative system context, components and data flow. |
 | [INSTALLATION_AND_DEPLOYMENT.md](INSTALLATION_AND_DEPLOYMENT.md) | Setup, environment variables, startup and troubleshooting. |
 | [DEMO_GUIDE.md](DEMO_GUIDE.md) | Judge-ready demonstration steps. |
