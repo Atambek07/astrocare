@@ -10,3 +10,17 @@ data_pipeline/cache/
 simulation_exports/
 simulation_checkpoints/
 data/raw/**/.DS_Store
+
+# AI agent files
+.claude/
+AGENTS.md
+CLAUDE.md
+.freebuff
+.claude-code/
+
+# AI agent files
+.claude/
+AGENTS.md
+CLAUDE.md
+.freebuff
+.claude-code/
