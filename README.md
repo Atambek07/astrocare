@@ -53,6 +53,16 @@ All three layers are connected through a shared contract layer (Pydantic v2 + Ty
 
 ---
 
+<div align="center">
+
+<img src="img/demo1.png" alt="AstroCare Dashboard — Astronaut Health Monitoring" width="100%"/>
+
+**Figure 1.** AstroCare Dashboard — 3D Digital Twin, vital signs, real-time alerts, and clinical recommendations.
+
+</div>
+
+---
+
 ## 2. The Problem
 
 Long-duration spaceflight exposes astronauts to unique physiological risks:
@@ -509,13 +519,19 @@ Use the **What-If** buttons in Simulation:
 
 Explain that the experiment is isolated and the baseline mission is unchanged.
 
-### Stage 8 — Stop
+---
 
-Press `Ctrl+C` in the terminal running `scripts/run.sh`.
+<div align="center">
+
+<img src="img/demo2.png" alt="AstroCare Simulation Control — seeded scenarios and countermeasures" width="100%"/>
+
+**Figure 2.** Simulation Control — live cabin ppCO₂, radiation dose rate, cumulative radiation, scenario start/stop buttons, and countermeasure controls (ARED, Aerobic Exercise, Sleep Intervention, Environmental Correction).
+
+</div>
 
 ---
 
-## 🧪 Testing & Quality
+## 🧪 Testing & Quality## 🧪 Testing & Quality
 
 Run the full test suite:
 
