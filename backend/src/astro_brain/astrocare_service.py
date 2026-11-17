@@ -9,6 +9,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import sys
 import threading
 import time
@@ -352,13 +353,17 @@ def build_astrocare_server(
 ) -> ThreadingHTTPServer:
     """Создать HTTP-сервер AstroCare с эндпоинтами управления симуляцией."""
     handler_cls = build_astrocare_handler(brain, store, ws=ws, seq=seq)
-    return ThreadingHTTPServer(("localhost", port), handler_cls)
+    return ThreadingHTTPServer(("0.0.0.0", port), handler_cls)
 
 
 def main(argv: list[str] | None = None) -> None:
     """Запустить единый сервис AstroCare."""
     parser = argparse.ArgumentParser(prog="astro_brain.astrocare_service")
-    parser.add_argument("--port", type=int, default=DEFAULT_PORT)
+    parser.add_argument(
+        "--port",
+        type=int,
+        default=int(os.environ.get("PORT", DEFAULT_PORT)),
+    )
     parser.add_argument("--ws-port", type=int, default=DEFAULT_WS_PORT)
     parser.add_argument("--duration-seconds", type=float, default=0)
     parser.add_argument("--scenario", action="append", default=[])
