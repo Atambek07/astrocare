@@ -126,6 +126,18 @@ class _Handler(BaseHTTPRequestHandler):
     seq: list[int]
     server_version = "AstroBrainDashboard/0.1"
 
+    _ALLOWED_ORIGINS = {
+        "https://astrocarev1.vercel.app",
+        "http://localhost:5173",
+        "http://127.0.0.1:5173",
+        "http://localhost:3000",
+        "http://127.0.0.1:3000",
+    }
+
+    def _allowed_origin(self) -> str | None:
+        origin = self.headers.get("Origin", "")
+        return origin if origin in self._ALLOWED_ORIGINS else None
+
     def log_message(self, format: str, *args: Any) -> None:  # noqa: A002
         if self.verbose:
             super().log_message(format, *args)
@@ -133,7 +145,9 @@ class _Handler(BaseHTTPRequestHandler):
     def _write(self, status: int, body: bytes, content_type: str) -> None:
         self.send_response(status)
         self.send_header("Content-Type", content_type)
-        self.send_header("Access-Control-Allow-Origin", "*")
+        origin = self._allowed_origin()
+        if origin is not None:
+            self.send_header("Access-Control-Allow-Origin", origin)
         self.send_header("Access-Control-Allow-Headers", "Content-Type")
         self.send_header("Access-Control-Allow-Methods", "GET, POST, OPTIONS")
         self.send_header("Content-Length", str(len(body)))
@@ -169,7 +183,9 @@ class _Handler(BaseHTTPRequestHandler):
 
     def do_OPTIONS(self) -> None:  # noqa: N802
         self.send_response(204)
-        self.send_header("Access-Control-Allow-Origin", "*")
+        origin = self._allowed_origin()
+        if origin is not None:
+            self.send_header("Access-Control-Allow-Origin", origin)
         self.send_header("Access-Control-Allow-Headers", "Content-Type")
         self.send_header("Access-Control-Allow-Methods", "GET, POST, OPTIONS")
         self.send_header("Content-Length", "0")
