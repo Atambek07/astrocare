@@ -1,5 +1,7 @@
 # AstroCare — Autonomous Space Triage & Resilience Analytics
 
+<img src="img/logo.jpeg" alt="AstroCare — Autonomous Space Triage & Resilience Analytics" width="260"/>
+
 **NASA Space Apps Challenge 2026**  
 **Track:** Create Health Monitoring Software for Astronauts on Space Missions  
 **Status:** `READY_WITH_LIMITATIONS` | **Version:** 1.0.0
